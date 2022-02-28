@@ -162,6 +162,7 @@ const slideTitleDiv = document.querySelector('.slide-title');
 const slideContentDiv = document.querySelector('.slide-content');
 const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
+const slideJumpSelect = document.querySelector('#jump-to-slide');
 
 function updateMap(collection, showpopups=false) {
   layerGroup.clearLayers();
@@ -231,15 +232,34 @@ function goPrevSlide() {
   showCurrentSlide();
 }
 
-async function loadLifeData() {
-  const resp = await fetch('journey.json');
-  const data = await resp.json();
-  lifeCollection = data;
+function jumpToSlide() {
+  currentSlideIndex = slideJumpSelect.value;
   showCurrentSlide();
+}
+
+function initSlideSelect() {
+  slideJumpSelect.innerHTML = '';
+  for (const [index, slide] of slides.entries()) {
+    const option = document.createElement('option');
+    option.value = index;
+    option.innerHTML = slide.title;
+    slideJumpSelect.appendChild(option);
+  }
+}
+
+function loadLifeData() {
+  fetch('data/journey.json')
+    .then(resp => resp.json())
+    .then(data => {
+      lifeCollection = data;
+      showCurrentSlide();
+    });
 }
 
 slidePrevButton.addEventListener('click', goPrevSlide);
 slideNextButton.addEventListener('click', goNextSlide);
+slideJumpSelect.addEventListener('click', jumpToSlide);
 
+initSlideSelect();
 showCurrentSlide();
 loadLifeData();

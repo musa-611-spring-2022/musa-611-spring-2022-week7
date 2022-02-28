@@ -31,6 +31,8 @@ body {
 .slide-controls {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  column-gap: 0.5rem;
 
   width: 100%;
 }
@@ -52,4 +54,8 @@ body {
 .slide-nav-button:hover {
   background-color: #444;
   color: #fff;
+}
+
+.slide-nav-select {
+  min-width: 0;
 }
