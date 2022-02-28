@@ -1,9 +1,11 @@
+/* globals showdown */
+
 let map = L.map('map').setView([0, 0], 0);
 let layerGroup = L.layerGroup().addTo(map);
-let lifeCollection = {features: []};
+let lifeCollection = { features: [] };
 
 L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg', {
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
 }).addTo(map);
 
 /* ==========
@@ -50,10 +52,10 @@ const slides = [
       Here we present a snapshot of Mjumbe Poe's life told geospatially.
     `,
     era: null,
-    bounds: [[-75, -180], [75, 180]]
+    bounds: [[-75, -180], [75, 180]],
   },
   {
-    title: "Early Days",
+    title: 'Early Days',
     content: `
       Mjumbe was born in San Jose, California. He lived with his family first in
       **San Jose**, then **Santa Cruz**, briefly in **Oceanside**, and finally
@@ -63,7 +65,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "Move to Philadelphia",
+    title: 'Move to Philadelphia',
     content: `
       When Mjumbe was 11, his family moved across the country to Philadelphia.
       They lived in what would later be knows as the **Cedar Park**
@@ -74,7 +76,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "College",
+    title: 'College',
     content: `
       Mjumbe went back to California for college. He graduated with a computer
       science degree from **Harvey Mudd College** in **Claremont, California**.
@@ -86,7 +88,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "Code for America",
+    title: 'Code for America',
     content: `
       Mjumbe was a Code for America fellow in 2011, living and working primarily
       from **Oakland, CA**. He worked on projects with the cities of Philadelphia
@@ -96,7 +98,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "OpenPlans",
+    title: 'OpenPlans',
     content: `
       After Code for America, Mjumbe went to work for OpenPlans, a NYC-based
       non-profit making tools to help citizens get involved in the urban
@@ -108,7 +110,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "City of Philadelphia",
+    title: 'City of Philadelphia',
     content: `
       Mjumbe then went to work for the **City of Philadelphia** in the Office of
       Open Data and Digital Transformation. During this period he lived near
@@ -118,7 +120,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "Stepwise",
+    title: 'Stepwise',
     content: `
       Mjumbe left the city of Philadelphia to work on a startup called Stepwise
       with a former coworker and friend. They made tools to help investors get
@@ -131,7 +133,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "International Conference on Appropriate Technology",
+    title: 'International Conference on Appropriate Technology',
     content: `
       Mjumbe has been involved with the planning of the International Conference
       on Appropriate Technology since 2012. This conference has taken him to
@@ -141,7 +143,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "Travels",
+    title: 'Travels',
     content: `
       Additionally, Mjumbe has been lucky to spend time in several places around
       the world.
@@ -150,7 +152,7 @@ const slides = [
     showpopups: true,
   },
   {
-    title: "Present Day",
+    title: 'Present Day',
     content: `
       Mjumbe currently lives in **East Passyunk**. Thanks for taking this journey!
     `,
@@ -164,9 +166,9 @@ const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 const slideJumpSelect = document.querySelector('#jump-to-slide');
 
-function updateMap(collection, showpopups=false) {
+function updateMap(collection) {
   layerGroup.clearLayers();
-  const geoJsonLayer = L.geoJSON(collection, {pointToLayer: (p, latlng) => L.marker(latlng) })
+  const geoJsonLayer = L.geoJSON(collection, { pointToLayer: (p, latlng) => L.marker(latlng) })
     .bindTooltip(l => l.feature.properties.label)
     .addTo(layerGroup);
 
@@ -175,24 +177,24 @@ function updateMap(collection, showpopups=false) {
 
 function makeEraCollection(era) {
   return {
-    'type': 'FeatureCollection',
-    'features': lifeCollection.features.filter(f => f.properties.era === era)
+    type: 'FeatureCollection',
+    features: lifeCollection.features.filter(f => f.properties.era === era),
   };
 }
 
 function showSlide(slide) {
-  const converter = new showdown.Converter({smartIndentationFix: true});
+  const converter = new showdown.Converter({ smartIndentationFix: true });
 
   slideTitleDiv.innerHTML = `<h2>${slide.title}</h2>`;
   slideContentDiv.innerHTML = converter.makeHtml(slide.content);
 
   const collection = slide.era ? makeEraCollection(slide.era) : lifeCollection;
-  const layer = updateMap(collection, slide.showpopups || false);
+  const layer = updateMap(collection);
 
   function handleFlyEnd() {
     if (slide.showpopups) {
       layer.eachLayer(l => {
-        l.bindTooltip(l.feature.properties.label, {permanent: true});
+        l.bindTooltip(l.feature.properties.label, { permanent: true });
         l.openTooltip();
       });
     }
@@ -215,7 +217,7 @@ function showCurrentSlide() {
 function goNextSlide() {
   currentSlideIndex++;
 
-  if (currentSlideIndex == slides.length) {
+  if (currentSlideIndex === slides.length) {
     currentSlideIndex = 0;
   }
 
@@ -233,7 +235,7 @@ function goPrevSlide() {
 }
 
 function jumpToSlide() {
-  currentSlideIndex = slideJumpSelect.value;
+  currentSlideIndex = parseInt(slideJumpSelect.value, 10);
   showCurrentSlide();
 }
 
