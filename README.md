@@ -6,6 +6,12 @@ Create a story map using some GeoJSON data. It can be a personal story, or the
 story of a place, a project, a process, a people, whatever you want, as long as
 you ground that story in location.
 
+Some examples from last year (which you can download and run locally):
+- https://github.com/gxzhao1/SF-Business-Trend
+- https://github.com/Haoheng-Tang/Haoheng-MUSA611-Midterm
+- https://github.com/hkbonestroo/Bonestroo_CPLN-692_Midterm
+- https://github.com/hqiao97/OSGIS-PhillyFoodAccess
+
 ### Preparation
 
 #### Step 1: Prepare Geographic Data
@@ -70,3 +76,11 @@ function showSlide(...) {
 ```
 
 #### Step 4: Start writing!
+
+## Submitting you assignment
+
+This exercise will not have automated tests in the same way as previous exercises, _however_ you code should still conform to the AirBnB JavaScript style guide. To ensure that it does, run:
+
+```
+npx eslint exercise
+```
