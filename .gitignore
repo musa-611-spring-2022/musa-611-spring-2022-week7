@@ -1,3 +1,5 @@
 *.pyc
 poetry.lock
 node_modules/
+exercise/.DS_Store
+sample/.DS_Store
