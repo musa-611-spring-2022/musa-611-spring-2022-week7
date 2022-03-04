@@ -1,6 +1,6 @@
 /* globals showdown */
 
-let map = L.map('map').setView([0, 0], 0);
+let map = L.map('map').setView([73, 12], 3);
 let layerGroup = L.layerGroup().addTo(map);
 let lifeCollection = { features: [] };
 
