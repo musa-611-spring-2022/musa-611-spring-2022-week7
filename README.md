@@ -79,6 +79,8 @@ function showSlide(...) {
 
 ## Submitting you assignment
 
+**This exercise will be due on March 28.** We will have a few students present their story maps during the class period.
+
 This exercise will not have automated tests in the same way as previous exercises, _however_ you code should still conform to the AirBnB JavaScript style guide. To ensure that it does, run:
 
 ```
