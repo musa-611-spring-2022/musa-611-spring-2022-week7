@@ -8,6 +8,7 @@ const slides = [
     Total_events:`109`,
     img:'data/beijing.jpg',
     era: 'Beijing',
+    content:`"Together for a Shared Future."`,
     bounds: [[-75, -180], [75, 180]],
     showpopups: true,
   },
@@ -20,6 +21,7 @@ const slides = [
     Total_events:`102`,
     img:'data/2018.jpg',
     era: 'Pyeongchang',
+    content:`"Passion. Connected."`,
     showpopups: true,
   },
 
@@ -31,6 +33,7 @@ const slides = [
     Total_events:`98`,
     img:'data/2014.jpg',
     era: 'Sochi',
+    content:`"Hot. Cool. Yours."`,
     showpopups: true,
   },
 
@@ -42,6 +45,7 @@ const slides = [
     Total_events:`86`,
     img:'data/2010.jpg',
     era: 'Vancouver',
+    content:`"With Glowing Hearts."`,
     showpopups: true,
   },
 
@@ -53,6 +57,7 @@ const slides = [
     Total_events:`84`,
     img:'data/2006.jpg',
     era: 'Turino',
+    content:`"Passion Lives Here."`,
     showpopups: true,
   },
 
@@ -64,6 +69,7 @@ const slides = [
     Total_events:`78`,
     img:'data/2002.jpg',
     era: 'Salt Lake City',
+    content:`"Light the Fire Within."`,
     showpopups: true,
   },
 
@@ -75,6 +81,7 @@ const slides = [
     Total_events:`68`,
     img:'data/1998.jpg',
     era: 'Nagano',
+    content:`"Coexistence with Nature."`,
     showpopups: true,
   },
 
@@ -86,6 +93,7 @@ const slides = [
     Total_events:`61`,
     img:'data/1994.jpg',
     era: 'Lillehammer',
+    content:`"Fire in your heart."`,
     showpopups: true,
   },
 
@@ -97,6 +105,7 @@ const slides = [
     Total_events:`57`,
     img:'data/1992.jpg',
     era: 'inat',
+    content:`"Savoie en Fête."`,
     showpopups: true,
   },
 
@@ -108,6 +117,7 @@ const slides = [
     Total_events:`46`,
     img:'data/1988.jpg',
     era: 'Calgary',
+    content:`"Coming Together in Calgary."`,
     showpopups: true,
   },
 
@@ -119,6 +129,7 @@ const slides = [
     Total_events:`39`,
     img:'data/1984.jpg',
     era: 'Sarajevo',
+    content:`"Harmony And Progress."`,
   },
 
   {
@@ -129,6 +140,7 @@ const slides = [
     Total_events:`38`,
     img:'data/1980.jpg',
     era: 'Lake Placid',
+    content:`"The Celebration Of The Century."`,
   },
 
   {
@@ -139,6 +151,7 @@ const slides = [
     Total_events:`37`,
     img:'data/1976.jpg',
     era: 'Innsbruck',
+    content:`"Games of Simplicity."`,
   },
 
   {
@@ -149,6 +162,7 @@ const slides = [
     Total_events:`35`,
     img:'data/1972.jpg',
     era: 'Sapporo',
+    content:`"The Games that brought winter sports to Asia."`,
   },
 
   {
@@ -159,6 +173,7 @@ const slides = [
     Total_events:`35`,
     img:'data/1968.jpg',
     era: 'Grenoble',
+    content:`"Citius, altius, fortius."`,
   },
 
   {
@@ -169,6 +184,7 @@ const slides = [
     Total_events:`34`,
     img:'data/1964.jpg',
     era: 'Innsbruck',
+    content:`"An almost unanimous choice."`,
   },
 
   {
@@ -179,6 +195,7 @@ const slides = [
     Total_events:`27`,
     img:'data/1960.jpg',
     era: 'Squaw Valley',
+    content:`"Passionate, persuasive and driven by an unshakeable belief."`,
   },
 
   {
@@ -189,6 +206,7 @@ const slides = [
     Total_events:`24`,
     img:'data/1956.jpg',
     era: 'Cortina dAmpezzo',
+    content:`"The Cheerful Games."`,
   },
 
   {
@@ -199,6 +217,7 @@ const slides = [
     Total_events:`22`,
     img:'data/1952.jpg',
     era: 'Oslo',
+    content:`"The birthplace of modern skiing."`,
   },
 
   {
@@ -209,6 +228,7 @@ const slides = [
     Total_events:`22`,
     img:'data/1948.jpg',
     era: 'St Moritz',
+    content:`"The birthplace of modern skiing."`,
   },
 
   {
@@ -219,6 +239,7 @@ const slides = [
     Total_events:`17`,
     img:'data/1936.jpg',
     era: 'Garmisch-Partenkirchen',
+    content:`"I Call The Youth Of The World!"`,
   },
 
   {
@@ -229,6 +250,7 @@ const slides = [
     Total_events:`14`,
     img:'data/1932.jpg',
     era: 'Lake Placid',
+    content:`"The Olympic Winter Games came to USA for the first time."`,
   },
 
   {
@@ -239,6 +261,7 @@ const slides = [
     Total_events:`14`,
     img:'data/1928.jpg',
     era: 'St Moritz',
+    content:`"Games of Renewal."`,
   },
 
   {
@@ -249,6 +272,7 @@ const slides = [
     Total_events:`16`,
     img:'data/1924.jpg',
     era: 'Chamonix',
+    content:`"The first Winter Olympics take off ."`,
   }
 
 ];

@@ -54,6 +54,7 @@ const slidelocationDiv = document.querySelector('.slide-location');
 const slidenationDiv = document.querySelector('.slide-Total_nations');
 const slideeventDiv = document.querySelector('.slide-Total_events');
 const slideimgDiv = document.querySelector('.slide-img');
+const slideconDiv = document.querySelector('.slide-content');
 const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 const slideJumpSelect = document.querySelector('#jump-to-slide');
@@ -83,7 +84,7 @@ function showSlide(slide) {
   slidenationDiv.innerHTML = slide.Total_nations;
   slideeventDiv.innerHTML = slide.Total_events;
   slideimgDiv.innerHTML =  `<img src="${slide.img}">`;
-
+  slideconDiv.innerHTML = slide.content;
 
   const collection = slide.era ? makeEraCollection(slide.era) : lifeCollection;
   const layer = updateMap(collection);
