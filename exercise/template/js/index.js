@@ -20,13 +20,8 @@ function updateSlideContent(content) {
 
 function updateMapFeatures(features) {
   currentLayer.clearLayers();
-  // for properties dataset
   feature_json = features.addTo(currentLayer);
   map.flyToBounds(feature_json.getBounds())
-}
-
-function updateMapBounds(bounds) {
-
 }
 
 function showPreviousSlide() {
@@ -57,6 +52,18 @@ function showSlide(slideNumber) {
 
 document.getElementById('next-slide').addEventListener("click", showNextSlide);
 document.getElementById('prev-slide').addEventListener("click", showPreviousSlide);
+
+let select = document.getElementById('jump-to-slide');
+
+select.addEventListener("change", function() { showSlide(select.value) });
+
+slides.forEach(function (slide, i) {
+  console.log(slide.title);
+  var opt = document.createElement('option');
+  opt.value = i;
+  opt.innerHTML = slide.title;
+  select.appendChild(opt);
+});
 
 window.addEventListener('load', (event) => {
   showSlide(slideNumber);
