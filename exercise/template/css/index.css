@@ -59,3 +59,10 @@ body {
 .slide-nav-select {
   min-width: 0;
 }
+
+
+.slide-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+}

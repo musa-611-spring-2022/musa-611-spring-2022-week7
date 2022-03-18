@@ -4,6 +4,7 @@ let map = L.map('map').setView([39.9526, -75.1652], 12);
 let slideNumber = 0;
 let currentLayer = new L.LayerGroup().addTo(map);
 
+
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
 }).addTo(map);
@@ -19,7 +20,8 @@ function updateSlideContent(content) {
 
 function updateMapFeatures(features) {
   currentLayer.clearLayers();
-  let feature_json = L.geoJson(features, {style: pointStyle}).addTo(currentLayer);
+  // for properties dataset
+  feature_json = features.addTo(currentLayer);
   map.flyToBounds(feature_json.getBounds())
 }
 

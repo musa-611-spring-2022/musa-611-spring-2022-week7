@@ -1,30 +1,76 @@
 var pointStyle = {
   "fillColor": "#007800",
-  "color": "#000",
+  "color": "#006400",
   "weight": 3,
   "fillOpacity": 0.2
 };
 
+let districtColors = ['#FFF', '#42E2B8', '#D66BA0', '#A89B8C',
+'#F0DFAD', '#8F5C38', '#177E89', '#084C61', '#DB3A34',
+'#FFC857' , '#AC0C38']
+
+function stylePropertiesByDistrict(feature, layer) {
+  layer.setStyle({'color': districtColors[getDistrict(feature.properties.ppr_district)]})
+  layer.bindPopup(feature.properties.public_name);
+} 
+
+function getDistrict(district) {
+  if(Array.isArray(district)) {
+    district = district[0];
+  }
+  return district;
+}
+/// 1. PHILADELPHIA PARKS AND REC DIVIDED INTO 10 DISTRICTS
+/// 2. EACH DISTRICT CONTAINS FACILITIES
+/// 3. FACILITIES HOLD EVENTS, LIKE THIS ONE FACILITY
+/// 4. WHAT IF WE KNEW WHERE PEOPLE WERE COMING FROM?
+/// 5. MIGHT THIS CHANGE HOW WE PROGRAM EVENTS?
+
+
 const slides = [
+
   {
-    title: "This is my slide 1 title",
+    title: "PPR - Districts",
     content: `
-      Here is some sample content for this slide.
+      The Philadelphia Parks and Rec (PPR) department divides the city into ten different districts.
     `,
-    features: { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-75.1635, 39.9528] } }
+    "features":  L.geoJson(districts, {onEachFeature:
+    function(feature, layer) {
+      layer.setStyle({'color': districtColors[feature.properties.DISTRICTID]})
+      layer.bindPopup("District #" + feature.properties.DISTRICTID);
+    }
+    })}
+  ,
+  {
+    title: "Each district contains facilities",
+    content: `
+      There are hundreds of different facilities throughout the city, all serving different purposes.
+    `,
+    features: L.geoJson(properties, {onEachFeature: stylePropertiesByDistrict})
   },
   {
-    title: "This is my slide 2 title",
+    title: "Facilities in district 8",
     content: `
-      Here is some sample content for this slide.
+      Many facilities can host events, such as the events at this facility.
     `,
-    features: { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-75.1615, 39.9628] } }
+    features: L.geoJson(properties, {filter: function(feature) {
+      if (getDistrict(feature.properties.ppr_district) == 8) return true;
+    }, onEachFeature: stylePropertiesByDistrict})
   },
   {
-    title: "This is my slide 3 title",
+    title: "Some facilities can hold events",
     content: `
-      Here is some sample content for this slide.
+      Many facilities can host events, such as the events at this facility.
     `,
-    features: { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-73.1635, 39.9598] } }
+    features: L.geoJson(properties)
   },
-];
+  {
+    title: "How should we make decisions about which events to program?",
+    content: `
+      This is the premise for our work with the Philadelphia Parks and Recreation. We believe that
+      using location data from SafeGraph can give us more insight into
+      where visitors travel and how facilities should be
+      programmed for events.
+    `,
+    features: L.geoJson(properties)
+  },];
