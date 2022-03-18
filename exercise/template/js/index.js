@@ -4,6 +4,7 @@ let map = L.map('map').setView([39.9526, -75.1652], 12);
 let slideNumber = 0;
 let currentLayer = new L.LayerGroup().addTo(map);
 
+let select = document.getElementById('jump-to-slide');
 
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
@@ -12,6 +13,7 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png'
 
 function updateSlideTitle(title){
   document.getElementsByClassName('slide-title')[0].innerHTML = title;
+  select.value = slideNumber;
 }
 
 function updateSlideContent(content) {
@@ -53,12 +55,12 @@ function showSlide(slideNumber) {
 document.getElementById('next-slide').addEventListener("click", showNextSlide);
 document.getElementById('prev-slide').addEventListener("click", showPreviousSlide);
 
-let select = document.getElementById('jump-to-slide');
-
-select.addEventListener("change", function() { showSlide(select.value) });
+select.addEventListener("change", function() { 
+  slideNumber = parseInt(select.value);
+  showSlide(slideNumber);
+ });
 
 slides.forEach(function (slide, i) {
-  console.log(slide.title);
   var opt = document.createElement('option');
   opt.value = i;
   opt.innerHTML = slide.title;
