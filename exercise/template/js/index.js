@@ -1,4 +1,4 @@
-/* globals showdown */
+/* eslint-disable no-undef */
 let map = L.map('map').setView([39.9526, -75.1652], 12);
 
 let slideNumber = 0;
@@ -11,7 +11,7 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png'
 }).addTo(map);
 
 
-function updateSlideTitle(title){
+function updateSlideTitle(title) {
   document.getElementsByClassName('slide-title')[0].innerHTML = title;
   select.value = slideNumber;
 }
@@ -22,51 +22,50 @@ function updateSlideContent(content) {
 
 function updateMapFeatures(features) {
   currentLayer.clearLayers();
-  feature_json = features.addTo(currentLayer);
-  map.flyToBounds(feature_json.getBounds())
+  let featureJson = features.addTo(currentLayer);
+  map.flyToBounds(featureJson.getBounds());
+}
+
+
+function showSlide(slideNum) {
+  updateSlideTitle(slides[slideNum].title);
+  updateSlideContent(slides[slideNum].content);
+  updateMapFeatures(slides[slideNum].features);
 }
 
 function showPreviousSlide() {
-  if(slideNumber > 0) {
-    slideNumber = slideNumber - 1;
-  }
-  else {
+  if (slideNumber > 0) {
+    slideNumber -= 1;
+  } else {
     slideNumber = slides.length - 1;
   }
   showSlide(slideNumber);
 }
 
 function showNextSlide() {
-  if(slideNumber < slides.length - 1) {
-    slideNumber = slideNumber + 1;
-  }
-  else {
+  if (slideNumber < slides.length - 1) {
+    slideNumber += 1;
+  } else {
     slideNumber = 0;
   }
   showSlide(slideNumber);
 }
 
-function showSlide(slideNumber) {
-  updateSlideTitle(slides[slideNumber].title);
-  updateSlideContent(slides[slideNumber].content);
-  updateMapFeatures(slides[slideNumber].features);
-}
+document.getElementById('next-slide').addEventListener('click', showNextSlide);
+document.getElementById('prev-slide').addEventListener('click', showPreviousSlide);
 
-document.getElementById('next-slide').addEventListener("click", showNextSlide);
-document.getElementById('prev-slide').addEventListener("click", showPreviousSlide);
-
-select.addEventListener("change", function() { 
-  slideNumber = parseInt(select.value);
+select.addEventListener('change', () => {
+  slideNumber = parseInt(select.value, 10);
   showSlide(slideNumber);
- });
+});
 
-slides.forEach(function (slide, i) {
-  var opt = document.createElement('option');
+slides.forEach((slide, i) => {
+  let opt = document.createElement('option');
   opt.value = i;
   opt.innerHTML = slide.title;
   select.appendChild(opt);
 });
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
   showSlide(slideNumber);
 });
