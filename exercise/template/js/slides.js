@@ -65,23 +65,25 @@ const slides = [
   {
     title: "All PPR Facilities",
     content: `
-      There are hundreds of different facilities throughout the city, all serving different purposes.
+      There are hundreds of different facilities throughout the city, spread throughout the different districts.
     `,
     features: L.geoJson(properties, {onEachFeature: stylePropertiesByDistrict})
   },
   {
     title: "Facilities in District 8",
     content: `
-      Many facilities can host events, such as the events at this facility.
+      <p>Here are the facilities in District 8.</p>
+      <p>Click on them to see their names. Can you find <b>Clark Park</b>?</p>
     `,
     features: L.geoJson(properties, {filter: function(feature) {
       if (getDistrict(feature.properties.ppr_district) == 8) return true;
     }, onEachFeature: stylePropertiesByDistrict})
   },
   {
-    title: "Facility Types",
+    title: "Facility Classifications",
     content: `
-      There are different types of facilities.
+      <p>There are different classifications of facilities, all four of them are present in District 8.</p>
+      <p>Select each facility to see how it's classified.</p>
     `,
     features: L.geoJson(properties, {filter: function(feature) {
       if (getDistrict(feature.properties.ppr_district) == 8) return true;
@@ -103,7 +105,9 @@ const slides = [
     content: `
       Some facilities can host events. The Parks & Recreation team has staff that is available to program and host different events at these facilities.
       <br /><br />
-      There's a wide-variety of events – including athletic sports and educational activities.
+      There's a wide-variety of events – including athletic sports and educational activities. You can view
+      a <a href="https://www.phila.gov/the-latest/all-events/?category=Philadelphia%20Parks%20%26%20Recreation" target="_blank">full calendar of events</a> hosted
+      by the Philadelphia Parks and Rec.
       `,
     features: L.geoJson(properties, {filter: function(feature) {
       if (getDistrict(feature.properties.ppr_district) == 8) return true;
@@ -112,7 +116,10 @@ const slides = [
   {
     title: "Events @ Kingsessing Rec Center",
     content: `
-      Some facilities can host events, such as the events at this facility.
+      <p>Kingsessing Rec Center is a very popular facility for events in District 8.</p>
+      <p><img src="data/kingsessingrec.png" style="width:100%;" /></p>
+      <p>Parks and rec staff have come to us to better understand how they can improve events across all facilities.</p>
+
     `,
     features: L.geoJson(properties, {filter: function(feature) {
       if (getDistrict(feature.properties.public_name) == 'Kingsessing Recreation Center') return true;
@@ -123,8 +130,9 @@ const slides = [
     content: `
       How should we make decisions about which events to program?
       <br /><br />
-      This is the premise for our work with the Philadelphia Parks and Recreation. We believe that
-      using location data from SafeGraph can give us more insight into
+      This is the premise for our ongoing work with the Philadelphia Parks and Recreation.
+      We believe that
+      we can use cell phone data (from SafeGraph) to give us more insight into
       where visitors travel and how facilities should be
       programmed for events.
     `,
