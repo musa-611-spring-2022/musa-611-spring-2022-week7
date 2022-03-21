@@ -13,37 +13,43 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <div class="map" id="map"></div>
 
-  <div class="slide-section">
-    <div class="slide-controls">
-      <label for="jump-to-slide" style="color: #191970">Jump&nbsp;To:</label>
-      <select class="slide-nav-select" id="jump-to-slide"></select>
+
+  <div class="navbar-brand">
+    <h3><span style="color: rgb(255, 255, 255);">Historic Winter Olympic Map</span></h3>
+  </div>
+  <div class="content">
+    <div class="map" id="map"></div>
+    <div class="slide-section">
+      <div class="slide-controls">
+        <label for="jump-to-slide" style="color: #191970">Jump&nbsp;To:</label>
+        <select class="slide-nav-select" id="jump-to-slide"></select>
+      </div>
+      <div class="slide-data">
+        <div class="slide-title" style="color: #191970"></div>
+        <b><font size = 4 color=#4169E1>time:</b></font>
+        <div class="slide-time"></div>
+      </div>
+      <div class="slide-data1">
+      <b><font size = 4 color=#4169E1>location:</b></font>
+      <div class="slide-location"></div>
+      </div>
+      <div class="slide-data2">
+      <b><font size = 4 color=#4169E1>Total participated nations:</b></font>
+      <div class="slide-Total_nations"></div>
+      </div>
+      <div class="slide-data3">
+      <b><font size = 4 color=#4169E1>Total events:</b></font>
+      <div class="slide-Total_events"></div>
+      </div>
+      <div class="slide-img"></div>
+      <div class="slide-content"></div>
+      <div class="slide-controls">
+        <button class="slide-nav-button" id="prev-slide">&lt Previous</button>
+        <button class="slide-nav-button" id="next-slide">Next &gt</button>
+      </div>
+      <a href = "https://www.topendsports.com/events/winter/hosts/index.htm">Winter Olympics Host City List</a>
     </div>
-    <div class="slide-data">
-      <div class="slide-title" style="color: #191970"></div>
-      <b><font size = 4 color=#4169E1>time:</b></font>
-      <div class="slide-time"></div>
-    </div>
-    <div class="slide-data1">
-    <b><font size = 4 color=#4169E1>location:</b></font>
-    <div class="slide-location"></div>
-    </div>
-    <div class="slide-data2">
-    <b><font size = 4 color=#4169E1>Total participated nations:</b></font>
-    <div class="slide-Total_nations"></div>
-    </div>
-    <div class="slide-data3">
-    <b><font size = 4 color=#4169E1>Total events:</b></font>
-    <div class="slide-Total_events"></div>
-    </div>
-    <div class="slide-img"></div>
-    <div class="slide-content"></div>
-    <div class="slide-controls">
-      <button class="slide-nav-button" id="prev-slide">&lt Previous</button>
-      <button class="slide-nav-button" id="next-slide">Next &gt</button>
-    </div>
-    <a href = "https://www.topendsports.com/events/winter/hosts/index.htm">Winter Olympics Host City List</a>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>

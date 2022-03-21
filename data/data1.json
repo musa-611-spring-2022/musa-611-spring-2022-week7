@@ -124,6 +124,21 @@
     {
       "type": "Feature",
       "properties": {
+        "label": "Alberville, France",
+        "era": "Alberville",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           6.392726,
+          45.675535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "label": "Calgary, Canada",
         "era": "Calgary",
         "type": "point"

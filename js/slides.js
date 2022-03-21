@@ -104,7 +104,7 @@ const slides = [
     Total_nations:`64`,
     Total_events:`57`,
     img:'data/1992.jpg',
-    era: 'inat',
+    era: 'Alberville',
     content:`"Savoie en Fête."`,
     showpopups: true,
   },
@@ -130,6 +130,7 @@ const slides = [
     img:'data/1984.jpg',
     era: 'Sarajevo',
     content:`"Harmony And Progress."`,
+    showpopups: true,
   },
 
   {
@@ -141,6 +142,7 @@ const slides = [
     img:'data/1980.jpg',
     era: 'Lake Placid',
     content:`"The Celebration Of The Century."`,
+    showpopups: true,
   },
 
   {
@@ -152,6 +154,7 @@ const slides = [
     img:'data/1976.jpg',
     era: 'Innsbruck',
     content:`"Games of Simplicity."`,
+    showpopups: true,
   },
 
   {
@@ -163,6 +166,7 @@ const slides = [
     img:'data/1972.jpg',
     era: 'Sapporo',
     content:`"The Games that brought winter sports to Asia."`,
+    showpopups: true,
   },
 
   {
@@ -174,6 +178,7 @@ const slides = [
     img:'data/1968.jpg',
     era: 'Grenoble',
     content:`"Citius, altius, fortius."`,
+    showpopups: true,
   },
 
   {
@@ -185,6 +190,7 @@ const slides = [
     img:'data/1964.jpg',
     era: 'Innsbruck',
     content:`"An almost unanimous choice."`,
+    showpopups: true,
   },
 
   {
@@ -196,6 +202,7 @@ const slides = [
     img:'data/1960.jpg',
     era: 'Squaw Valley',
     content:`"Passionate, persuasive and driven by an unshakeable belief."`,
+    showpopups: true,
   },
 
   {
@@ -207,6 +214,7 @@ const slides = [
     img:'data/1956.jpg',
     era: 'Cortina dAmpezzo',
     content:`"The Cheerful Games."`,
+    showpopups: true,
   },
 
   {
@@ -218,6 +226,7 @@ const slides = [
     img:'data/1952.jpg',
     era: 'Oslo',
     content:`"The birthplace of modern skiing."`,
+    showpopups: true,
   },
 
   {
@@ -229,6 +238,7 @@ const slides = [
     img:'data/1948.jpg',
     era: 'St Moritz',
     content:`"The birthplace of modern skiing."`,
+    showpopups: true,
   },
 
   {
@@ -240,6 +250,7 @@ const slides = [
     img:'data/1936.jpg',
     era: 'Garmisch-Partenkirchen',
     content:`"I Call The Youth Of The World!"`,
+    showpopups: true,
   },
 
   {
@@ -251,6 +262,7 @@ const slides = [
     img:'data/1932.jpg',
     era: 'Lake Placid',
     content:`"The Olympic Winter Games came to USA for the first time."`,
+    showpopups: true,
   },
 
   {
@@ -262,6 +274,7 @@ const slides = [
     img:'data/1928.jpg',
     era: 'St Moritz',
     content:`"Games of Renewal."`,
+    showpopups: true,
   },
 
   {
@@ -273,6 +286,7 @@ const slides = [
     img:'data/1924.jpg',
     era: 'Chamonix',
     content:`"The first Winter Olympics take off ."`,
-  }
+    showpopups: true,
+  },
 
 ];
