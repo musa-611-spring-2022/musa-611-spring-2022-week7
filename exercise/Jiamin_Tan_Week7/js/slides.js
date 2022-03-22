@@ -4,7 +4,16 @@ const slides = [
     content: `
       Introduction of the site...
     `,
-    showUpGroup: "A",
+    section: null,
     bounds: [[-75, -180], [75, 180]],
   },
+
+  {
+    title: 'Amenities Slide',
+    content: `
+      Some amenities nearby.
+    `,
+    section: 'Amenities',
+    showpopups: true,
+  }
 ];
