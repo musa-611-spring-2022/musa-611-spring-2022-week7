@@ -4,9 +4,9 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "Site"
-        "section": "intro"
-        "type": "alwaysUp"
+        "label": "Site Polygon"
+        "section": "any"
+        "showUpGroup": "A"
       },
       "geometry": {
         "type": "Polygon",
@@ -33,6 +33,21 @@
               39.93903564078756
             ]
           ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Site Point"
+        "section": "any"
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1941794157028,
+          39.938533846938086
         ]
       }
     }
