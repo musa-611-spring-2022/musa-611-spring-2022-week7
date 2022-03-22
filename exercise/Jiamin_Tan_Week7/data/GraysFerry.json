@@ -4,8 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "Site Polygon"
-        "section": "any"
+        "label": "Site Polygon",
+        "section": "any",
         "showUpGroup": "A"
       },
       "geometry": {
@@ -39,8 +39,8 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "Site Point"
-        "section": "any"
+        "label": "Site Point",
+        "section": "any",
         "showUpGroup": "B"
       },
       "geometry": {
@@ -54,8 +54,8 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "Fresh Grocer"
-        "section": "Amenities"
+        "label": "Fresh Grocer",
+        "section": "Amenities",
         "showUpGroup": "B"
       },
       "geometry": {
