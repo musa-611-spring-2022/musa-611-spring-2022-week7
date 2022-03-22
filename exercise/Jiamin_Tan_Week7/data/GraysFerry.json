@@ -65,6 +65,21 @@
           39.9403435779523
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Donald Finnegan Playground",
+        "section": "Amenities",
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19279539585114,
+          39.9379868051887
+        ]
+      }
     }
   ]
 }
