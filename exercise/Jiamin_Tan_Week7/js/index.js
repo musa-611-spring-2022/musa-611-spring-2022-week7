@@ -20,12 +20,15 @@ fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.g
           feature.properties.NAME10 == 36)
           return true;
       },
+      /* ==========
       onEachFeature(feature, layer) {
         layer.bindTooltip(feature.properties.NAMELSAD10);
         layer.setStyle({ fillColor: "#000000" });
         layer.setStyle({ color: "#4287f5" });
       },
-    }).addTo(map);
+      ========== */
+    })
+    //.addTo(map);
   });
 
 /////////////////////////////////////////////////////////////
@@ -48,10 +51,10 @@ function updateMap(collection) {
   return geoJsonLayer;
 }
 
-function makeEraCollection(era) {
+function makeSecCollection(section) {
   return {
     type: 'FeatureCollection',
-    features: lifeCollection.features.filter(f => f.properties.era === era),
+    features: lifeCollection.features.filter(f => f.properties.section === section),
   };
 }
 
@@ -61,7 +64,7 @@ function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h2>${slide.title}</h2>`;
   slideContentDiv.innerHTML = converter.makeHtml(slide.content);
 
-  const collection = slide.era ? makeEraCollection(slide.era) : lifeCollection;
+  const collection = slide.section ? makeSecCollection(slide.section) : lifeCollection;
   const layer = updateMap(collection);
 
   function handleFlyEnd() {
@@ -77,7 +80,7 @@ function showSlide(slide) {
   map.addEventListener('moveend', handleFlyEnd);
   if (slide.bounds) {
     map.flyToBounds(slide.bounds);
-  } else if (slide.era) {
+  } else if (slide.section) {
     map.flyToBounds(layer.getBounds());
   }
 }
@@ -123,7 +126,7 @@ function initSlideSelect() {
 }
 
 function loadLifeData() {
-  fetch('data/journey.json')
+  fetch('data/GraysFerry.json')
     .then(resp => resp.json())
     .then(data => {
       lifeCollection = data;
