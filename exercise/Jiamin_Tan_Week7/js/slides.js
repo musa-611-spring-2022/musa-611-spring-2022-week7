@@ -1,11 +1,10 @@
-const slide1 =
-
 const slides = [
   {
-    title: "This is my slide title",
+    title: "Introduction Slide",
     content: `
-      Here is some sample content for this slide.
+      Introduction of the site...
     `,
+    showUpGroup: "A",
     bounds: [[-75, -180], [75, 180]],
   },
 ];
