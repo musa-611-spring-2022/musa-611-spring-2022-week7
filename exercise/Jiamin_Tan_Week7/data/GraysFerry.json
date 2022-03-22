@@ -50,6 +50,21 @@
           39.938533846938086
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Fresh Grocer"
+        "section": "Amenities"
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19332647323608,
+          39.9403435779523
+        ]
+      }
     }
   ]
 }
