@@ -27,7 +27,9 @@ body {
 }
 
 .slide-content {
-  align-items: center;
+  text-align: center;
+  color:#4169E1;
+  font-size: 20px;
   flex-grow: 1;
 }
 
