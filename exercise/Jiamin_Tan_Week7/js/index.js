@@ -31,6 +31,28 @@ fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.g
     //.addTo(map);
   });
 
+fetch('./data/Fall_2021_Routes.geojson')
+  .then(resp => resp.json())
+  .then(data => {
+    L.geoJSON(data, {
+			filter(feature) {
+        if (feature.properties.LineAbbr == '12' ||
+          feature.properties.LineAbbr == '49' ||
+          feature.properties.LineAbbr == '64')
+          return true;
+      },
+      /* ==========
+      onEachFeature(feature, layer) {
+        layer.bindTooltip(feature.properties.NAMELSAD10);
+        layer.setStyle({ fillColor: "#000000" });
+        layer.setStyle({ color: "#4287f5" });
+      },
+      ========== */
+    })
+    .addTo(map);
+  });
+
+
 /////////////////////////////////////////////////////////////
 //copied from Mjumbe
 
