@@ -111,8 +111,8 @@ function showSlide(slide) {
   function handleFlyEnd() {
     if (slide.showpopups) {
       layer.eachLayer(l => {
-        l.bindTooltip(l.feature.properties.label, { permanent: true });
-        l.openTooltip();
+        l.bindTooltip(l.feature.properties.label, { permanent: false });
+        //l.openTooltip();
       });
     }
     map.removeEventListener('moveend', handleFlyEnd);
