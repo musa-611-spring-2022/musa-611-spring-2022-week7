@@ -5,7 +5,7 @@ const slides = [
       Introduction of the site...
     `,
     section: null,
-    bounds: [[-75, -180], [75, 180]],
+    bounds: [[39.938098, -75.195012], [39.939015, -75.193338]],
   },
 
   {
