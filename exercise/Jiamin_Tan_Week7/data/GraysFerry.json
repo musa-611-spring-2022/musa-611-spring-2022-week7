@@ -80,6 +80,111 @@
           39.9379868051887
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Stinger Park",
+        "section": "Amenities",
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19770383834837,
+          39.936337427280094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Rite Aid",
+        "section": "Amenities",
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19454956054688,
+          39.936102973826806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Fire Engine 47",
+        "section": "Amenities",
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19432961940765,
+          39.93934823181733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Reed Street Health Center",
+        "section": "Amenities",
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19787549972534,
+          39.9370407828208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Carl Moore Health Center",
+        "section": "Amenities",
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19521474838257,
+          39.936308634794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Universal Audenried Charter High School",
+        "section": "Amenities",
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19860506057739,
+          39.93385300248081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Universal Audenried Elementary School",
+        "section": "Amenities",
+        "showUpGroup": "B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19765019416809,
+          39.935226851182165
+        ]
+      }
     }
   ]
 }
