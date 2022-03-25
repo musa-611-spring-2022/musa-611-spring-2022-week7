@@ -20,13 +20,11 @@ fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.g
           feature.properties.NAME10 == 36)
           return true;
       },
-      /* ==========
       onEachFeature(feature, layer) {
         layer.bindTooltip(feature.properties.NAMELSAD10);
         layer.setStyle({ fillColor: "#000000" });
         layer.setStyle({ color: "#4287f5" });
       },
-      ========== */
     })
     //.addTo(map);
   });
@@ -41,18 +39,39 @@ fetch('./data/Fall_2021_Routes.geojson')
           feature.properties.LineAbbr == '64')
           return true;
       },
-      /* ==========
       onEachFeature(feature, layer) {
-        layer.bindTooltip(feature.properties.NAMELSAD10);
-        layer.setStyle({ fillColor: "#000000" });
-        layer.setStyle({ color: "#4287f5" });
+        layer.bindTooltip('Line ' +
+				feature.properties.LineAbbr +
+				'<br>' +
+				feature.properties.LineName);
+        //layer.setStyle({ fillColor: "#000000" });
+        //layer.setStyle({ color: "#4287f5" });
       },
-      ========== */
     })
-    .addTo(map);
+    //.addTo(map);
   });
 
-
+fetch('https://kiosks.bicycletransit.workers.dev/phl')
+  .then(resp => resp.json())
+  .then(data => {
+    L.geoJSON(data, {
+			filter(feature) {
+        if (feature.properties.id == 3252)
+          return true;
+      },
+      onEachFeature(feature, layer) {
+        layer.bindTooltip('Name: ' +
+				feature.properties.name +
+				'<br> Available Docks:' +
+				feature.properties.docksAvailable +
+				'<br> Available Bikes:' +
+				feature.properties.bikesAvailable);
+        //layer.setStyle({ fillColor: "#000000" });
+        //layer.setStyle({ color: "#4287f5" });
+      },
+    })
+    //.addTo(map);
+  });
 /////////////////////////////////////////////////////////////
 //copied from Mjumbe
 
