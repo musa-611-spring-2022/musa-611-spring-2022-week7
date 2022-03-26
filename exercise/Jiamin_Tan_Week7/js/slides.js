@@ -36,6 +36,15 @@ const slides = [
   },
 
   {
+    title: 'Plan: Road Extension',
+    content: `
+      There is one Indego Bikeshare Station.
+    `,
+    section: 'RoadExtension',
+    showpopups: true,
+  },
+
+  {
     title: 'Plan: Affordable Housing',
     content: `
       There is one Indego Bikeshare Station.
