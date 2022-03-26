@@ -74,6 +74,20 @@ fetch('https://kiosks.bicycletransit.workers.dev/phl')
     })
     //.addTo(map);
   });
+
+fetch('https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e1449a2be48_0.geojson')
+  .then(resp => resp.json())
+  .then(data => {
+    L.geoJSON(data, {
+      onEachFeature(feature, layer) {
+        layer.bindTooltip('Philadelphia, PA');
+        //layer.setStyle({ fillColor: "#000000" });
+        //layer.setStyle({ color: "#4287f5" });
+      },
+    })
+    .addTo(map);
+  });
+
 /////////////////////////////////////////////////////////////
 //copied from Mjumbe
 
