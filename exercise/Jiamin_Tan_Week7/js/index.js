@@ -1,5 +1,7 @@
 /* globals showdown */
 
+// npx http-server --port 8000
+
 let map = L.map('map').setView([0, 0], 0);
 let layerGroup = L.layerGroup().addTo(map);
 let lifeCollection = { features: [] };
