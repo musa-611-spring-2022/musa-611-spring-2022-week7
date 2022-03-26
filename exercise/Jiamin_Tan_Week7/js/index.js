@@ -10,6 +10,7 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 }).addTo(map);
 
+// census tracts
 fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.geojson')
   .then(resp => resp.json())
   .then(data => {
@@ -31,6 +32,7 @@ fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.g
     //.addTo(map);
   });
 
+// bus routes
 fetch('./data/Fall_2021_Routes.geojson')
   .then(resp => resp.json())
   .then(data => {
@@ -53,6 +55,7 @@ fetch('./data/Fall_2021_Routes.geojson')
     //.addTo(map);
   });
 
+// indego station
 fetch('https://kiosks.bicycletransit.workers.dev/phl')
   .then(resp => resp.json())
   .then(data => {
@@ -75,6 +78,7 @@ fetch('https://kiosks.bicycletransit.workers.dev/phl')
     //.addTo(map);
   });
 
+// City limit
 fetch('https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e1449a2be48_0.geojson')
   .then(resp => resp.json())
   .then(data => {
