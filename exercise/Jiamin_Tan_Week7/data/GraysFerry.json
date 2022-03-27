@@ -87,7 +87,8 @@
         "section": [
           "Introduction",
           "Transit"
-        ]
+        ],
+        "icon": "schoolIcon"
       },
       "geometry": {
         "type": "Point",
@@ -101,7 +102,8 @@
       "type": "Feature",
       "properties": {
         "label": "Fresh Grocer",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "storeIcon"
       },
       "geometry": {
         "type": "Point",
@@ -115,7 +117,8 @@
       "type": "Feature",
       "properties": {
         "label": "Donald Finnegan Playground",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "parkIcon"
       },
       "geometry": {
         "type": "Point",
@@ -129,7 +132,8 @@
       "type": "Feature",
       "properties": {
         "label": "Stinger Park",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "parkIcon"
       },
       "geometry": {
         "type": "Point",
@@ -143,7 +147,8 @@
       "type": "Feature",
       "properties": {
         "label": "Rite Aid",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "storeIcon"
       },
       "geometry": {
         "type": "Point",
@@ -157,7 +162,8 @@
       "type": "Feature",
       "properties": {
         "label": "Fire Engine 47",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "fireIcon"
       },
       "geometry": {
         "type": "Point",
@@ -171,7 +177,8 @@
       "type": "Feature",
       "properties": {
         "label": "Reed Street Health Center",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "healthCareIcon"
       },
       "geometry": {
         "type": "Point",
@@ -185,7 +192,8 @@
       "type": "Feature",
       "properties": {
         "label": "Carl Moore Health Center",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "healthCareIcon"
       },
       "geometry": {
         "type": "Point",
@@ -199,7 +207,8 @@
       "type": "Feature",
       "properties": {
         "label": "Universal Audenried Charter High School",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "schoolIcon"
       },
       "geometry": {
         "type": "Point",
@@ -213,7 +222,8 @@
       "type": "Feature",
       "properties": {
         "label": "Universal Audenried Elementary School",
-        "section": "Amenities"
+        "section": "Amenities",
+        "icon": "schoolIcon"
       },
       "geometry": {
         "type": "Point",
