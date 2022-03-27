@@ -32,7 +32,7 @@ const slides = [
       Some amenities nearby.
     `,
     section: 'Amenities',
-    showpopups: true,
+    showpopups: false,
   },
 
   {
@@ -50,7 +50,7 @@ const slides = [
       There is one Indego Bikeshare Station.
     `,
     section: 'RoadExtension',
-    showpopups: true,
+    showpopups: false,
   },
 
   {
@@ -59,7 +59,7 @@ const slides = [
       There is one Indego Bikeshare Station.
     `,
     section: 'AffordableHousing',
-    showpopups: true,
+    showpopups: false,
   },
 
   {
@@ -68,7 +68,7 @@ const slides = [
       There is one Indego Bikeshare Station.
     `,
     section: 'CommunityCenter',
-    showpopups: true,
+    showpopups: false,
   },
 
   {
@@ -77,7 +77,7 @@ const slides = [
       There is one Indego Bikeshare Station.
     `,
     section: 'SmallRetail',
-    showpopups: true,
+    showpopups: false,
   },
 
   {
@@ -86,7 +86,7 @@ const slides = [
       There is one Indego Bikeshare Station.
     `,
     section: 'GreenSpace',
-    showpopups: true,
+    showpopups: false,
   },
 
   {
@@ -95,6 +95,6 @@ const slides = [
       There is one Indego Bikeshare Station.
     `,
     section: 'Parking',
-    showpopups: true,
+    showpopups: false,
   }
 ];

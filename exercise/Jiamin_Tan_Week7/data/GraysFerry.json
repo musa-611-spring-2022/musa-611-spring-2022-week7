@@ -83,7 +83,10 @@
       "type": "Feature",
       "properties": {
         "label": "Site",
-        "section": ["Introduction"]
+        "section": [
+          "Introduction",
+          "Transit"
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -97,7 +100,8 @@
       "type": "Feature",
       "properties": {
         "label": "Fresh Grocer",
-        "section": "Amenities"
+        "section": "Amenities",
+        "img": "data/FreshGrocer.jpg"
       },
       "geometry": {
         "type": "Point",

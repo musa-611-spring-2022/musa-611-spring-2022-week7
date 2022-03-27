@@ -183,7 +183,7 @@ function updateMap(collection) {
 	console.log(collection);
   const geoJsonLayer = L.geoJSON(collection, { pointToLayer: (p, latlng) => L.marker(latlng) })
 		.eachLayer(l => {
-			console.log(l);
+			//console.log(l);
 			if (l.feature.properties.section.includes('ProjectOverview')){
 				l.setStyle({
 							color: l.feature.properties.stroke,
@@ -224,7 +224,10 @@ function showSlide(slide) {
   function handleFlyEnd() {
     if (slide.showpopups) {
       layer.eachLayer(l => {
-        l.bindTooltip(l.feature.properties.label, { permanent: false });
+				if (l.feature.properties.section.includes('ProjectOverview')) {
+					l.bindPopup(`<h1>${l.feature.properties.label}</h1> <img src=${l.feature.properties.img} />`, { maxWidth: "auto" });
+				}
+        l.bindTooltip(l.feature.properties.label, { permanent: true });
         //l.openTooltip();
       });
     }
