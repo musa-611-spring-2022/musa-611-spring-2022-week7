@@ -1,11 +1,20 @@
 const slides = [
   {
-    title: "Introduction",
+    title: "Project Overview",
     content: `
-      Introduction of the site...
+      Overview...
     `,
-    section: null,
+    section: 'ProjectOverview',
     bounds: [[39.938098, -75.195012], [39.939015, -75.193338]],
+  },
+
+  {
+    title: 'Introduction',
+    content: `
+      There is one Indego Bikeshare Station.
+    `,
+    section: 'Introduction',
+    showpopups: true,
   },
 
   {
@@ -13,7 +22,7 @@ const slides = [
     content: `
       There is one Indego Bikeshare Station.
     `,
-    section: 'SiteOverview',
+    section: 'CensusData',
     showpopups: true,
   },
 
@@ -86,15 +95,6 @@ const slides = [
       There is one Indego Bikeshare Station.
     `,
     section: 'Parking',
-    showpopups: true,
-  },
-
-  {
-    title: 'Conclusion',
-    content: `
-      There is one Indego Bikeshare Station.
-    `,
-    section: 'Conclusion',
     showpopups: true,
   }
 ];

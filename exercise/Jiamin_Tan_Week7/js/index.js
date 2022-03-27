@@ -23,14 +23,14 @@ const getAllData = async () => {
 	let ind_data = await ind;
 	let cl_data = await cl;
 
-	ct_data.forEach(element => element.properties['section'] = 'SiteOverview');
+	ct_data.forEach(element => element.properties['section'] = 'CensusData');
 	ct_data.forEach(element => element.properties['label'] = element.properties.NAMELSAD10);
 	bus_data.forEach(element => element.properties['section'] = 'Transit');
 	bus_data.forEach(element => element.properties['label'] = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`);
 	ind_data.forEach(element => element.properties['section'] = 'Amenities');
 	ind_data.forEach(element => element.properties['label'] = 'Indego Staion');
 	cl_data.forEach(element => element.properties['section'] = 'Introduction');
-	cl_data.forEach(element => element.properties['label'] = 'Philadelphia, PA')
+	cl_data.forEach(element => element.properties['label'] = 'Philadelphia, PA');
 
 	ct_data.forEach(element => gf_data.features.push(element));
 	bus_data.forEach(element => gf_data.features.push(element));
@@ -180,17 +180,35 @@ const slideJumpSelect = document.querySelector('#jump-to-slide');
 
 function updateMap(collection) {
   layerGroup.clearLayers();
+	console.log(collection);
   const geoJsonLayer = L.geoJSON(collection, { pointToLayer: (p, latlng) => L.marker(latlng) })
+		.eachLayer(l => {
+			console.log(l);
+			if (l.feature.properties.section.includes('ProjectOverview')){
+				l.setStyle({
+							color: l.feature.properties.stroke,
+							fillColor: l.feature.properties.fill,
+	            fillOpacity: l.feature.properties['fill-opacity'],
+	            //weight: l.feature.properties['storke-width']
+	        })
+			}
+		})
     .bindTooltip(l => l.feature.properties.label)
     .addTo(layerGroup);
 
   return geoJsonLayer;
 }
 
+let campusStyle = (feature) => ({
+  color: feature.properties.stroke,
+  fillColor: feature.properties.fill,
+  weight: 5,
+});
+
 function makeSecCollection(section) {
   return {
     type: 'FeatureCollection',
-    features: lifeCollection.features.filter(f => f.properties.section === section),
+    features: lifeCollection.features.filter(f => f.properties.section.includes(section)),
   };
 }
 
