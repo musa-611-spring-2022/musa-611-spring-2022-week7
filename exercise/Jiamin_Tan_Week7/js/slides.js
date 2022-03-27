@@ -48,6 +48,7 @@ const slides = [
     title: 'Plan: Road Extension',
     content: `
       There is one Indego Bikeshare Station.
+      Image Source: Google Maps.
     `,
     section: 'RoadExtension',
     showpopups: false,
@@ -66,6 +67,7 @@ const slides = [
     title: 'Plan: Community Center',
     content: `
       There is one Indego Bikeshare Station.
+      Image Source: https://whyy.org/articles/upper-darby-receives-1-million-grant-for-phase-one-of-new-community-center/
     `,
     section: 'CommunityCenter',
     showpopups: false,
@@ -84,6 +86,7 @@ const slides = [
     title: 'Plan: Green Space',
     content: `
       There is one Indego Bikeshare Station.
+      Image Sources: Buffer: Morgan's Pier / Erin Whitcomb, https://www.inquirer.com/food/craig-laban/restaurants-outdoor-dining-restrictions-yellow-phase-20200526.html, Garden: GoogleMaps.
     `,
     section: 'GreenSpace',
     showpopups: false,

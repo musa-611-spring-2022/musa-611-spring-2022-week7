@@ -224,13 +224,16 @@ function showSlide(slide) {
   function handleFlyEnd() {
     if (slide.showpopups) {
       layer.eachLayer(l => {
-				if (l.feature.properties.section.includes('ProjectOverview')) {
-					l.bindPopup(`<h1>${l.feature.properties.label}</h1> <img src=${l.feature.properties.img} />`, { maxWidth: "auto" });
-				}
         l.bindTooltip(l.feature.properties.label, { permanent: true });
         //l.openTooltip();
       });
-    }
+    } else {
+			layer.eachLayer(l => {
+				if (l.feature.properties.section.includes('ProjectOverview')) {
+					l.bindPopup(`<h1>${l.feature.properties.label} Typology</h1> <img src=${l.feature.properties.img} />`, { maxWidth: 400 });
+				}
+			});
+		}
     map.removeEventListener('moveend', handleFlyEnd);
   }
 
