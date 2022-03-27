@@ -178,6 +178,45 @@ const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 const slideJumpSelect = document.querySelector('#jump-to-slide');
 
+/* ==========
+var schoolIcon = L.Icon.extend({
+	iconUrl: 'icon/school.png',
+	iconSize: [32, 37],
+	iconAnchor: [16, 37]
+})
+
+var storeIcon = L.Icon.extend({
+	iconUrl: 'icon/store.png',
+	iconSize: [32, 37],
+	iconAnchor: [16, 37]
+})
+
+var parkIcon = L.Icon.extend({
+	iconUrl: 'icon/park.png',
+	iconSize: [32, 37],
+	iconAnchor: [16, 37]
+})
+
+var healthCareIcon = L.Icon.extend({
+	iconUrl: 'icon/healthcare.png',
+	iconSize: [32, 37],
+	iconAnchor: [16, 37]
+})
+
+var bikeIcon = L.Icon.extend({
+	iconUrl: 'icon/bike.png',
+	iconSize: [32, 37],
+	iconAnchor: [16, 37]
+})
+
+var fireIcon = L.Icon.extend({
+	iconUrl: 'icon/fire.png',
+	iconSize: [32, 37],
+	iconAnchor: [16, 37]
+})
+
+========== */
+
 function updateMap(collection) {
   layerGroup.clearLayers();
 	console.log(collection);
@@ -230,7 +269,7 @@ function showSlide(slide) {
     } else {
 			layer.eachLayer(l => {
 				if (l.feature.properties.section.includes('ProjectOverview')) {
-					l.bindPopup(`<h1>${l.feature.properties.label} Typology</h1> <img src=${l.feature.properties.img} />`, { maxWidth: 400 });
+					l.bindPopup(`<h1>${l.feature.properties.label} Typology</h1> <img src=${l.feature.properties.img} />`, { maxWidth: 'auto' });
 				}
 			});
 		}
