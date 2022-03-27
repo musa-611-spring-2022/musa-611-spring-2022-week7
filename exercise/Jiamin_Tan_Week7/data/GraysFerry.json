@@ -39,7 +39,7 @@
       "type": "Feature",
       "properties": {
         "fill": "#a3a3a3",
-        "fill-opacity": 0.8,
+        "fill-opacity": 0.6,
         "label": "Site",
         "section": [
           "RoadExtension",
@@ -222,10 +222,10 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#c6ae7b",
+        "stroke": "#707070",
         "stroke-width": 4,
         "stroke-opacity": 1,
-        "fill": "#555555",
+        "fill": "#707070",
         "fill-opacity": 1,
         "label": "Road Extension",
         "section": [
@@ -450,7 +450,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#555555",
+        "stroke": "#ffffff",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill": "#555555",
@@ -492,7 +492,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#555555",
+        "stroke": "#ffffff",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill": "#555555",
@@ -577,12 +577,12 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#555555",
+        "stroke": "#ffffff",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill": "#555555",
         "fill-opacity": 0.9,
-        "label": "Parking (mid)",
+        "label": "Parking (center)",
         "section": [
           "Parking",
           "ProjectOverview"
@@ -619,7 +619,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#c6ae7b",
+        "stroke": "#555555",
         "stroke-width": 4,
         "stroke-opacity": 1,
         "fill": "#35de41",
