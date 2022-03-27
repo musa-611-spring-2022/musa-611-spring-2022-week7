@@ -10,11 +10,58 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 }).addTo(map);
 
+const graysFerryData = fetch('data/GraysFerry.json')
+	.then(resp => resp.json())
+	.then(data => {
+		return data;
+	});
+
+const getAllData = async () => {
+  let gf_data = await graysFerryData;
+  let ct_data = await ct;
+	let bus_data = await bus;
+	let ind_data = await ind;
+	let cl_data = await cl;
+
+	ct_data.forEach(element => element.properties['section'] = 'SiteOverview');
+	ct_data.forEach(element => element.properties['label'] = element.properties.NAMELSAD10);
+	bus_data.forEach(element => element.properties['section'] = 'Transit');
+	bus_data.forEach(element => element.properties['label'] = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`);
+	ind_data.forEach(element => element.properties['section'] = 'Amenities');
+	ind_data.forEach(element => element.properties['label'] = 'Indego Staion');
+	cl_data.forEach(element => element.properties['section'] = 'Introduction');
+	cl_data.forEach(element => element.properties['label'] = 'Philadelphia, PA')
+
+	ct_data.forEach(element => gf_data.features.push(element));
+	bus_data.forEach(element => gf_data.features.push(element));
+	ind_data.forEach(element => gf_data.features.push(element));
+	cl_data.forEach(element => gf_data.features.push(element));
+
+	//console.log(gf_data);
+	//console.log(ct_data);
+	//console.log(bus_data);
+	//console.log(ind_data);
+	//console.log(cl_data);
+
+	return gf_data
+};
+
+
+
+//getAllData()
+
 // census tracts
-fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.geojson')
-  .then(resp => resp.json())
+const ct = fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.geojson')
+	.then(resp => resp.json())
   .then(data => {
-    L.geoJSON(data, {
+		return data.features.filter(feature => feature.properties.NAME10 == 13 ||
+			feature.properties.NAME10 == 20 ||
+			feature.properties.NAME10 == 32 ||
+			feature.properties.NAME10 == 33 ||
+			feature.properties.NAME10 == 36)
+
+		/* ==========
+    return L.geoJSON(data, {
       filter(feature) {
         if (feature.properties.NAME10 == 13 ||
           feature.properties.NAME10 == 20 ||
@@ -29,13 +76,34 @@ fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.g
         layer.setStyle({ color: "#4287f5" });
       },
     })
+		========== */
     //.addTo(map);
   });
 
+//const getct = async () => {
+  //const result = await ct;
+	//console.log(result[0]);
+//};
+
+//getct()
+
+/* ==========
+const getct = async () => {
+  const a = await ct;
+	a.addTo(map);
+};
+========== */
+
+//getct();
+
 // bus routes
-fetch('./data/Fall_2021_Routes.geojson')
+const bus = fetch('./data/Fall_2021_Routes.geojson')
   .then(resp => resp.json())
   .then(data => {
+		return data.features.filter(feature => feature.properties.LineAbbr == '12' ||
+			feature.properties.LineAbbr == '49' ||
+			feature.properties.LineAbbr == '64')
+		/* ==========
     L.geoJSON(data, {
 			filter(feature) {
         if (feature.properties.LineAbbr == '12' ||
@@ -52,13 +120,16 @@ fetch('./data/Fall_2021_Routes.geojson')
         //layer.setStyle({ color: "#4287f5" });
       },
     })
+		========== */
     //.addTo(map);
   });
 
 // indego station
-fetch('https://kiosks.bicycletransit.workers.dev/phl')
+const ind = fetch('https://kiosks.bicycletransit.workers.dev/phl')
   .then(resp => resp.json())
   .then(data => {
+		return data.features.filter(feature => feature.properties.id == 3252)
+		/* ==========
     L.geoJSON(data, {
 			filter(feature) {
         if (feature.properties.id == 3252)
@@ -75,13 +146,16 @@ fetch('https://kiosks.bicycletransit.workers.dev/phl')
         //layer.setStyle({ color: "#4287f5" });
       },
     })
+		========== */
     //.addTo(map);
   });
 
 // City limit
-fetch('https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e1449a2be48_0.geojson')
+const cl = fetch('https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e1449a2be48_0.geojson')
   .then(resp => resp.json())
   .then(data => {
+		return data.features;
+		/* ==========
     L.geoJSON(data, {
       onEachFeature(feature, layer) {
         layer.bindTooltip('Philadelphia, PA');
@@ -89,7 +163,8 @@ fetch('https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e1449a2be48_0.g
         //layer.setStyle({ color: "#4287f5" });
       },
     })
-    .addTo(map);
+		========== */
+    //.addTo(map);
   });
 
 /////////////////////////////////////////////////////////////
@@ -139,12 +214,13 @@ function showSlide(slide) {
   }
 
   map.addEventListener('moveend', handleFlyEnd);
-  if (slide.bounds) {
+	if (slide.bounds) {
     map.flyToBounds(slide.bounds);
   } else if (slide.section) {
     map.flyToBounds(layer.getBounds());
   }
 }
+
 
 function showCurrentSlide() {
   const slide = slides[currentSlideIndex];
@@ -187,13 +263,16 @@ function initSlideSelect() {
 }
 
 function loadLifeData() {
-  fetch('data/GraysFerry.json')
-    .then(resp => resp.json())
+  getAllData()
+    //.then(resp => resp.json())
     .then(data => {
       lifeCollection = data;
+			//console.log(lifeCollection)
       showCurrentSlide();
     });
 }
+
+
 
 slidePrevButton.addEventListener('click', goPrevSlide);
 slideNextButton.addEventListener('click', goNextSlide);
