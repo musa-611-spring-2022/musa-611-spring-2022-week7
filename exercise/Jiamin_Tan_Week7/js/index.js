@@ -17,8 +17,10 @@ const graysFerryData = fetch('data/GraysFerry.json')
 // census tracts
 const ct = fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.geojson')
   .then(resp => resp.json())
-  .then(data => data.features.filter(feature => feature.properties.NAME10 === '13'
-  || feature.properties.NAME10 === '20' || feature.properties.NAME10 === '33' || feature.properties.NAME10 === '36'));
+  .then(data => data.features
+    .filter(feature => feature.properties.NAME10 === '13'
+    || feature.properties.NAME10 === '20' || feature.properties.NAME10 === '33'
+    || feature.properties.NAME10 === '36'));
 
 // bus routes
 const bus = fetch('./data/Fall_2021_Routes.geojson')
