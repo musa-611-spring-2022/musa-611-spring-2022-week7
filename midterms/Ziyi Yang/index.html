@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- CSS Imports -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="text">
+    <h1 id="title">Title</h1>
+    <p id="content">This map from all the city's restaurant data is designed to familiarize you with Baltimore's restaurant locations, whether it's for market research, finding your way, or just for fun -- no need to leave home! The map will automatically scale in each direction.</p>
+    <h2 id="info">Top 3 Neighborhoods</p>
+      <ol id="top3">
+        <li class="neighborhood1"></li>
+        <li class="neighborhood2"></li>
+        <li class="neighborhood3"></li>
+      </ol>
+  </div>
+  </div>
+  <div class="mybutton">
+    <button id="previousButton">previous</button>
+    <button id="nextButton">next</button>
+  </div>
+  <div class="notes">
+    <p>Musa 611 Midterm Project
+    <a href='https://data.baltimorecity.gov/datasets/baltimore::restaurants-1/explore?location=39.285854%2C-76.620500%2C10.71'><button id="source">Data Source</button></a>
+    <a href='https://github.com/yzy2000'><button id="about">About Author</button></a>
+    </p>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+  <!-- Legend -->
+  <div class="legend"></div>
+
+
+    <!-- Javascript Imports -->
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/content.js"></script>
+  </body>
+</html>
