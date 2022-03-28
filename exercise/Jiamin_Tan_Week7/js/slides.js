@@ -17,6 +17,8 @@ const slides = [
     content: `
       The pin shows the location of the site to City of Philadelphia. Zoom in to
       view the boundary of the site.
+      <br><br> *Data Source:
+      [OpenDataPhilly](https://www.opendataphilly.org/dataset/city-limits)*
     `,
     section: 'Introduction',
     showpopups: true,
@@ -26,10 +28,13 @@ const slides = [
     title: 'Existing: Site Overview',
     content: `
       The site is located within Census Tract 33 and surrounded by Census Tract 13,
-      20, 32, 36. According to 2015-2019 ACS 5-Year Estimate, Census Tract 33 has a
+      20, 32, 36. According to 2015-2019 ACS 5-Year Estimates, Census Tract 33 has a
       population of 6203 with 44.3% White, 41.8% African American, 6.9% Asian, 7%
       others. The median age is 35.5 years old. The median household income in 2019
       dollars is $35,521. The vacant rate in this census tract is 16.9%.
+      <br><br> *Data Source:
+      [OpenDataPhilly](https://www.opendataphilly.org/dataset/census-tracts),
+        2015-2019 ACS 5-Year Estimates*
     `,
     section: 'CensusData',
     showpopups: true,
@@ -42,6 +47,7 @@ const slides = [
       healthcare facilities, schools, and a fire station. There is a also an Indego
       bikeshare station at 30th st and Grays Ferry Ave. Hover over the pins to
       see what the amenities are.
+      <br><br> *Data Source: [Indego](https://www.rideindego.com/about/data/)*
     `,
     section: 'Amenities',
     showpopups: false,
@@ -52,6 +58,8 @@ const slides = [
     content: `
       Three bus routes pass through the site. They all go to different part of
       the city without transferring. So, the area can be considered transit sufficient.
+      <br><br> *Data Source:
+      [SEPTA GIS Portal](https://septaopendata-septa.opendata.arcgis.com/search?tags=Bus)*
     `,
     section: 'Transit',
     showpopups: true,
@@ -65,7 +73,7 @@ const slides = [
       will be divided into two parts. The upper triangle can be used as a buffer
       zone to prevent noise on the Grays Ferry Ave. Click on the feature to see
       the planning vision or a typology.
-      Image Source: Google Maps.
+      <br><br> *Image Source: Google Maps*.
     `,
     section: 'RoadExtension',
     showpopups: false,
@@ -78,6 +86,7 @@ const slides = [
       top the site, there will be 16 units, and on the bottom of the site, there
       will be 24 unit. Each unit will have 2 floors, and each floor will be 15ft
       by 45 ft. The typology comes from existing row houses in Grays Ferry region.
+      <br><br> *Image Source: Google Maps*
     `,
     section: 'AffordableHousing',
     showpopups: false,
@@ -90,7 +99,8 @@ const slides = [
       one in the area. We are envisioning a two to three story structure with a
       green roof because the people will be able to see Philadelphia's skyline from
       this area. A planned community center at Upper Darby can be used a typology.
-      Image Source: https://whyy.org/articles/upper-darby-receives-1-million-grant-for-phase-one-of-new-community-center/
+      <br><br> *Image Source:
+      [WHYY](https://whyy.org/articles/upper-darby-receives-1-million-grant-for-phase-one-of-new-community-center/)*
     `,
     section: 'CommunityCenter',
     showpopups: false,
@@ -103,6 +113,7 @@ const slides = [
       planned residential area. They can also be blend to the first floor of the
       community center. A typology can be the retails at 23rd and South St where
       people enjoy the open space with restaurants and shops.
+      <br><br> *Image Source: Google Maps*
     `,
     section: 'SmallRetail',
     showpopups: false,
@@ -116,7 +127,8 @@ const slides = [
       dinning. The lower one is more like a community garden shared by the residents
       of the row houses. A typology for that can be the share pedestrian area between
       row houses in Grad Hospital region.
-      Image Sources: Buffer: Morgan's Pier / Erin Whitcomb, https://www.inquirer.com/food/craig-laban/restaurants-outdoor-dining-restrictions-yellow-phase-20200526.html, Garden: GoogleMaps.
+      <br><br> *Image Source: Google Maps,
+      [The Philadelphia Inquirer](https://www.inquirer.com/food/craig-laban/restaurants-outdoor-dining-restrictions-yellow-phase-20200526.html)*
     `,
     section: 'GreenSpace',
     showpopups: false,
@@ -130,6 +142,7 @@ const slides = [
       will look like the existing parking across the street. However, the residential
       parking will look more similar to other public housing projects in Grays
       Ferry where residents park the cars at their back yards.
+      <br><br> *Image Source: Google Maps*
     `,
     section: 'Parking',
     showpopups: false,
