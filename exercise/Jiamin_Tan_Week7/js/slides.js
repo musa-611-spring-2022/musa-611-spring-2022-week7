@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: "off" */
+
 const slides = [
   {
     title: 'Project Overview',
