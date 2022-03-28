@@ -1,0 +1,379 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Amtrak 84 to Metropark. Say GoodBye to Mr.Guan who are unfortunately unable to join with me at 30th St Station in Philadelphia",
+          "date": "3/4 Friday",
+          "Location": "Philadelphia, Pennsylvania",
+          "File": "IMG_0447.JPG",
+          "Order": 1
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75.1819109916687,
+            39.95593818515614
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "NJT train to EWR: There is no direct train from PHL to EWR in the early afternoon thus I have to make this transfer",
+          "date": "3/4 Friday",
+          "Location": "Iselin, New Jersey",
+          "File": "IMG_0467.JPG",
+          "Order": 2
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.3294620513916,
+            40.56870315030587
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "UA1065 from Newark to Ciudad de Mexico. Takeoff from EWR Airport with Manhattan in the background.",
+          "date": "3/4 Friday",
+          "Location": "Newark, New Jersey",
+          "File": "IMG_0498.JPG",
+          "Order": 3
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.17371153831482,
+            40.69491563696394
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Arriving at CDMX in the night. A feeling of Southeast Asia",
+          "date": "3/4 Friday",
+          "Location": "Ciudad de Mexico",
+          "File": "IMG_0623.JPG",
+          "Order": 4
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99.0778398513794,
+            19.43761875930136
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Visiting Volcanos ''Iztaccíhuatl'' and ''Popocatépetl'' not far from CDMX. Had a very tiring but satisfying hiking.",
+          "date": "3/5 Saturday",
+          "Location": "Izta-Popo Zoquiapan National Park",
+          "File": "IMG_0677.JPG",
+          "Order": 5
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.64280700683592,
+            19.088400029611567
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Riding Cablebus Line 2 in Itztapalapa - the eastern periphery of CDMX",
+          "date": "3/6 Sunday",
+          "Location": "Itztapalapa, Ciudad de Mexico",
+          "File": "IMG_0817.JPG",
+          "Order": 6
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99.00861740112305,
+            19.340382304760446
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Sightseeing at Torre Latinoamerica - the second tallest building in CDMX",
+          "date": "3/6 Sunday",
+          "Location": "Ciudad de Mexico",
+          "File": "IMG_0897.JPG",
+          "Order": 7
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99.14064645767212,
+            19.433885418195278
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Riding Tren Suburbano from Buenavista to Tlalnepantla",
+          "date": "3/6 Sunday",
+          "Location": "Ciudad de Mexico",
+          "File": "IMG_0938.JPG",
+          "Order": 8
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99.15191173553467,
+            19.449313982164373
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Riding Cablebus Line 1 in the northern periphery of CDMX",
+          "date": "3/6 Sunday",
+          "Location": "Cuautepec, State of Mexico",
+          "File": "IMG_1009.JPG",
+          "Order": 9
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99.13684844970703,
+            19.521449587628265
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Riding Metrobus. Metrobus was seemed as a successful urban transit system. Heard of it so many times from CPLN550",
+          "date": "3/6 Sunday",
+          "Location": "Ciudad de Mexico",
+          "File": "IMG_1049.JPG",
+          "Order": 10
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99.15925025939941,
+            19.430981649106492
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "AM804 to Villahermosa where I am about to begin a tough journey to Laguna Miramar",
+          "date": "3/7 Monday",
+          "Location": "Villahermosa, Tabasco",
+          "File": "IMG_1100.JPG",
+          "Order": 11
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -92.81876564025879,
+            17.99359089100915
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "ADO (a national bus operator in Mexico) to Palenque. This is just the first segment of car trips; also this is the last time I could use credit card.",
+          "date": "3/7 Monday",
+          "Location": "Palenque, Chiapas",
+          "File": "IMG_1123.JPG",
+          "Order": 12
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -91.99058532714844,
+            17.509176765934782
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Colectivo to Ocosingo. Ocosingo is one of the two gateways to Laguna Miramar, it is a small city in the middle of mountains. After taking planes and cars for an entire day, I stayed here overnight.",
+          "date": "3/7 Monday",
+          "Location": "Ocosingo, Chiapas",
+          "File": "IMG_1148.JPG",
+          "Order": 13
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -92.09787368774413,
+            16.906070311903765
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Colectivo to Emiliano Zapata which takes about 6 hours (only approx 100km). Those ''colectivo'' are tuned by pickup trucks where the storage area can be used for both cargo and passengers! Passengers could choose to whether sit or stand or crawl!",
+          "date": "3/8 Tuesday",
+          "Location": "Ocosingo, Chiapas",
+          "File": "IMG_1190.JPG",
+          "Order": 14
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -92.08499908447266,
+            16.904756366129483
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Visiting Laguna Miramar after 2 days of tough journey: finally I can enjoy the nature of my own. However, since there is no mobile signal at all, I lost the contact to the outside world in those days.",
+          "date": "3/9 Wednesday",
+          "Location": "Chiapas/EZLN",
+          "File": "IMG_1261.JPG",
+          "Order": 15
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -91.29844665527342,
+            16.403811762085002
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Rideshare to Comitan, where there is finally a mobile phone signal. I met some travelers from CDMX who drove here by a rent car from Tuxtla Gutiérrez. So I asked them to take me to Tuxtla as well.",
+          "date": "3/10 Thursday",
+          "Location": "Chiapas/EZLN",
+          "File": "IMG_1307.JPG",
+          "Order": 16
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -91.6204833984375,
+            16.349132345093366
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "AM315 to CDMX. Tuxtla is much dryer compared to the foreste near the Laguna Miramar.",
+          "date": "3/11 Friday",
+          "Location": "Tuxtla Guierrez, Chiapas.",
+          "File": "IMG_1389.JPG",
+          "Order": 17
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.02261352539062,
+            16.56117619154576
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "AM528 to Cancun. After take of I see the volcanos again! Finally I can take some rests after spending 4 days in the tough area.",
+          "date": "3/11 Friday",
+          "Location": "Ciudad de Mexico",
+          "File": "IMG_1507.JPG",
+          "Order": 18
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.52264404296875,
+            19.342244996771804
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Arriving at CUN. Look at the seashore!",
+          "date": "3/11 Friday",
+          "Location": "Cancun, Quintana Roo",
+          "File": "IMG_1530.JPG",
+          "Order": 19
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -86.87610626220703,
+            21.042209507614245
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Doing homework at Cancun. Unfortunately, I have a assignment due right next week and there was little done by far, I have to zoom-meeting group members and work on it.",
+          "date": "3/12 Saturday",
+          "Location": "Cancun, Quintana Roo",
+          "File": "IMG_1555.JPG",
+          "Order": 20
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -86.82040214538574,
+            21.15471749043285
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "AA1971 to PHL. Cancun is packed of tourists from all over North American and Europe. And the airport ramp is very busy/congested. Our flight back is delayed for an hour.",
+          "date": "3/13 Sunday",
+          "Location": "Cancun, Quintana Roo",
+          "File": "IMG_1619.JPG",
+          "Order": 21
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -86.87029123306273,
+            21.036221376360373
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Event": "Arriving at Philadelphia, and I see the iconic skyline! Unfortunately I have to go home to finish the assignment ASAP.",
+          "date": "3/13 Sunday",
+          "Location": "Philadelphia, Pennsylvania",
+          "File": "IMG_1646.JPG",
+          "Order": 22
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75.25806427001953,
+            39.87233063679467
+          ]
+        }
+      }
+    ]
+  }
