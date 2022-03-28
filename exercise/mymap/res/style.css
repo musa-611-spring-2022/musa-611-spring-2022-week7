@@ -89,7 +89,7 @@ div.section{
     pointer-events: none;
     z-index: 10;
     margin: 0 20px;
-    margin-bottom: 400px;
+    margin-bottom: 120vh;
     margin-left:100px;
     width: 0.4vw;
     min-width: 400px;
@@ -135,7 +135,7 @@ b{
     margin-right:auto;
 }
 
-footer a{
+a{
     color:white;
 }
 
@@ -144,7 +144,9 @@ footer div p{
     
 }
 
-
+small{
+    font-size: smaller;
+}
 
 
 

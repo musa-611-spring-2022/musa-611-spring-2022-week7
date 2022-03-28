@@ -14,13 +14,22 @@ Here is a great knot~ Her tag may say "XNC", but she is Beak Beak to the reseach
 
 ## Starting
 
-This is Beak Beak's home in Broome, Australia. A beautiful beach with lots of molluscs and insects. 
-
 陪沙滩图，最好有鸟。
 
 It's getting colder here... Maybe it's time to start!!
 
 
+不知不觉已经到四月中旬了，是时候补充一些能量来继续前进了。这里是它能够在旅途中饱餐一顿的机会。成片的沙滩，滩涂以及沼泽，对于他来说，简直就是一个自助餐厅。 beach with lots of molluscs and insects. 
+
+它用它充满感受器的喙，深入3-5cm的泥土之中，寻觅着它的午餐。在这一个月之中，他会不断往返于中国黄海这片海域，每天换不一样的餐厅。
+
+值得注意的是，由于近些年来，沿海地图的过度发展，这样好的餐厅（湿地）已经变得越来越少。（可视化待补充）
+
+
+
+Many sandpipers form monogamous pairs, so does Beak Beak. She meets her husband in northeast Siberia. They finds a tundra that is perfect for babies.
+
+They exchange on the nest in the morning and in the evening so that their incubation rhythm follows a 24-hour day. Their children hatch after about three weeks of incubation and are able to walk and forage within a few hours of hatching. Beak Beak and her husband guide and brood their children together.
 
 # Citation
 

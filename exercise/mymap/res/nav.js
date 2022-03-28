@@ -53,7 +53,7 @@ let onScroll = () => {
     if (scrollNumByScreen <= 2 || firstRender) renderNavBar(h, scrollNumByScreen);
 
     // console.log(scrollNumByScreen.toFixed(1))
-    let newSecN = whichSection(y + h);
+    let newSecN = whichSection(y + h + 200);
     if (secN !== newSecN) {
         // console.log(secN);
         renderSection(newSecN);
@@ -68,14 +68,13 @@ let renderSection = (n) => {
         mapCenter,  //p0
         mapCenter,  //p1
         mapCenter,  //p2
-        [0, 110], //p3
-        [50, 50],
-        [30, 120],
-        [0, 0],
-        [10, -100],
+        [0, 110],   //p3
+        [40, 110],  //p4
+        [60, 140],  //p5
+        [60, 140],  //p6
         mapCenter
     ];
-    const zoomLevels = [2, 2, 4, 4, 4, 4, 4, 4, 4, 4];
+    const zoomLevels = [2.5, 2.5, 4, 4, 4, 4, 4, 2.5, 4, 4];
     const movingPct = 0.3;
 
     let lowerBound = Math.floor(n);

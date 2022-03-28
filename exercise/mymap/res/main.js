@@ -144,7 +144,6 @@ sectionRenderer[2] = () => {
 sectionRenderer[3] = () => {
   if (!beap) return;
   let pts = beap.slice(0, 60).map(x => x.geometry.coordinates.slice().reverse());
-  console.log(pts)
 
   pts.forEach((pt) => {
     L.circleMarker(pt, {
@@ -160,8 +159,72 @@ sectionRenderer[3] = () => {
   windLayer.addTo(allLayers);
 };
 
+// =======================================
+// # section 4 #
+
+sectionRenderer[4] = () => {
+  if (!beap) return;
+  let pts = beap.slice(30, 60).map(x => x.geometry.coordinates.slice().reverse());
+  let pts_past = beap.slice(0, 30).map(x => x.geometry.coordinates.slice().reverse());
+
+  pts.forEach((pt) => {
+    L.circleMarker(pt, {
+      color: "darkorange",
+      radius: 4,
+    }).addTo(allLayers);
+  })
+
+  L.polyline(pts, {
+    color: "darkorange",
+  }).addTo(allLayers);
+
+  pts_past.forEach((pts_past) => {
+    L.circleMarker(pts_past, {
+      color: "gray",
+      radius: 4,
+    }).addTo(allLayers);
+  })
+
+  L.polyline(pts_past, {
+    color: "gray",
+  }).addTo(allLayers);
+};
 
 
+
+
+
+// =======================================
+// # section 5 #
+
+sectionRenderer[5] = () => {
+  if (!beap) return;
+  let endN = 100;
+  let pts = beap.slice(endN, 150).map(x => x.geometry.coordinates.slice().reverse());
+  let pts_past = beap.slice(0, endN).map(x => x.geometry.coordinates.slice().reverse());
+
+  pts.forEach((pt) => {
+    L.circleMarker(pt, {
+      color: "darkorange",
+      radius: 4,
+    }).addTo(allLayers);
+  })
+
+  L.polyline(pts, {
+    color: "darkorange",
+  }).addTo(allLayers);
+
+  pts_past.forEach((pts_past) => {
+    L.circleMarker(pts_past, {
+      color: "gray",
+      radius: 4,
+    }).addTo(allLayers);
+  })
+
+  L.polyline(pts_past, {
+    color: "gray",
+  }).addTo(allLayers);
+};
 
 $(() => {
   onScroll();
