@@ -8,7 +8,7 @@ const slides = [
       block in Grays Ferry, Philadelphia, PA. The site is about 142,000 sq ft,
       and it current has an abandoned grocery building. We are asked to add 40-50
       affordable housing units and 2000-4000 sq ft of commercials retail space.
-      This story map walks through some analysis of the site and design ideass.
+      This story map walks through some analysis of the site and design ideas.
     `,
     section: 'ProjectOverview',
     bounds: [[39.938098, -75.195012], [39.939015, -75.193338]],
