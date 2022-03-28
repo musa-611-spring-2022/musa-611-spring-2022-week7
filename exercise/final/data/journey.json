@@ -1,0 +1,215 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Malmo FF",
+        "era": "Malmo FF",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.986626241204526, 
+          55.58392597067839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Ajax",
+        "era": "Ajax",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.942275234450615, 
+          52.314482779979706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "<p><img src='pic/Ajax.gif' style='width:30rem;' /></p>",
+        "era": "Ajax",
+        "type": "goal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.941488908880688, 
+          52.314724737775364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Juventus",
+        "era": "Juventus",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.641275284446231, 
+          45.109801732604254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Inter Milan",
+        "era": "Inter Milan",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.124069095084717, 
+          45.47819865638239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "<p><img src='pic/Inter.gif' style='width:30rem;' /></p>",
+        "era": "Inter Milan",
+        "type": "goal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.12405492620229, 
+          45.47845402396114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Barcelona",
+        "era": "Barcelona",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1229378150052214, 
+          41.381008681740354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "AC Milan",
+        "era": "AC Milan",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.124176574669432, 
+          45.47821385336888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Paris Saint-Germain",
+        "era": "Paris Saint-Germain",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.253059426911251, 
+          48.841576801712534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "<p><img src='pic/Puskas.gif' style='width:30rem;' /></p>",
+        "era": "Paris Saint-Germain",
+        "type": "goal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.000237440453937, 
+          59.37271200659943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Manchester United",
+        "era": "Manchester United",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.29131864407238, 
+          53.46316107692504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "LA Galaxy",
+        "era": "LA Galaxy",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.26079972931339, 
+          33.864628452364016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "<p><img src='pic/LA galaxy.gif' style='width:30rem;' /></p>",
+        "era": "LA Galaxy",
+        "type": "goal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.26136558981793, 
+          33.86452744927141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Return to AC Milan",
+        "era": "Return to AC Milan",
+        "type": "club"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.124176574669432, 
+          45.47821385336888
+        ]
+      }
+    }
+  ]
+}
