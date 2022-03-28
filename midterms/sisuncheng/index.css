@@ -1,0 +1,124 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0rem;
+  height: 100vh;
+}
+
+.header,
+.content,
+.footer,
+.section,
+.map-container,
+.slides {
+  border: 0px solid red;
+}
+
+.header,
+.footer,
+.section {
+  height: 100vh;
+}
+.header {
+  background-image: url(./images/np_cover.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.header-blank {
+  padding: 20vh;
+}
+.header-header {
+  text-align: center;
+  color: white;
+  background-color: darkseagreen;
+  padding: 2rem;
+}
+.slide {
+  border: 1px solid white;
+  width: 25rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  margin-bottom: 90vh;
+  background-color: darkseagreen;
+  padding: 2rem;
+}
+
+.slide:first-child {
+  margin-top: -90vh;
+}
+
+.map-container {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+.map { 
+  height: 100%; 
+}
+#section1 {
+  background-color: darkseagreen;
+}
+.sec1-header {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.sec1-content {
+  text-align: left;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.image-row {
+  display: flex;
+}
+
+.image-column {
+  flex: 33.33%;
+  padding: 5px;
+}
+.footer {
+  background-image: url(./images/np_footer.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.footer-blank {
+  padding: 20vh;
+}
+.footer-header {
+  text-align: center;
+  color: white;
+  background-color: rgb(255, 149, 28);
+  padding: 2rem;
+}
+.slide:last-child {
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0px;
+}
+.slide-header {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+}
+.slide-special {
+  font-style: italic;
+}
+#chart-container {
+  width: 100%;
+  height: 60%;
+}
+.citation {
+  bottom: 0px;
+  right: 5px;
+  color:white;
+}
+#park-filters {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}

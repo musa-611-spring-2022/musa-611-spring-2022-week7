@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <title>US National Parks</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link href="index.css" rel="stylesheet">
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-blank"></div>
+      <h1 class="header-header">Explore the Amazing Nature Beauty of 150 Years</h1>
+
+    </div>
+    <div class="content">
+      <div class="section" id="section1">
+        <div class="sec1-header">
+          Introduction to National Parks
+        </div>
+        <p class="sec1-content">National parks are defined as a reserve of natural, semi-natural, 
+        or developed land that a sovereign state declares or owns, with the conservation of 
+        ‘wild nature’ for posterity and as a symbol of national pride.</p>
+
+        <p class="sec1-content">Since 1872 that the US government established the first “public park or pleasuring-ground 
+        for the benefit and enjoyment of the people”, Yellowstone National Park, there has been 423 
+        recreational sites in the National Park System (NPS), while about 60 of those are what 
+        we often called national parks. During the past 150 years, over 15 billion visitors are 
+        fascinated by the natural beauty of those parks and we really treasure those gifts from 
+        our mother nature.</p>
+
+        <div class="image-row">
+          <div class="image-column">
+            <img src="./images/park-1.jpg" alt="Snow" style="width:100%">
+          </div>
+          <div class="image-column">
+            <img src="./images/park-2.jpg" alt="Forest" style="width:100%">
+          </div>
+          <div class="image-column">
+            <img src="./images/park-3.jpg" alt="Mountains" style="width:100%">
+          </div>
+        </div>
+
+
+
+      </div>
+
+      
+      <fieldset id="park-filters">
+        <label for="type-select">NPS Type</label>
+        <select id="type-select" class="form-select">
+          <option value="">All</option>
+        </select>
+  
+        <label for="state-select">State</label>
+        <select id="state-select" class="form-select">
+          <option value="">All</option>
+        </select>
+      </fieldset>
+      <div class="map-container">
+        <div class="map" id="map"></div>
+
+      </div>
+
+      <div class="slides">
+        <div class="slide">
+          <p class="slide-header">National Park Service - NPS</p>
+          <p class="slide-content">
+            There are 427 parks in the National Park Service system, types of which includes national parks, 
+            national historical park, national monuments, national seashore, etc.
+          </p>
+        </div>
+        <div class="slide">
+          <p class="slide-header">National Parks - History</p>
+          <p class="slide-content">
+            In 1872, Yellowstone became the first national park, signed by President Ulysses S. Grant. 
+            It was also the world's first national park. Thus, we can say that there is a history of 
+            150 years for US national parks.
+          </p>
+          <p class="slide-content">In 1906, President Theodore Roosevelt signed the Antiquities Act, 
+            which gave presidents the authority to create national monuments to preserve areas of 
+            natural or historic interest on public lands.</p>
+             
+          <p class="slide-content"></p>The National Park Service was officially established in 1916. 
+          </p>
+        </div>
+        <div class="slide">
+          <p class="slide-header">National Parks - Visitors 2021</p>
+          <p class="slide-content">
+            In 2021, 297,115,406 recreational visits are made throughout the NPS parks. 
+            Three parks had more than 10 million recreation visits,  
+            73 parks had more than one million recreation visits (19% of reporting parks), 
+            which is up from 60 parks in 2020 and down from 80 parks in 2019.
+          </p>
+          <div id="chart-container"></div>
+        </div>
+        <div class="slide">
+          <p class="slide-header">
+            Let's explore some of the famous parks...
+          </p>
+        </div>
+
+        <div class="slide">
+          <p class="slide-header">Independence National Historical Park</p>
+          <p class="slide-content">
+            Getting start from our local parks!
+          </p>
+            
+          <p class="slide-content">Philly is famous as the birth place of the United States, 
+              where the founding fathers of the country met here to sign the Declaration of Independence in 
+              1776 at the Second Continental Congress, and the Constitution at the Philadelphia Convention 
+              of 1787. Both documents were debated and signed inside Independence Hall, 
+              now a UNESCO World Heritage Site and a US National Historical Park.
+          </p>
+          <p class="slide-special">
+            "We hold these Truths to be self-evident, that all Men are created equal..."
+          </p>
+        </div>
+
+        <div class="slide">
+          <p class="slide-header">Great Smoky Mountains National Park</p>
+          <p class="slide-content">
+            The park straddles the ridgeline of the Great Smoky Mountains, part of the Blue Ridge Mountains, 
+            which are a division of the larger Appalachian Mountain chain. It was chartered by the United States 
+            Congress in 1934, and officially dedicated by President Roosevelt in 1940. 
+          </p>
+          <p class="slide-content">
+            The Great Smoky Mountains is the most visited national parks in 2021, attracted over 
+            14.1 million visitors.
+          </p>
+        </div>
+        <div class="slide">          
+          <p class="slide-header">Zion National Park</p>
+          <p class="slide-content">
+            Zion National Park locates in southwestern Utah near the town of Springdale. 
+            The highlight of Zion is an expansive canyon and 
+            the canyon walls are reddish and tan-colored Navajo Sandstone eroded by the North Fork of the Virgin River. 
+          </p>
+          <p class="slide-content">
+            Zion National Park is the second most visited national parks in 2021, attracted over 
+            5 million visitors.
+          </p>
+        </div>
+        <div class="slide">
+          <p class="slide-header">Yellow Stone National Park</p>
+          <p class="slide-content">
+            Yellowstone National Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic 
+            hot spot. Mostly in Wyoming, the park spreads into parts of Montana and Idaho too. Yellowstone 
+            features dramatic canyons, alpine rivers, lush forests, hot springs and gushing geysers, 
+            including its most famous, Old Faithful. It's also home to hundreds of animal species, 
+            including bears, wolves, bison, elk and antelope.
+          </p>
+          <p class="slide-content">
+            Yellow Stone National Park is the third most visited national parks in 2021, attracted over 
+            4.9 million visitors. It is also the first national park of the US and famous worldwide.
+          </p>
+        </div>
+        <div class="slide">
+          <p class="slide-header">Grand Canyon National Park</p>
+          <p class="slide-content">
+            Grand Canyon National Park, in Arizona, is home to much of the immense Grand Canyon, 
+            with its layered bands of red rock revealing millions of years of geological history. 
+            Viewpoints include Mather Point, Yavapai Observation Station and architect Mary Colter’s 
+            Lookout Studio and her Desert View Watchtower. Lipan Point, with wide views of the canyon 
+            and Colorado River, is a popular, especially at sunrise and sunset.
+          </p>
+          <p class="slide-content">
+            Grand Canyon National Park is the forth most visited national parks in 2021, attracted about 
+            4.5 million visitors. 
+          </p>
+        </div>
+        <div class="slide"></div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <div class="footer-blank"></div>
+      <h1 class="footer-header">Thanks for watching!</h1>
+      <div class="citation">Data Source: www.nps.gov</div>
+
+    </div>
+    
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="tools.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
