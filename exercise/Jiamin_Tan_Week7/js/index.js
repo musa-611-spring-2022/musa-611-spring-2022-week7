@@ -7,168 +7,74 @@ let layerGroup = L.layerGroup().addTo(map);
 let lifeCollection = { features: [] };
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
 }).addTo(map);
 
 const graysFerryData = fetch('data/GraysFerry.json')
-	.then(resp => resp.json())
-	.then(data => {
-		return data;
-	});
+  .then(resp => resp.json())
+  .then(data => data);
 
 const getAllData = async () => {
-  let gf_data = await graysFerryData;
-  let ct_data = await ct;
-	let bus_data = await bus;
-	let ind_data = await ind;
-	let cl_data = await cl;
+  let gfData = await graysFerryData;
+  let ctData = await ct;
+  let busData = await bus;
+  let indData = await ind;
+  let clData = await cl;
 
-	ct_data.forEach(element => element.properties['section'] = 'CensusData');
-	ct_data.forEach(element => element.properties['label'] = element.properties.NAMELSAD10);
-	bus_data.forEach(element => element.properties['section'] = 'Transit');
-	bus_data.forEach(element => element.properties['label'] = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`);
-	ind_data.forEach(element => element.properties['section'] = 'Amenities');
-	ind_data.forEach(element => element.properties['label'] = 'Indego Staion');
-	cl_data.forEach(element => element.properties['section'] = 'Introduction');
-	cl_data.forEach(element => element.properties['label'] = 'Philadelphia, PA');
+  ctData.forEach(element => element.properties.section = 'CensusData');
+  ctData.forEach(element => element.properties.label = element.properties.NAMELSAD10);
+  busData.forEach(element => element.properties.section = 'Transit');
+  busData.forEach(element => element.properties.label = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`);
+  indData.forEach(element => element.properties.section = 'Amenities');
+  indData.forEach(element => element.properties.label = 'Indego Staion');
+  clData.forEach(element => element.properties.section = 'Introduction');
+  clData.forEach(element => element.properties.label = 'Philadelphia, PA');
 
-	ct_data.forEach(element => gf_data.features.push(element));
-	bus_data.forEach(element => gf_data.features.push(element));
-	ind_data.forEach(element => gf_data.features.push(element));
-	cl_data.forEach(element => gf_data.features.push(element));
+  ctData.forEach(element => gfData.features.push(element));
+  busData.forEach(element => gfData.features.push(element));
+  indData.forEach(element => gfData.features.push(element));
+  clData.forEach(element => gfData.features.push(element));
 
-	//console.log(gf_data);
-	//console.log(ct_data);
-	//console.log(bus_data);
-	//console.log(ind_data);
-	//console.log(cl_data);
+  // console.log(gfData);
+  // console.log(ctData);
+  // console.log(busData);
+  // console.log(indData);
+  // console.log(clData);
 
-	return gf_data
+  return gfData;
 };
 
 
 
-//getAllData()
+// getAllData()
 
 // census tracts
 const ct = fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.geojson')
-	.then(resp => resp.json())
-  .then(data => {
-		return data.features.filter(feature => feature.properties.NAME10 == 13 ||
-			feature.properties.NAME10 == 20 ||
-			feature.properties.NAME10 == 32 ||
-			feature.properties.NAME10 == 33 ||
-			feature.properties.NAME10 == 36)
-
-		/* ==========
-    return L.geoJSON(data, {
-      filter(feature) {
-        if (feature.properties.NAME10 == 13 ||
-          feature.properties.NAME10 == 20 ||
-          feature.properties.NAME10 == 32 ||
-          feature.properties.NAME10 == 33 ||
-          feature.properties.NAME10 == 36)
-          return true;
-      },
-      onEachFeature(feature, layer) {
-        layer.bindTooltip(feature.properties.NAMELSAD10);
-        layer.setStyle({ fillColor: "#000000" });
-        layer.setStyle({ color: "#4287f5" });
-      },
-    })
-		========== */
-    //.addTo(map);
-  });
-
-//const getct = async () => {
-  //const result = await ct;
-	//console.log(result[0]);
-//};
-
-//getct()
-
-/* ==========
-const getct = async () => {
-  const a = await ct;
-	a.addTo(map);
-};
-========== */
-
-//getct();
+  .then(resp => resp.json())
+  .then(data => data.features.filter(feature => feature.properties.NAME10 === '13'
+    || feature.properties.NAME10 === '20'
+		|| feature.properties.NAME10 === '32'
+		|| feature.properties.NAME10 === '33'
+		|| feature.properties.NAME10 === '36'));
 
 // bus routes
 const bus = fetch('./data/Fall_2021_Routes.geojson')
   .then(resp => resp.json())
-  .then(data => {
-		return data.features.filter(feature => feature.properties.LineAbbr == '12' ||
-			feature.properties.LineAbbr == '49' ||
-			feature.properties.LineAbbr == '64')
-		/* ==========
-    L.geoJSON(data, {
-			filter(feature) {
-        if (feature.properties.LineAbbr == '12' ||
-          feature.properties.LineAbbr == '49' ||
-          feature.properties.LineAbbr == '64')
-          return true;
-      },
-      onEachFeature(feature, layer) {
-        layer.bindTooltip('Line ' +
-				feature.properties.LineAbbr +
-				'<br>' +
-				feature.properties.LineName);
-        //layer.setStyle({ fillColor: "#000000" });
-        //layer.setStyle({ color: "#4287f5" });
-      },
-    })
-		========== */
-    //.addTo(map);
-  });
+  .then(data => data.features.filter(feature => feature.properties.LineAbbr === '12'
+    || feature.properties.LineAbbr === '49'
+    || feature.properties.LineAbbr === '64'));
 
 // indego station
 const ind = fetch('https://kiosks.bicycletransit.workers.dev/phl')
   .then(resp => resp.json())
-  .then(data => {
-		return data.features.filter(feature => feature.properties.id == 3252)
-		/* ==========
-    L.geoJSON(data, {
-			filter(feature) {
-        if (feature.properties.id == 3252)
-          return true;
-      },
-      onEachFeature(feature, layer) {
-        layer.bindTooltip('Name: ' +
-				feature.properties.name +
-				'<br> Available Docks:' +
-				feature.properties.docksAvailable +
-				'<br> Available Bikes:' +
-				feature.properties.bikesAvailable);
-        //layer.setStyle({ fillColor: "#000000" });
-        //layer.setStyle({ color: "#4287f5" });
-      },
-    })
-		========== */
-    //.addTo(map);
-  });
+  .then(data => data.features.filter(feature => feature.properties.id === 3252));
 
 // City limit
 const cl = fetch('https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e1449a2be48_0.geojson')
   .then(resp => resp.json())
-  .then(data => {
-		return data.features;
-		/* ==========
-    L.geoJSON(data, {
-      onEachFeature(feature, layer) {
-        layer.bindTooltip('Philadelphia, PA');
-        //layer.setStyle({ fillColor: "#000000" });
-        //layer.setStyle({ color: "#4287f5" });
-      },
-    })
-		========== */
-    //.addTo(map);
-  });
+  .then(data => data.features);
 
-/////////////////////////////////////////////////////////////
-//copied from Mjumbe
+// codes below are based on Mjumbe's sample codes
 
 let currentSlideIndex = 0;
 
@@ -179,6 +85,7 @@ const slideNextButton = document.querySelector('#next-slide');
 const slideJumpSelect = document.querySelector('#jump-to-slide');
 
 /* ==========
+
 var schoolIcon = L.Icon.extend({
 	iconUrl: 'icon/school.png',
 	iconSize: [32, 37],

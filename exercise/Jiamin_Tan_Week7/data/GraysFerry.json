@@ -5,7 +5,10 @@
       "type": "Feature",
       "properties": {
         "label": "Site Limit",
-        "section": ["Introduction"]
+        "section": [
+          "Introduction",
+          "Amenities"
+        ]
       },
       "geometry": {
         "type": "Polygon",
