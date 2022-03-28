@@ -1,10 +1,10 @@
-/* globals showdown */
+/* globals showdown, slides */
 
 // npx http-server --port 8000
 
 let map = L.map('map').setView([0, 0], 0);
 let layerGroup = L.layerGroup().addTo(map);
-let lifeCollection = { features: [] };
+let slideCollection = { features: [] };
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
@@ -46,14 +46,29 @@ const getAllData = async () => {
   let indData = await ind;
   let clData = await cl;
 
-  ctData.forEach((element) => { element.properties.section = 'CensusData'; });
-  ctData.forEach((element) => { element.properties.label = element.properties.NAMELSAD10; });
-  busData.forEach((element) => { element.properties.section = 'Transit'; });
-  busData.forEach((element) => { element.properties.label = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`; });
-  indData.forEach((element) => { element.properties.section = 'Amenities'; });
-  indData.forEach((element) => { element.properties.label = 'Indego Station'; });
-  clData.forEach((element) => { element.properties.section = 'Introduction'; });
-  clData.forEach((element) => { element.properties.label = 'Philadelphia, PA'; });
+  let ctData2 = ctData.slice();
+  ctData.forEach((element, i) => {
+    ctData2[i].properties.section = 'CensusData';
+    ctData2[i].properties.label = element.properties.NAMELSAD10;
+  });
+
+  let busData2 = busData.slice();
+  busData.forEach((element, i) => {
+    busData2[i].properties.section = 'Transit';
+    busData2[i].properties.label = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`;
+  });
+
+  let indData2 = indData.slice();
+  indData.forEach((element, i) => {
+    indData2[i].properties.section = 'Amenities';
+    indData2[i].properties.label = 'Indego Station';
+  });
+
+  let clData2 = clData.slice();
+  clData.forEach((element, i) => {
+    clData2[i].properties.section = 'Introduction';
+    clData2[i].properties.label = 'Philadelphia, PA';
+  });
 
   ctData.forEach(element => gfData.features.push(element));
   busData.forEach(element => gfData.features.push(element));
@@ -100,7 +115,7 @@ function updateMap(collection) {
 function makeSecCollection(section) {
   return {
     type: 'FeatureCollection',
-    features: lifeCollection.features.filter(f => f.properties.section.includes(section)),
+    features: slideCollection.features.filter(f => f.properties.section.includes(section)),
   };
 }
 
@@ -110,7 +125,7 @@ function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h2>${slide.title}</h2>`;
   slideContentDiv.innerHTML = converter.makeHtml(slide.content);
 
-  const collection = slide.section ? makeSecCollection(slide.section) : lifeCollection;
+  const collection = slide.section ? makeSecCollection(slide.section) : slideCollection;
   const layer = updateMap(collection);
 
   function handleFlyEnd() {
@@ -177,10 +192,10 @@ function initSlideSelect() {
   }
 }
 
-function loadLifeData() {
+function loadSlideData() {
   getAllData()
     .then(data => {
-      lifeCollection = data;
+      slideCollection = data;
       showCurrentSlide();
     });
 }
@@ -193,4 +208,4 @@ slideJumpSelect.addEventListener('click', jumpToSlide);
 
 initSlideSelect();
 showCurrentSlide();
-loadLifeData();
+loadSlideData();
