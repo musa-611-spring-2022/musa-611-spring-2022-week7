@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New York Drinking Water Quality </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+
+  </head>
+  <body>
+    <div class="mainViewAboveMap" id="header">
+      <div class="title">New York Drinking Water Quality 2020-2022</div>
+      <div class="Jiali">A stroy map created by Jiali Yao</div>
+    </div>
+    <div class="navigation" id="nav-bar">
+      <ul>
+        <li><a class="active" href="index.html">Overview</a></li>
+        <li><a href="index1.html">Manhattan</a></li>
+        <li><a href="index2.html">Bronx</a></li>
+        <li><a href="index3.html">Brooklyn</a></li>
+        <li><a href="index4.html">Queens</a></li>
+        <li><a href="index5.html">Staten Island</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="slide" id="Overview">
+        <a name='Overview'>
+          <p class="description1">
+            <span style="font-size:14px">
+              ** data source: <a class="link" href="https://data.cityofnewyork.us/Environment/Drinking-Water-Quality-Distribution-Monitoring-Dat/bkwf-xfky/data">NYC Opendata</a>
+            </span>
+          </p>
+        <p class="description1">
+          <span style="font-size:14px">
+            The sources of drinking water (both tap water and bottled water) include rivers, lakes, streams, ponds,reservoirs, springs, and wells.
+          </span>
+        </p>
+        <p class="description">
+          The data summarizes the turbidity values, coliform, fluoride and chlorine found at sides in distribution each month.
+        </p>
+        <p class="description">
+        <span style="font-size:14px">
+          New York City’s water supply system provides more than one billion gallons of safe drinking water every day to more than 8.8 million residents of New York City
+          and one million people living in the counties of Westchester, Putnam, Orange, and Ulster.
+          In all, this system provides nearly half the population of New York State with high-quality drinking water.
+        </span>
+        <img src="D:\graduate\MUSA611\musa-611-spring-2022-week7\midterms\Jiali_Yao\waterSupply.jpg" id="img1" style="margin-top: 10px;width:400px;height:600px;">
+        </p>
+        </a>
+      </div>
+      <div class="map" id="map">Map</div>
+
+      <!-- Leaflet JavaScript -->
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+
+      <!-- JavaScript -->
+      <script src="../../Jiali_Yao/Data/SampleSite.geojson"></script>
+      <script src="../../Jiali_Yao/Data/BoroughBoundaries.geojson"></script>
+      <script src="tools.js"></script>
+      <script src="main.js"></script>
+    </div>
+  </body>
+</html>
