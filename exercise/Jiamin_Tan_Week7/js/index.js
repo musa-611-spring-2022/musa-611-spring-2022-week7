@@ -176,7 +176,7 @@ function showSlide(slide) {
     } else {
 			layer.eachLayer(l => {
 				if (l.feature.properties.section.includes('ProjectOverview')) {
-					l.bindPopup(`<h1>${l.feature.properties.label} Typology</h1> <img src=${l.feature.properties.img} />`, { maxWidth: 'auto' });
+					l.bindPopup(`<h1>${l.feature.properties.label}</h1> <img src=${l.feature.properties.img} />`, { maxWidth: 'auto' });
 				}
 			});
 		}
