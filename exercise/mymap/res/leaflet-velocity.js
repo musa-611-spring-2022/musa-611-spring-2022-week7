@@ -926,7 +926,7 @@ var Windy = function Windy(params) {
       // Fade existing particle trails.
       var prev = "lighter";
       g.globalCompositeOperation = "destination-in";
-      g.globalAlpha = 0.99;
+      g.globalAlpha = 0.95;
       g.fillRect(bounds.x, bounds.y, bounds.width, bounds.height);
       g.globalCompositeOperation = prev;
       // g.globalAlpha = OPACITY === 0 ? 0 : OPACITY * 1; // Draw new particle trails.

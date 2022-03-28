@@ -17,11 +17,120 @@
 </head>
 
 <body>
-    <div id="map"></div>
+    <!-- <div class="logo-container"> -->
+    <div class="navigation">
+        <img src="res/logo.svg" alt="" id="logo">
+    </div>
+    <!-- </div> -->
 
+    <div class="front-page">
+        <div class="front-background">
+            <video src="res/knot.mp4" autoplay loop muted></video>
+        </div>
+        <div class="poem">
+            <p>There they are again</p>
+            <p>Those citizens of nowhere,</p>
+            <p>Blazing through the skies</p>
+            <p>On their various epic journeys,</p>
+            <p>Bothering the somewheres</p>
+            <p>With their flighty existence.</p>
+            <p>They were born to move.</p>
+            <blockquote>-- Mahima Sukhdev</blockquote>
+            <div></div>
+        </div>
+    </div>
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
 
+    <div class="section card" id="card-1">
+        <div class="card-body">
+            <h4 class="card-title">Have you met... the Great Knots?</h4>
+            <h5 class="card-subtitle">One of the greatest waders</h5>
+            <div class="card-text">
+                <p>
+                    Hi, come to know `Great Knot` (Calidris tenuirostris)! It is a small wader, but also a great
+                    long-distance migratory shorebird of the East Asian-Australasian Flyway.
+                </p>
+                <p>
+                    Here is a great knot~ Her tag may say "XNC", but she is <b>Beak Beak</b> to the reseacher. As a
+                    "research
+                    assistant" of Deakin University, Australia, Beak Beak will carry a small solar-satellite device
+                    throughout this summer. Let's see how is she doing.
+                </p>
+            </div>
+            <br>
+            <img src="res/knot.png" id="img-knot" alt="" srcset="">
+        </div>
+    </div>
+    <div class="section">
+        <div class="card-body">
+            <h4 class="card-title"><b>Beak-Beak</b>'s Home</h4>
+            <h5 class="card-subtitle">(Actually, it's one of her homes.)</h5>
+            <div class="card-text">
+                <p>
+                    This is Beak Beak's home in Broome, Australia. A beautiful beach with lots of molluscs and insects.
+                </p>
+                <img src="res/broome.jpg" alt="" srcset="" class="card-img">
+                <p class="mt-3">
+                    Getting into the late March, it will soon be cold here... Maybe it's time for Beak-Beak to start!!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="card-body">
+            <h4 class="card-title">Journey, Wind, and Power</h4>
+            <h5 class="card-subtitle">Leveraging the power of nature</h5>
+            <div class="card-text">
+                <p>
+
+                </p>
+                <p class="mt-3">
+                    Getting into the late March, it will soon be cold here... Maybe it's time for Beak-Beak to start!!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="card-body">
+            <h4 class="card-title">To Be Continued...</h4>
+        </div>
+    </div>
+
+    <footer>
+
+        <h5>Data Sources:</h5>
+        <ul>
+            <li>
+                Great Knot Geometry and Track Data: <a
+                    href="https://www.movebank.org/cms/webapp?gwt_fragment=page=studies,path=study215137383">MoveBank</a>
+            </li>
+            <li>Lisovski, S., Gosbell, K., Hassell, C. and Minton, C. 2016 Tracking the full annual-cycle of the Great
+                Knot Calidris tenuirostris, a long-distance migratory shorebird of the East Asian-Australasian Flyway.
+                Wader Study. <a
+                    href="https://www.researchgate.net/publication/311512725_Tracking_the_full_annual-cycle_of_the_Great_Knot_Calidris_tenuirostris_a_long-distance_migratory_shorebird_of_the_East_Asian-Australasian_Flyway">Article</a>
+            </li>
+            <li>[EAAFP] World Migratory Bird Day 2020 (Eng) <a
+                    href="https://www.youtube.com/watch?v=KMKP8Zvvy0U">Youtube</a></li>
+
+            <li>Wiki: <a href="https://en.wikipedia.org/wiki/Great_knot">Great Knot Wikipedia</a></li>
+            <li>Beautiful wind visualization insparation from <a
+                    href="https://earth.nullschool.net/">earth.nullschool.net</a></li>
+            <li>Saving a Flyway <a href="https://birdingbeijing.com/2021/05/23/saving-a-flyway/">Blog</a></li>
+        </ul>
+
+        <h5>Author:</h5>
+        <div>
+            <p>Zh3n <a href="https://github.com/Zhen3r/musa-611-spring-2022-week7">GitHub Repo</a></p>
+            <p>Special thanks to Mjumbe Poe and MUSA611 2022</p>
+        </div>
+    </footer>
 
     <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
@@ -32,9 +141,13 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <link rel="stylesheet" href="res/leaflet-velocity.css" />
+    <script src="res/leaflet-velocity.js"></script>
+    <!-- <script src="res/SmoothWheelZoom.js"></script> -->
+
+    <script src="res/nav.js"></script>
 
     <script src="res/main.js"></script>
-
 
 
 

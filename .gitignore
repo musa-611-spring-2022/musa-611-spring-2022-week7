@@ -3,3 +3,4 @@ poetry.lock
 node_modules/
 *.ai
 *.qgz
+.vscode
