@@ -1,3 +1,5 @@
+/* eslint no-undef: 0, no-use-before-define: 0 */
+
 let map = L.map('map', {
   center: mapCenter,
   zoom: 2,
@@ -9,7 +11,7 @@ let map = L.map('map', {
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: 'abcd',
-  maxZoom: 20
+  maxZoom: 20,
 }).addTo(map);
 
 // L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
@@ -26,9 +28,9 @@ let allLayers = L.layerGroup().addTo(map);
 // var circle = L.circle(center, { renderer: myRenderer });
 
 class Camera {
-  constructor(map) {
-    this.map = map;
-    this.zoom = map.getZoom();
+  constructor(map1) {
+    this.map = map1;
+    this.zoom = this.map.getZoom();
 
     // this.animationLoop;
     // this.then = Date.now();
@@ -66,8 +68,11 @@ class Camera {
     // this.x = this.x + this.dx;
     // this.y = this.y + this.dy;
 
-    this.map.setView([this.destinationX, this.destinationY], this.zoom,
-      { animate: true, duration: 1, });
+    this.map.setView(
+      [this.destinationX, this.destinationY],
+      this.zoom,
+      { animate: true, duration: 1 },
+    );
   }
 
   // draw() {
@@ -96,24 +101,22 @@ camera.setDestination(...mapCenter);
 let beap;
 $.getJSON('data/trail-great.geojson', (data) => {
   // console.log(data.features);
-  beap = data.features.filter((x) => {
-    return x.properties["individual-local-identifier"] === "XNC"
-  });
+  beap = data.features.filter((x) => x.properties['individual-local-identifier'] === 'XNC');
 });
 
 let windLayer;
-$.getJSON("data/wind-global.json", function (data) {
+$.getJSON('data/wind-global.json', (data) => {
   windLayer = L.velocityLayer({
     displayValues: true,
     displayOptions: {
-      velocityType: "Global Wind",
-      position: "bottomleft",
-      emptyString: "No wind data"
+      velocityType: 'Global Wind',
+      position: 'bottomleft',
+      emptyString: 'No wind data',
     },
-    data: data,
+    data,
     // minVelocity: 10,
     // maxVelocity: 15,
-    colorScale: ["rgba(255,255,255,100)"],
+    colorScale: ['rgba(255,255,255,100)'],
     velocityScale: 0.005,
     particleAge: 90,
     opacity: 0.1,
@@ -125,14 +128,14 @@ $.getJSON("data/wind-global.json", function (data) {
 // # section 2 #
 sectionRenderer[2] = () => {
   if (!beap) {
-    console.log("section 1 not ready!");
+    console.log('section 1 not ready!');
     return;
   }
   L.geoJSON(beap[0], {
     pointToLayer: (x, y) => L.circleMarker(y),
-    style: { color: "darkorange" }
+    style: { color: 'darkorange' },
   })
-    .bindTooltip("Broome, Australia", { offset: [20, 0], direction: "right" })
+    .bindTooltip('Broome, Australia', { offset: [20, 0], direction: 'right' })
     .addTo(allLayers)
     .openTooltip();
 };
@@ -147,13 +150,13 @@ sectionRenderer[3] = () => {
 
   pts.forEach((pt) => {
     L.circleMarker(pt, {
-      color: "darkorange",
+      color: 'darkorange',
       radius: 4,
     }).addTo(allLayers);
-  })
+  });
 
   L.polyline(pts, {
-    color: "darkorange",
+    color: 'darkorange',
   }).addTo(allLayers);
 
   windLayer.addTo(allLayers);
@@ -165,28 +168,28 @@ sectionRenderer[3] = () => {
 sectionRenderer[4] = () => {
   if (!beap) return;
   let pts = beap.slice(30, 60).map(x => x.geometry.coordinates.slice().reverse());
-  let pts_past = beap.slice(0, 30).map(x => x.geometry.coordinates.slice().reverse());
+  let ptsPast = beap.slice(0, 30).map(x => x.geometry.coordinates.slice().reverse());
 
   pts.forEach((pt) => {
     L.circleMarker(pt, {
-      color: "darkorange",
+      color: 'darkorange',
       radius: 4,
     }).addTo(allLayers);
-  })
+  });
 
   L.polyline(pts, {
-    color: "darkorange",
+    color: 'darkorange',
   }).addTo(allLayers);
 
-  pts_past.forEach((pts_past) => {
-    L.circleMarker(pts_past, {
-      color: "gray",
+  ptsPast.forEach((ptPast) => {
+    L.circleMarker(ptPast, {
+      color: 'gray',
       radius: 4,
     }).addTo(allLayers);
-  })
+  });
 
-  L.polyline(pts_past, {
-    color: "gray",
+  L.polyline(ptsPast, {
+    color: 'gray',
   }).addTo(allLayers);
 };
 
@@ -201,28 +204,28 @@ sectionRenderer[5] = () => {
   if (!beap) return;
   let endN = 100;
   let pts = beap.slice(endN, 150).map(x => x.geometry.coordinates.slice().reverse());
-  let pts_past = beap.slice(0, endN).map(x => x.geometry.coordinates.slice().reverse());
+  let ptsPast = beap.slice(0, endN).map(x => x.geometry.coordinates.slice().reverse());
 
   pts.forEach((pt) => {
     L.circleMarker(pt, {
-      color: "darkorange",
+      color: 'darkorange',
       radius: 4,
     }).addTo(allLayers);
-  })
+  });
 
   L.polyline(pts, {
-    color: "darkorange",
+    color: 'darkorange',
   }).addTo(allLayers);
 
-  pts_past.forEach((pts_past) => {
-    L.circleMarker(pts_past, {
-      color: "gray",
+  ptsPast.forEach((ptPast) => {
+    L.circleMarker(ptPast, {
+      color: 'gray',
       radius: 4,
     }).addTo(allLayers);
-  })
+  });
 
-  L.polyline(pts_past, {
-    color: "gray",
+  L.polyline(ptsPast, {
+    color: 'gray',
   }).addTo(allLayers);
 };
 
