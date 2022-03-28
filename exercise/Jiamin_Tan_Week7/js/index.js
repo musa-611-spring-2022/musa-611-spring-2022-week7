@@ -44,14 +44,14 @@ const getAllData = async () => {
   let indData = await ind;
   let clData = await cl;
 
-  ctData.forEach((element) => (element.properties.section = 'CensusData'));
-  ctData.forEach((element) => (element.properties.label = element.properties.NAMELSAD10));
-  busData.forEach((element) => (element.properties.section = 'Transit'));
-  busData.forEach((element) => (element.properties.label = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`));
-  indData.forEach((element) => (element.properties.section = 'Amenities'));
-  indData.forEach((element) => (element.properties.label = 'Indego Staion'));
-  clData.forEach((element) => (element.properties.section = 'Introduction'));
-  clData.forEach((element) => (element.properties.label = 'Philadelphia, PA'));
+  ctData.forEach((element) => { element.properties.section = 'CensusData'; });
+  ctData.forEach((element) => { element.properties.label = element.properties.NAMELSAD10; });
+  busData.forEach((element) => { element.properties.section = 'Transit'; });
+  busData.forEach((element) => { element.properties.label = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`; });
+  indData.forEach((element) => { element.properties.section = 'Amenities'; });
+  indData.forEach((element) => { element.properties.label = 'Indego Station'; });
+  clData.forEach((element) => { element.properties.section = 'Introduction'; });
+  clData.forEach((element) => { element.properties.label = 'Philadelphia, PA'; });
 
   ctData.forEach(element => gfData.features.push(element));
   busData.forEach(element => gfData.features.push(element));
