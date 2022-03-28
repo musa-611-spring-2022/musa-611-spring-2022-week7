@@ -14,48 +14,11 @@ const graysFerryData = fetch('data/GraysFerry.json')
   .then(resp => resp.json())
   .then(data => data);
 
-const getAllData = async () => {
-  let gfData = await graysFerryData;
-  let ctData = await ct;
-  let busData = await bus;
-  let indData = await ind;
-  let clData = await cl;
-
-  ctData.forEach(element => element.properties.section = 'CensusData');
-  ctData.forEach(element => element.properties.label = element.properties.NAMELSAD10);
-  busData.forEach(element => element.properties.section = 'Transit');
-  busData.forEach(element => element.properties.label = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`);
-  indData.forEach(element => element.properties.section = 'Amenities');
-  indData.forEach(element => element.properties.label = 'Indego Staion');
-  clData.forEach(element => element.properties.section = 'Introduction');
-  clData.forEach(element => element.properties.label = 'Philadelphia, PA');
-
-  ctData.forEach(element => gfData.features.push(element));
-  busData.forEach(element => gfData.features.push(element));
-  indData.forEach(element => gfData.features.push(element));
-  clData.forEach(element => gfData.features.push(element));
-
-  // console.log(gfData);
-  // console.log(ctData);
-  // console.log(busData);
-  // console.log(indData);
-  // console.log(clData);
-
-  return gfData;
-};
-
-
-
-// getAllData()
-
 // census tracts
 const ct = fetch('https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.geojson')
   .then(resp => resp.json())
   .then(data => data.features.filter(feature => feature.properties.NAME10 === '13'
-    || feature.properties.NAME10 === '20'
-		|| feature.properties.NAME10 === '32'
-		|| feature.properties.NAME10 === '33'
-		|| feature.properties.NAME10 === '36'));
+  || feature.properties.NAME10 === '20' || feature.properties.NAME10 === '33' || feature.properties.NAME10 === '36'));
 
 // bus routes
 const bus = fetch('./data/Fall_2021_Routes.geojson')
@@ -74,6 +37,36 @@ const cl = fetch('https://opendata.arcgis.com/datasets/405ec3da942d4e20869d4e144
   .then(resp => resp.json())
   .then(data => data.features);
 
+const getAllData = async () => {
+  let gfData = await graysFerryData;
+  let ctData = await ct;
+  let busData = await bus;
+  let indData = await ind;
+  let clData = await cl;
+
+  ctData.forEach((element) => (element.properties.section = 'CensusData'));
+  ctData.forEach((element) => (element.properties.label = element.properties.NAMELSAD10));
+  busData.forEach((element) => (element.properties.section = 'Transit'));
+  busData.forEach((element) => (element.properties.label = `Route ${element.properties.LineAbbr}, ${element.properties.LineName}`));
+  indData.forEach((element) => (element.properties.section = 'Amenities'));
+  indData.forEach((element) => (element.properties.label = 'Indego Staion'));
+  clData.forEach((element) => (element.properties.section = 'Introduction'));
+  clData.forEach((element) => (element.properties.label = 'Philadelphia, PA'));
+
+  ctData.forEach(element => gfData.features.push(element));
+  busData.forEach(element => gfData.features.push(element));
+  indData.forEach(element => gfData.features.push(element));
+  clData.forEach(element => gfData.features.push(element));
+
+  // console.log(gfData);
+  // console.log(ctData);
+  // console.log(busData);
+  // console.log(indData);
+  // console.log(clData);
+
+  return gfData;
+};
+
 // codes below are based on Mjumbe's sample codes
 
 let currentSlideIndex = 0;
@@ -84,72 +77,23 @@ const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 const slideJumpSelect = document.querySelector('#jump-to-slide');
 
-/* ==========
-
-var schoolIcon = L.Icon.extend({
-	iconUrl: 'icon/school.png',
-	iconSize: [32, 37],
-	iconAnchor: [16, 37]
-})
-
-var storeIcon = L.Icon.extend({
-	iconUrl: 'icon/store.png',
-	iconSize: [32, 37],
-	iconAnchor: [16, 37]
-})
-
-var parkIcon = L.Icon.extend({
-	iconUrl: 'icon/park.png',
-	iconSize: [32, 37],
-	iconAnchor: [16, 37]
-})
-
-var healthCareIcon = L.Icon.extend({
-	iconUrl: 'icon/healthcare.png',
-	iconSize: [32, 37],
-	iconAnchor: [16, 37]
-})
-
-var bikeIcon = L.Icon.extend({
-	iconUrl: 'icon/bike.png',
-	iconSize: [32, 37],
-	iconAnchor: [16, 37]
-})
-
-var fireIcon = L.Icon.extend({
-	iconUrl: 'icon/fire.png',
-	iconSize: [32, 37],
-	iconAnchor: [16, 37]
-})
-
-========== */
-
 function updateMap(collection) {
   layerGroup.clearLayers();
-	console.log(collection);
   const geoJsonLayer = L.geoJSON(collection, { pointToLayer: (p, latlng) => L.marker(latlng) })
-		.eachLayer(l => {
-			//console.log(l);
-			if (l.feature.properties.section.includes('ProjectOverview')){
-				l.setStyle({
-							color: l.feature.properties.stroke,
-							fillColor: l.feature.properties.fill,
-	            fillOpacity: l.feature.properties['fill-opacity'],
-	            //weight: l.feature.properties['storke-width']
-	        })
-			}
-		})
+    .eachLayer(l => {
+      if (l.feature.properties.section.includes('ProjectOverview')) {
+        l.setStyle({
+          color: l.feature.properties.stroke,
+          fillColor: l.feature.properties.fill,
+          fillOpacity: l.feature.properties['fill-opacity'],
+        });
+      }
+    })
     .bindTooltip(l => l.feature.properties.label)
     .addTo(layerGroup);
 
   return geoJsonLayer;
 }
-
-let campusStyle = (feature) => ({
-  color: feature.properties.stroke,
-  fillColor: feature.properties.fill,
-  weight: 5,
-});
 
 function makeSecCollection(section) {
   return {
@@ -171,20 +115,19 @@ function showSlide(slide) {
     if (slide.showpopups) {
       layer.eachLayer(l => {
         l.bindTooltip(l.feature.properties.label, { permanent: true });
-        //l.openTooltip();
       });
     } else {
-			layer.eachLayer(l => {
-				if (l.feature.properties.section.includes('ProjectOverview')) {
-					l.bindPopup(`<h1>${l.feature.properties.label}</h1> <img src=${l.feature.properties.img} />`, { maxWidth: 'auto' });
-				}
-			});
-		}
+      layer.eachLayer(l => {
+        if (l.feature.properties.section.includes('ProjectOverview')) {
+          l.bindPopup(`<h1>${l.feature.properties.label}</h1> <img src=${l.feature.properties.img} />`, { maxWidth: 'auto' });
+        }
+      });
+    }
     map.removeEventListener('moveend', handleFlyEnd);
   }
 
   map.addEventListener('moveend', handleFlyEnd);
-	if (slide.bounds) {
+  if (slide.bounds) {
     map.flyToBounds(slide.bounds);
   } else if (slide.section) {
     map.flyToBounds(layer.getBounds());
@@ -234,10 +177,8 @@ function initSlideSelect() {
 
 function loadLifeData() {
   getAllData()
-    //.then(resp => resp.json())
     .then(data => {
       lifeCollection = data;
-			//console.log(lifeCollection)
       showCurrentSlide();
     });
 }

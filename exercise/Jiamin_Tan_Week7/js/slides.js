@@ -1,6 +1,6 @@
 const slides = [
   {
-    title: "Project Overview",
+    title: 'Project Overview',
     content: `
       In CPLN 504 - Site Planning class this semeter, we are redesigning the
       block in Grays Ferry, Philadelphia, PA. The site is about 142,000 sq ft,
@@ -146,5 +146,5 @@ const slides = [
     `,
     section: 'Parking',
     showpopups: false,
-  }
+  },
 ];
