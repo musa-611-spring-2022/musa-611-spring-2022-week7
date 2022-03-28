@@ -1,0 +1,41 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topnav">
+    <div class="title">
+      <p>Shipping Facilities Distribution Guidance</p>
+    </div>
+    <div class="slide-controls">
+      <button class="slide-nav-button" id="prev-slide">⧏</button>
+      <button class="slide-nav-button" id="next-slide">⧐</button>
+    </div>
+  </div>
+
+  <div class="content" id="content">
+    <div class="sidebar">
+      <div class="text"></div>
+      <div class="notes">
+        <p>
+        <a href='https://hifld-geoplatform.opendata.arcgis.com/'><button id="source1">Source of Facility Data</button></a>
+        <a href='https://www.opendataphilly.org/dataset/zip-codes/resource/825cc9f5-92c2-4b7c-8b4e-6affa41396ee'><button id="source2">Source of Zip Data</button></a>
+        </p>
+      </div>
+    </div>
+    <div class="map" id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="tools.js"></script>
+  <script src="slides.js"></script>
+  <script src="zipdata.js"></script>
+  <script src="data.js"></script>
+  <script src="content.js"></script>
+  
+</body>
+</html>
