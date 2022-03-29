@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New York Drinking Water Quality </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+
+  </head>
+  <body>
+    <div class="mainViewAboveMap" id="header">
+      <div class="title">New York Drinking Water Quality 2020-2022</div>
+      <div class="Jiali">A stroy map created by Jiali Yao</div>    </div>
+    <div class="navigation" id="nav-bar">
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="index1.html">Manhattan</a></li>
+        <li><a href="index2.html">Bronx</a></li>
+        <li><a class="active" href="index3.html">Brooklyn</a></li>
+        <li><a href="index4.html">Queen</a></li>
+        <li><a href="index5.html">Staten Island</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="slide" id="Overview">
+        <div class="filter-field">
+          <label for="year-select">Year</label>
+            <select id="year-select" class="form-select">
+              <option value="">All</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2022</option>
+           </select>
+          <label for="site-select">Sample Site</label>
+            <select id="site-select" class="form-select">
+              <option value="">All</option>
+            </select>
+        </div>
+        <a name='Manhattan'>
+        <p class="description">&nbsp;</p>
+        <p class="description">
+          <span style="font-size:14px">
+            There are <b>95</b> sample sites in Brooklyn.
+          </span>
+        </p>
+        </a>
+        <h5>Residual Free Chlorine</h5>
+        <canvas class="chart" id="myChart" style="width:90%;max-width:600px" ></canvas>
+        <h5>Turbidity</h5>
+        <canvas class="chart" id="myChart2" style="width:90%;max-width:600px" ></canvas>
+        <h5>Coliform</h5>
+        <canvas class="chart" id="myChart3" style="width:90%;max-width:600px" ></canvas>
+      </div>
+      <div class="map" id="map">Map</div>
+
+      <!-- Leaflet JavaScript -->
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+
+      <!-- chart JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+      <!-- JavaScript -->
+      <script src="../../Jiali_Yao/Data/waterqualityNYC3.geojson"></script>
+      <script src="../../Jiali_Yao/Data/SampleSite.geojson"></script>
+      <script src="../../Jiali_Yao/Data/BoroughBoundaries.geojson"></script>
+      <script src="tools.js"></script>
+      <script src="main3.js"></script>
+    </div>
+  </body>
+</html>

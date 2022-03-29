@@ -1,0 +1,103 @@
+library(sf)
+library(dplyr)
+#install.packages("data.table")                   
+library("data.table")   
+#install.packages("rjson")
+library(rjson)
+
+setwd("D:\\graduate\\MUSA611\\Midterm\\Data")
+dictionary <- read.csv("dictionarywithcoordinate.csv")
+waterquality <- read.csv("Drinking_Water_Quality_Distribution_Monitoring_Data.csv")
+boundary <- st_read("Borough_Boundaries.geojson")
+
+### convert the coordinate ###
+sf <- st_as_sf(
+  dictionary,
+  coords = c(
+    "X...Coordinate",
+    "Y...Coordinate"),
+  crs = 2263
+)
+sf %>%
+  st_crs()
+
+dictionary <- st_transform(
+  sf,
+  "+proj=longlat +datum=WGS84"
+)
+dictionary %>%
+  st_crs() 
+  
+dictionary$index <- 1:nrow(dictionary)
+dictionary <- dictionary %>%filter( index != 248)
+### join the table ###
+data <- left_join(waterquality, dictionary, by = "Sample.Site")%>% 
+  select(., -13)%>%
+  filter(! Sample.Time %like% "1899")
+
+data$Sample.Date <- as.Date(data$Sample.Date, format = "%m/%d/%Y")
+data1 <- data %>%
+  filter(Sample.Date <= "2022-02-01" & Sample.Date >= "2020-02-01")
+
+#st_write(data1, "waterqualityNYC20_22.geojson")
+fianldata1 <- st_read("waterqualityNYC20_22.geojson")
+
+Manhattan <- boundary%>%filter(boundary$boro_code=="1")
+Bronx <- boundary%>%filter(boundary$boro_code=="2")
+Brooklyn <- boundary%>%filter(boundary$boro_code=="3")
+Queens <- boundary%>%filter(boundary$boro_code=="4")
+Staten_Island <- boundary%>%filter(boundary$boro_code=="5")
+
+finaldata1 <- fianldata1 %>% 
+  mutate(District = as.integer(st_intersects(fianldata,Manhattan)))%>%
+  mutate(District = case_when(District == "1" ~ "Manhattan"))%>%
+  select(Sample.Number, District)%>%
+  st_drop_geometry()
+
+finaldata2 <- fianldata1 %>% 
+  mutate(District = as.integer(st_intersects(fianldata,Bronx)))%>%
+  mutate(District = case_when(District == "1" ~ "Bronx"))%>%
+  select(Sample.Number, District)%>%
+  st_drop_geometry()
+
+finaldata3 <- fianldata1 %>% 
+  mutate(District = as.integer(st_intersects(fianldata,Brooklyn)))%>%
+  mutate(District = case_when(District == "1" ~ "Brooklyn"))%>%
+  select(Sample.Number, District)%>%
+  st_drop_geometry()
+
+finaldata4 <- fianldata1 %>% 
+  mutate(District = as.integer(st_intersects(fianldata,Queens)))%>%
+  mutate(District = case_when(District == "1" ~ "Queens"))%>%
+  select(Sample.Number, District)%>%
+  st_drop_geometry()
+
+finaldata5 <- fianldata1 %>% 
+  mutate(District = as.integer(st_intersects(fianldata,Staten_Island)))%>%
+  mutate(District = case_when(District == "1" ~ "Staten Island"))%>%
+  select(Sample.Number, District)%>%
+  st_drop_geometry()
+
+District <- left_join(finaldata1,finaldata2,by = "Sample.Number")%>%
+  mutate(distric = ifelse(is.na(District.x), District.y, District.x))%>%
+  select(Sample.Number, distric)
+
+District1 <- left_join(District,finaldata3, by = "Sample.Number")%>%
+  mutate(distric = ifelse(is.na(distric), District, distric))%>%
+  select(Sample.Number, distric)
+
+District2 <- merge(District1,finaldata4, by = "Sample.Number")%>%
+  mutate(distric = ifelse(is.na(distric), District, distric))%>%
+  select(Sample.Number, distric)
+
+District <- merge(District2,finaldata5, by = "Sample.Number")%>%
+  mutate(distric = ifelse(is.na(distric), District, distric))%>%
+  select(Sample.Number, distric)%>%
+  rename("District" = distric)
+
+final_data1 <- merge(final_data, District, by = "Sample.Number")
+st_write(final_data1, "waterqualityNYC3.geojson")
+st_write(final_data1, "waterqualityNYC3.csv")
+dictionary <- dictionary %>% select(-index)
+dictionary <- dictionary %>%   rename("Sample_Site" = Sample.Site)
+st_write(dictionary, "SampleSite.geojson")
