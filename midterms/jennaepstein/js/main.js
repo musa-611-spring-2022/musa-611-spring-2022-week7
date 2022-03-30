@@ -1,18 +1,20 @@
 /* eslint-disable no-undef */
 let map = L.map('map').setView([52.20408251869462, 24.662590026855465], 5);
-let horodetz_marker =  L. marker([ 52.203714307355916, 24.662590026855465]).bindTooltip('<strong>Horodetz</strong>').addTo(map);
+
+
+L.marker([52.203714307355916, 24.662590026855465]).bindTooltip('<strong>Horodetz</strong>').addTo(map);
 
 let slideNumber = 0;
 let currentLayer = new L.LayerGroup().addTo(map);
 
 let select = document.getElementById('jump-to-slide');
 
-let Stamen_TonerLite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
   subdomains: 'abcd',
   minZoom: 0,
   maxZoom: 20,
-  ext: 'png'
+  ext: 'png',
 }).addTo(map);
 
 
@@ -30,8 +32,9 @@ function updateSlideContent(content) {
 
 function updateMapFeatures(features) {
   currentLayer.clearLayers();
+  // eslint-disable-next-line no-unused-vars
   let featureJson = features.addTo(currentLayer);
- //map.flyToBounds([10.546875,48.253941,36.298828,57.774518]);
+  // map.flyToBounds([10.546875,48.253941,36.298828,57.774518]);
 }
 
 
@@ -76,5 +79,5 @@ slides.forEach((slide, i) => {
 
 window.addEventListener('load', () => {
   showSlide(slideNumber);
-})
+});
 
