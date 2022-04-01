@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Military GeoJSON</title>
+
+    <!-- Stylesheet for Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+
+    <!-- Exercise stylesheet -->
+    <link href="index.css" rel="stylesheet">
+  </head>
+  
+  
+  <body>
+    <div id="header">
+       RePowering Military Brownfields
+    </div>
+    <div id="central">
+      <div id="map"></div>
+      <div id="title">
+        Description: 
+      </div>
+      <div id="content">
+        <P>
+          This group of sites represent a wide range of typologies associated with former and current military use. Many of these sites are explicitly owned by branches of the US military, presenting in some ways an obstacle to their repurposing and in other ways a great latent potential for the mobilization of human and capital resources necessary for large-scale landscape transformation.
+        </P>
+        <p>
+          Weaponry: This site classification includes all sites with the potential presence of weapons or ammunition, from depots and sites of manufacture to bombing targets and firing ranges. Within this subclass, there is a range of potential danger involved in access to these sites. In some cases, specialized teams and equipment will be necessary to make sites safe for access or intervention.
+        </p>
+        <p>
+          Aviation: These are military airports or areas otherwise related to military aviation. With the exception of a small number of landfills and other disposal sites, the majority of the sites in this subcategory are operational military airfields, a typology with very strict security constraints. It can likely be assumed that for many of these sites, the contaminants present are jet fuel or related components or by-products thereof. Might be possible to group these sites with other aviation sites from other categories, possibly including aerospace sites.
+         </p>
+         <p>
+          Waste Management: Small number of landfills and dumps affiliated with the military. It is unclear whether this affiliation has an impact on the nature of the waste interred at these sites.
+        </p>
+      </div>
+      <div id="charts">
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        <div id="myPlot" style="width:100%;max-width:700px"></div>
+      </div>
+    </div>
+    <!-- 
+    <script type="text/javascript" src="//ofmpub.epa.gov/sor_internet/js/searchWidget.js"></script>
+
+    <link href="//ofmpub.epa.gov/sor_internet/css/redmond/jquery-ui-1.8.17.custom.css" rel="stylesheet">
+
+    <div class="tsSearchWidget"></div>
+  -->
+   <!-- W3 charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  
+  <!-- W3 PiePlot -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <!-- Exercise JavaScript -->
+    <script src="index.js"></script>
+  </body>
+</html>
