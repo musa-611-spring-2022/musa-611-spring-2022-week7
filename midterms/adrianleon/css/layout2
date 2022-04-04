@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.header,
+.content,
+.section,
+.footer,
+.map-container,
+.slides {
+  border: 1px solid white;
+}
+
+.header,
+.section,
+.footer {
+  height: 100vh;
+}
+
+.slide {
+  border: 1px solid white;
+  width: 18rem;
+  margin-left: auto;
+  margin-right: 4rem;
+  margin-bottom: 80vh;
+  margin-top: 5vh;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.slide:first-child {
+  margin-top: -95vh;
+}
+
+.map {
+  height: 100%;
+}
+
+.map-container {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+.intro-buttons-wrapper {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    z-index: 1;
+}
+
+.intro-button-link {
+    font-size: 1.2rem;
+    width: 30ch;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.intro-story-button {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.story-intro-figcaption {
+  bottom: 0;
+  text-align: center;
+}
+
+.figure {
+  display: block;
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

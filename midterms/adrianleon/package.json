@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@material/button": "^13.0.0",
+    "tiger-boundaries": "github:ghing/census-boundaries"
+  }
+}
