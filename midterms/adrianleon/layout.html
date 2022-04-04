@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <link rel="stylesheet" href="css/layout.css">
+  </head>
+
+<body>
+  <!-- The layout goes here -->
+
+  <div class="header">
+    <h1>Yes Vacancy</h1>
+    <h2>The Development Risk of Vacant Lots in Philadelphia</h2>
+  </div>
+  <div class="content">
+    <div class="map-container">
+      <div class="map" id="map">Map</div>
+    </div>
+    <div class="slides"></div>
+  </div>
+  <div class="footer">
+    <h2>Work in collaboration with Max Masuda-Farkas, Xuezhu Zhao and Philadelphia Legal Assistance</h2>
+    <p id="credit">This data was obtained from the OpenDataPhilly repository, Philadelphia Legal Assistance and Adam Butler</p>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="https://unpkg.com/showdown@1.9.0/dist/showdown.min.js"></script>
+  <script src="js/slides.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/layout.js"></script>
+  <!-- <script src="js/index.js"></script> -->
+
+</body>
+</html>
