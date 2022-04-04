@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>American House Musuems</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+	integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+	crossorigin=""/>
+
+<!--  	<link rel="stylesheet" href="css/normalize.css">
+-->	<link rel="stylesheet" href="css/index.css">
+
+
+</head>
+<body>
+
+
+	<div class="header">Header</div>
+	<div class="content">
+		<div class="section" id="section1">Section1</div>	
+		<div class="map-container">
+			<div class="map" id="map">Map</div>
+		</div>
+
+		<div class="slides">
+			<div class="slide" id="slide-0">
+				<h1>Philadelphia Historic Streets</h1>
+				<P>
+					The map shows older streets with historical value in the City of Philadelphia. 
+				</P>
+				<div class="scroll-button-container">
+					<button class="scroll-button" id="scroll-up">⧏</button>
+					<button class="scroll-button" id="scroll-down">⧐</button>
+				</div>
+			</div>
+			<div class="slide" id="slide-1">
+				<h1>Select By Street Name</h1>
+				<p>
+					You can search for a certain street by name to see if it is a historic street
+				</p>
+				<div class="selectbar-constainer" id="selectbar-constainer">
+					<label for="find-street">Find Street: </label>
+					<select class="slide-select" id="find-street">
+						<option value="Please Select Around Street" selected>Please Select Around Street</option>
+					</select>
+				</div>
+				<div class="traverse-street-container">
+					<label for="traverse-street">Traverse Nearby Streets</label>
+					<button class="traverse-street" id="traverse-street">Traverse!</button>
+				</div>
+				<div class="scroll-button-container">
+					<button class="scroll-button" id="scroll-up-1">⧏</button>
+					<button class="scroll-button" id="scroll-down-1">⧐</button>
+				</div>
+			</div>
+			<div class="slide" id="slide-2">
+				<h1>Select by Street Code</h1>
+				<p>
+					You can search for a certain street by street code 
+				</p>
+				<div class="streetcode-selectbar" id="streetcode-selectbar">
+					<label for="find-street-code">Filter Street Code</label>
+					<select class="slide-select" id="find-street-code">
+						<option value="Please select a street code" selected>Please select a street code</option>
+					</select>
+					<button type="button" class="show-historic-site" id="show-historic-site">Show surrounding historic properties</button>
+					<button type="button" class="show-historic-distric" id="show-historic-distric">Show surrounding historic districs</button>
+
+				</div>
+				<div class="scroll-button-container">
+					<button class="scroll-button" id="scroll-up-2">⧏</button>
+					<button class="scroll-button" id="scroll-down-2">⧐</button>
+				</div>
+			</div>
+			<div class="slide" id="slide-3">
+				<h1>Zoom Around!</h1>
+				<div class="zooming-buttons-container">
+					<label for="zoom-to-sites-bound">Zoom to see all surrounding historic properties</label>
+					<button type="button" class="zoom-to-sites-bound" id="zoom-to-sites-bound">GO</button>
+				</div>
+
+				<div class="zooming-buttons-container">
+					<label for="zoom-to-all-districts">Zoom to see all historic districts</label>
+					<button type="button" class="zoom-to-all-districts" id="zoom-to-all-districts">GO</button>
+				</div>
+
+				<div class="zooming-buttons-container">
+					<label for="zoom-back-street">Zoom back to selected street</label>
+					<button type="button" class="zoom-back-street" id="zoom-back-street">GO</button>
+				</div>
+				<div class="scroll-button-container">
+					<button class="scroll-button" id="scroll-up-3">⧏</button>
+					<button class="scroll-button" id="scroll-down-3">⧐</button>
+				</div>
+			</div>
+			<div class="slide" id="slide-4">Slide 4</div>
+		</div>
+		<div class="section" id="section2">Section2</div>
+		<div class="slides">
+			<div class="slide" id="slide-5">Slide 5</div>
+			<div class="slide" id="slide-6">Slide 6</div>
+			<div class="slide" id="slide-7">Slide 7</div>
+			<div class="slide" id="slide-8">Slide 8</div>
+			<div class="slide" id="slide-9">Slide 9</div>
+		</div>
+	</div>
+
+	<div class="footer">Footer</div>
+
+
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	<script src="js/index.js"></script>
+	<script src="js/slides.js"></script>
+
+	
+
+</body>
+</html>
