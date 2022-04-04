@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- =====================
+      Add elements in this space
+      ====================== -->
+      <h1 id="title">Orange County 2020 Census CBO Landscape</h1>
+      <h2 id="subtitle">Overview</h2>
+      <p id="content">The map to the right displays the number of community-based organizations (CBOs) that conducted outreach activities for the 2020 Census by city. The following slides highlight the cities where the most CBOs held events, passed out flyers, canvassed. etc.. This story map intends to inform these organizations of other work that's being done in their shared service area(s) and should be utilized to form strong networks for futureorganizing movements. The data used to generate this app was provided by Charitable Ventures through the Good Work Collaborative. For a more detailed analysis, please visit the GWC's Census Atlas here: https://occensusatlas.com/docs/home.html</p>
+      <button class="button" id="prev">Previous</button>
+      <button class="button" id="next">Next</button>
+    </div>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+    <div id="legend">
+        <div id="high">Number of CBOs: > 8</div>
+        <div id="medium">Number of CBOs: 2-8</div>
+        <div id="low">Number of CBOs: 0-2 </div>
+    </div>
+
+    <!--pop up-->
+    <div class="bg-modal" >
+        <div class="modal-content">
+            <img src="data/OC_GWC_Logo.png"
+            height="60"/>
+            <p>This web application visualizes the landscape of community-based organizations (CBOs) that conducted outreach during the 2020 Census in Orange County, CA. Please click the Previous and Next buttons to view the slides.</p>
+            <button class="button" id='close'> Got it!</button>
+        </div>
+    </div>
+    <!-- Javascript Imports -->
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
