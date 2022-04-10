@@ -1,0 +1,86 @@
+body {
+    padding: 10px;
+    overflow: hidden;
+    font-family: colfax, helvetica, arial, sans-serif;
+}
+
+p.main {
+  font-size: 24px;
+}
+
+#credit{
+  position: absolute;
+    left: 0px;
+    width: 400px;
+    top: 90%;
+    bottom:0;
+    /* overflow-y: auto; */
+    padding: 20px;
+    font-size: 16px;
+}
+
+
+button {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  color: black;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#exposureButton{
+  background-color: #F39972;
+}
+#skeletalButton{
+  background-color: #888888;
+}
+#bluntforceButton{
+  background-color: #B4C248;
+}
+#gunshotButton{
+  background-color:#661100;
+  /*cursor: not-allowed;*/
+}
+
+.map {
+    position: absolute;
+    right: 0px;
+    left: 400px;
+    height: 100%;
+    top: 0;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0px;
+  width: 400px;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.legend{
+    position: absolute;
+    left: 0px;
+    width: 400px;
+    top:60%;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.navButton{
+    position: absolute;
+    left: 0px;
+    width: 400px;
+    top: 80%;
+    bottom:0;
+    overflow-y: auto;
+    padding: 20px;
+    font-size: 16px;
+}
