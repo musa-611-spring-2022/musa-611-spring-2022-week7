@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AZ Migrant Map</title>
+      <meta charset="utf-8">
+      <!-- CSS Imports -->
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/leaflet.css" />
+      <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+
+      <h1 id="title">Migrant Deaths on the Arizona/Sonora Border</h1>
+      <p id="description">Those who cross the border into the US often underestimate the danger that awaits them on the other side before they reach civilization. As this tool illustrates, many perish in the desert of southern Arizona with the American dream right at their fingertips.</p>
+      <p id="description2">This website provides insight into the individuals who lost their lives attempting to cross the border through the Sonoran Desert. Data includes recorded deaths from 1987 to 2022</p>
+    <img src="Data\crossers.jpg" alt="Migrants Crossing the Border" width="224" height="128">
+
+      <!-- Legend -->
+      <div class="legend">
+        <h2> Causes of Death </h2>
+          <button id="exposureButton">Exposure</button>
+          <button id="skeletalButton">Skeletal Remains</button>
+          <button id="bluntforceButton">Blunt Force Injury</button>
+          <button id="gunshotButton">Gunshot Wound</button>
+      </div>
+
+      <!-- buttons -->
+      <div class="navButton">
+        <button id="previousButton" style="display: none;">previous</button>
+        <button id="nextButton">next</button>
+      </div>
+    </div>
+    <p id="credit">Austin L. Wheat: MUSA 611, Spring 2022 <br> University of Pennsylvania</p>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+    <!-- Javascript Imports -->
+    <script src="Data/azdeaths.js"></script>
+
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/leaflet.js"></script>
+
+    <script src="js/midtermFunctions.js"></script>
+    <script src="js/slideModel.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
