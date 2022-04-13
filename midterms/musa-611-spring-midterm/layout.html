@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="stylesheet" href="css/layout.css">
+
+    <!-- Stylesheet for Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class = 'topnav'>
+    <h1 class = 'title'>Mosquitoes control in Chicago</h1>
+    <p> --  high risk area of mosquitoes-borne disease over time</p>
+  </div>
+
+  <div class = 'content'>
+    <div class = 'sidebar'>
+      <h2 class="traps" id="side-title">Mosqutoes traps</h2>
+      <p class="traps" id="side-content">The Chicago Department of Public Health maintains an environmental surveillance program for West Nile Virus (WNV). This program includes the collection of mosquitoes from traps located throughout the city; the identification and sorting of mosquitoes collected from these traps; and the testing of specific species of mosquitoes for WNV.</p>
+      <button class="button" id="prev">Previous</button>
+      <button class="button" id="next">Next</button>     
+    </div>
+    <div class = 'map' id="map">map</div>  
+  </div>
+
+
+   <script src="js/trap_location.js"></script>
+   <script src="js/content-list.js"></script>
+
+  <!-- <script src="https://data.cityofchicago.org/resource/jqe8-8r6s.json?season_year=2021"></script> -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/layout.js"></script>
+
+</body>
+
+
+</html>

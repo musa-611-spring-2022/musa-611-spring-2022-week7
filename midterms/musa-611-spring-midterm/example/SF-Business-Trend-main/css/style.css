@@ -1,0 +1,185 @@
+
+#sidebar {
+  position: absolute;
+  left: 0px;
+  width: 400px;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  font-size: 16px;
+  background-color: #f0ebe7;
+}
+
+.text {
+  padding: 0.1rem;
+  color: #343a40
+}
+
+body {
+    padding: 0;
+    overflow: hidden;
+    font-family: colfax, helvetica, arial, sans-serif;
+}
+
+p.main {
+  font-size: 24px;
+}
+
+#top3 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+#map {
+    position: absolute;
+    right: 0px;
+    left: 400px;
+    height: 100%;
+    top: 0;
+}
+
+
+.mybutton {
+  position: absolute;
+  top:420;
+  left: 24px;
+}
+
+#previousButton, #nextButton {
+  background-color: white;
+  font-size: 18px;
+  border: 0px;
+  color: #343a40;
+}
+
+#previousButton:hover, #nextButton:hover {
+  background-color: #6096ba;
+  color: #ffffff;
+}
+
+#previousButton:disabled, #nextButton:disabled {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.notes {
+  position: absolute;
+  bottom: 20;
+  left: 24px;
+  font-size: 10px;
+}
+
+#source {
+  position:absolute;
+  width: 90%;
+  left: 170px;
+  background-color: white;
+  font-size: 10px;
+  border: 0px;
+  color: #14213d;
+  bottom: 10;
+}
+
+#about {
+  position:absolute;
+  width: 90%;
+  left: 270px;
+  background-color: white;
+  font-size: 10px;
+  border: 0px;
+  color: #14213d;
+  bottom: 10;
+}
+
+.leaflet-marker-icon {
+  border:0;
+  border-radius:50%;
+}
+
+.nValue {
+  background-color: #277da1
+}
+
+.Prof {
+  background-color: #577590
+}
+
+.Real  {
+  background-color: #f3722c
+}
+
+.Cons  {
+  background-color: #4d908e
+}
+
+.Reta  {
+  background-color: #f8961e
+}
+
+.Food   {
+  background-color: #43aa8b
+}
+
+.Priv  {
+  background-color: #f46036
+}
+
+.Arts   {
+  background-color: #335c67
+}
+
+.Acco   {
+  background-color: #90be6d
+}
+
+.Tran   {
+  background-color: #735d78
+}
+
+.Mult   {
+  background-color: #e6b89c
+}
+
+.Fina   {
+  background-color: #9f7e69
+}
+
+/*Legend specific*/
+.legend {
+  padding: 6px 8px;
+  font: 10px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
+  /*border-radius: 5px;*/
+  line-height: 24px;
+  color: #555;
+  bottom: 10;
+  right: 10;
+}
+
+.legend h4 {
+  text-align: center;
+  font-size: 16px;
+  margin: 2px 12px 8px;
+  color: #777;
+}
+
+.legend span {
+  position: relative;
+  bottom: 3px;
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin: 0 8px 0 0;
+  opacity: 0.7;
+}
+
+.legend i.icon {
+  background-size: 18px;
+  background-color: rgba(255, 255, 255, 1);
+}
