@@ -1,0 +1,37 @@
+body {
+  margin:0;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+.topnav,
+.sidebar {
+  padding: 1rem;
+  background-color: #eee;
+  color: #222;
+}
+
+.topnav {
+  background: linear-gradient(  #eee, rgba(238, 238, 238, 0.577));
+}
+
+.map{
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 15rem;
+}
+
+
+.content{
+  
+  flex-grow:1;
+  display: flex;
+}
