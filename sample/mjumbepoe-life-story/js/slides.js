@@ -16,6 +16,7 @@ const slides = [
       in **Riverside**.
     `,
     era: 'early life',
+    bounds: [[36.97, -122.07], [36.99, -121.98]],
     showpopups: true,
   },
 

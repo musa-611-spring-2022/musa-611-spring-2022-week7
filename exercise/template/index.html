@@ -13,23 +13,22 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <div class="map" id="map"></div>
-
-  <div class="slide-section">
-    <div class="slide-controls">
-      <label for="jump-to-slide">Jump&nbsp;To:</label>
-      <select class="slide-nav-select" id="jump-to-slide"></select>
+  <div>
+    <div class ="intro">
+      <!--want an h1 and img tag...you can style font etc in the css -->
+      <img src="gif.gif" alt="House Music" style="width:100%;">
+      <div class="intro-text">A Spatial History of House Music</div>
+      <div class="intro-subtitle">Adapted from beatportal.com</div>
     </div>
-    <div class="slide-title"></div>
-    <div class="slide-content"></div>
-    <div class="slide-controls">
-      <button class="slide-nav-button" id="prev-slide">⧏</button>
-      <button class="slide-nav-button" id="next-slide">⧐</button>
+    <div class="map-container">
+      <div class="map" id="map"></div>
     </div>
+    <div class="slides"></div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
   <script src="https://unpkg.com/showdown@1.9.0/dist/showdown.min.js"></script>
+  <script src="js/tools.js"></script>
   <script src="js/slides.js"></script>
   <script src="js/index.js"></script>
 </body>
