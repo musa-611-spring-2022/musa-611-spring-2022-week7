@@ -40,10 +40,8 @@ const updatedogLicensesMarkers = (dogLicenses) => {
   dogMap.flyToBounds(dogLicensesBoundSmall);
   /* Loop each dog store to plot it */
   dogLicenses.forEach((dogLicense) => {
-    const circleMarker = L.circle(
-      [dogLicense.geometry.coordinates[1], 
-      dogLicense.geometry.coordinates[0]], 
-      40, dogLicensesStyle)
+    let dogLicenseLocation = [dogLicense.geometry.coordinates[1], dogLicense.geometry.coordinates[0]]
+    const circleMarker = L.circle(dogLicenseLocation, 40, dogLicensesStyle)
       .bindTooltip(dogLicense.properties.GEOID.toString())
       .addTo(layerGroup);
     const dogLicensesGEOID = dogLicense.properties.GEOID.toString();
@@ -57,8 +55,8 @@ const updatedogLicensesMarkers = (dogLicenses) => {
         <li>Age: ${dogLicense.properties.Age.toString()} </li>
         <li>Female %: ${dogLicense.properties.Femalperc.toString()} </li>
         <li>Male %: ${dogLicense.properties.Maleperc.toString()} </li></ul>`,
-        ).openPopup();
-      });
+      ).openPopup();
+    });
   });
 };
 
@@ -77,7 +75,7 @@ const zipCodeBoundary = (zipcode) => {
   });
 };
 
-$('#form1').submit( function(e) {
+$('#form1').submit(function (e) {
   e.preventDefault();
   const selectZipcodeElement = document.getElementById('zipcodeTypeIn');
   selectZipcode = selectZipcodeElement.value;
@@ -90,7 +88,7 @@ let zipCodedogLicenses = (selectZipcode) => {
   /* celar layer  */
   layerGroup.clearLayers();
   /* Loop each dog store to plot it */
-  dogLicenses.forEach( (dogLicense) => {
+  dogLicenses.forEach((dogLicense) => {
     if (dogLicense.properties.GEOID.toString() === selectZipcode) {
       const circleMarker = L.circle([dogLicense.geometry.coordinates[1], dogLicense.geometry.coordinates[0]], 40, dogLicensesStyle)
         .bindTooltip(dogLicense.properties.GEOID.toString())
@@ -229,7 +227,7 @@ const updatePetStoresMarkers = (petStores) => {
           .replace('}', '')
           .replaceAll('"', '')
           .replaceAll('addr:', '')
-          .replaceAll(':', ':\ ')
+          .replaceAll(':', ': ')
           .replaceAll(',', '<br>')
           .toUpperCase(),
       ).openPopup();
