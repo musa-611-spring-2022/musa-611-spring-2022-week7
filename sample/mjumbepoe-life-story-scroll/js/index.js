@@ -28,6 +28,11 @@ function makeEraCollection(era) {
   };
 }
 
+function syncMapToCurrentSlide() {
+  const slide = slides[currentSlideIndex];
+  syncMapToSlide(slide);
+}
+
 function syncMapToSlide(slide) {
   const collection = slide.era ? makeEraCollection(slide.era) : lifeCollection;
   const layer = updateMap(collection);
@@ -50,10 +55,6 @@ function syncMapToSlide(slide) {
   }
 }
 
-function syncMapToCurrentSlide() {
-  const slide = slides[currentSlideIndex];
-  syncMapToSlide(slide);
-}
 
 function initSlides() {
   const converter = new showdown.Converter({ smartIndentationFix: true });

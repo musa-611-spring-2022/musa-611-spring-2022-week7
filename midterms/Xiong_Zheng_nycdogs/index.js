@@ -32,8 +32,6 @@ const dogLicensesStyle = {
   fillOpacity: 0.5,
 };
 
-const dogLicensesBound = L.geoJSON(dogLicenses);
-
 const updatedogLicensesMarkers = (dogLicenses) => {
   /* celar layer  */
   layerGroup.clearLayers();
@@ -42,7 +40,10 @@ const updatedogLicensesMarkers = (dogLicenses) => {
   dogMap.flyToBounds(dogLicensesBoundSmall);
   /* Loop each dog store to plot it */
   dogLicenses.forEach((dogLicense) => {
-    const circleMarker = L.circle([dogLicense.geometry.coordinates[1], dogLicense.geometry.coordinates[0]], 40, dogLicensesStyle)
+    const circleMarker = L.circle(
+      [dogLicense.geometry.coordinates[1], 
+      dogLicense.geometry.coordinates[0]], 
+      40, dogLicensesStyle)
       .bindTooltip(dogLicense.properties.GEOID.toString())
       .addTo(layerGroup);
     const dogLicensesGEOID = dogLicense.properties.GEOID.toString();
@@ -231,10 +232,6 @@ const updatePetStoresMarkers = (petStores) => {
           .replaceAll(':', ':\ ')
           .replaceAll(',', '<br>')
           .toUpperCase(),
-        // PetStore.tags.forEach( tag => {
-        //   console.log(tag);
-        // })
-        // `<h6>${PetStore.tags[0]}</h6>`
       ).openPopup();
     });
   });
