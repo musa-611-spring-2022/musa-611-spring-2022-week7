@@ -5,7 +5,7 @@ const slides = [
       Here we present a snapshot of Mjumbe Poe's life told geospatially.
     `,
     era: null,
-    bounds: [[-75, -180], [75, 180]],
+    bounds: [[-190.17, 70], [170.17, 90]],
   },
 
   {
@@ -29,6 +29,7 @@ const slides = [
     `,
     era: 'formative',
     showpopups: true,
+    bounds: [[-20, -90], [0,20]],
   },
 
   {

@@ -1,0 +1,71 @@
+<!--
+Goals of webpage:
+What story should it tell?
+The change of Fairmount over the last 20 years
+discuss the trajectory of
+Tell stories of business owners and short term/ long term residents
+display data on the map -
+what does the change in demographics over time imply?
+ -->
+
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/leaflet.css">
+</head>
+<body>
+
+  <header class="header">
+    <div><p class = "header-name">Olivia Scalora, MUSA 611, Spring 2022</p></div>
+    <h1>FAIRMOUNT, PHILADELPHIA</h1>
+
+    <div class="desc">
+      <div style= "padding: 100px;
+      height: 75%;">
+      <div class="left">
+        <h2 style= "color: white;" >FAIRMOUNT</h2>
+        <p class = "paragraph">
+          The Fairmount neighborhood is located northwest of Center City Philadelphia. It is bordered to the South by Spring Garden Street, to the North by Poplar Street, to the West by Pennsylvania Avenue and to the East by 17thStreet. It is home to numerous neighborhood anchors including the Philadelphia Museum of Art, the Eastern State Penitentiary, and Girard College.
+        </p>
+      </div>
+
+      <div class="center">
+        <p class = "paragraph"> <br>
+          Fairmount is a largely residential area with low to medium density and a major commercial corridor, Fairmount Avenue, running through the neighborhood. Fairmount has experienced neighborhood change throughout the past thirty years which may be described as gentrification. Incomes and real estate values have grown rapidly, and the population has become higher-income and more formally educated. These changes are a reversal of 20th Century trends, during which Fairmount experienced disinvestment from financial institutions.
+      </div>
+
+      <div class="right"> <br>
+        <p class= "paragraph">In the mid-20th  Century, Fairmount was classified by the Homeowners' Loan Corporation as a 'hazardous' neighborhood for lending. <br> Redlining had detrimental impacts on neighborhoods  in Philadelphia, including Fairmount, resulting in lower housing  values over time and neighborhood  instability. Over the last 20 years, Fairmount has experienced significant demographic changes in race and income. Housing markets have also undergone  significant changes that reflect the movement  of higher-income individuals into  the area.
+        </p>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="map-wrapper">
+      <div class="map" id="map"></div>
+    </div>
+    <div class = "sidebar">
+      <div class="slides"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Olivia Scalora, MUSA 611, Spring 2022</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="https://unpkg.com/showdown@1.9.0/dist/showdown.min.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/layout.js"></script>
+
+
+</body>
+</html>

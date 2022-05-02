@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "circle-stroked",
+        "name": 1,
+        "label": "Louise"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.18118143081665,
+          39.97171834730693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "circle-stroked",
+        "name": 4,
+        "label": "Bookstore"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.17413258552551,
+          39.967270009493426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "circle-stroked",
+        "name": 2,
+        "label": "Emma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.17469048500061,
+          39.96848695876808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "circle-stroked",
+        "name": 5,
+        "label": "Brianna"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.17663240432739,
+          39.96879119270173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "circle-stroked",
+        "name": 3,
+        "label": "Drew"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.17290413379669,
+          39.965243083051256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#c9b6b6",
+        "stroke-width": 1.9,
+        "stroke-opacity": 1,
+        "fill": "#e57171",
+        "fill-opacity": 0.2,
+        "name": 6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.18755435943604,
+              39.97531134043091
+            ],
+            [
+              -75.18553733825682,
+              39.97185812402583
+            ],
+            [
+              -75.17626762390137,
+              39.96416175694031
+            ],
+            [
+              -75.16897201538086,
+              39.963471014959566
+            ],
+            [
+              -75.1667833328247,
+              39.97235145133721
+            ],
+            [
+              -75.18755435943604,
+              39.97531134043091
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
