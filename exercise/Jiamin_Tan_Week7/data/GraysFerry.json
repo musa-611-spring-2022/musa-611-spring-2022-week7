@@ -1,0 +1,690 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Site Limit",
+        "section": [
+          "Introduction",
+          "Amenities"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19483655691147,
+              39.93900479291115
+            ],
+            [
+              -75.19504845142363,
+              39.93807935015283
+            ],
+            [
+              -75.19358664751053,
+              39.93789220354041
+            ],
+            [
+              -75.19334524869919,
+              39.93900067985992
+            ],
+            [
+              -75.19483655691147,
+              39.93900479291115
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fill": "#a3a3a3",
+        "fill-opacity": 0.6,
+        "label": "Site",
+        "section": [
+          "RoadExtension",
+          "AffordableHousing",
+          "CommunityCenter",
+          "SmallRetail",
+          "GreenSpace",
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/Site.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19483655691147,
+              39.93900479291115
+            ],
+            [
+              -75.19504845142363,
+              39.93807935015283
+            ],
+            [
+              -75.19358664751053,
+              39.93789220354041
+            ],
+            [
+              -75.19334524869919,
+              39.93900067985992
+            ],
+            [
+              -75.19483655691147,
+              39.93900479291115
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Site",
+        "section": [
+          "Introduction",
+          "Transit"
+        ],
+        "icon": "schoolIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1941794157028,
+          39.938533846938086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Fresh Grocer",
+        "section": "Amenities",
+        "icon": "storeIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19332647323608,
+          39.9403435779523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Donald Finnegan Playground",
+        "section": "Amenities",
+        "icon": "parkIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19279539585114,
+          39.9379868051887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Stinger Park",
+        "section": "Amenities",
+        "icon": "parkIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19770383834837,
+          39.936337427280094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Rite Aid",
+        "section": "Amenities",
+        "icon": "storeIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19454956054688,
+          39.936102973826806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Fire Engine 47",
+        "section": "Amenities",
+        "icon": "fireIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19432961940765,
+          39.93934823181733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Reed Street Health Center",
+        "section": "Amenities",
+        "icon": "healthCareIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19787549972534,
+          39.9370407828208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Carl Moore Health Center",
+        "section": "Amenities",
+        "icon": "healthCareIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19521474838257,
+          39.936308634794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Universal Audenried Charter High School",
+        "section": "Amenities",
+        "icon": "schoolIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19860506057739,
+          39.93385300248081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Universal Audenried Elementary School",
+        "section": "Amenities",
+        "icon": "schoolIcon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19765019416809,
+          39.935226851182165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#707070",
+        "stroke-width": 4,
+        "stroke-opacity": 1,
+        "fill": "#707070",
+        "fill-opacity": 1,
+        "label": "Road Extension",
+        "section": [
+          "RoadExtension",
+          "AffordableHousing",
+          "CommunityCenter",
+          "SmallRetail",
+          "GreenSpace",
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/RoadExtension.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19341699779034,
+              39.93867214909382
+            ],
+            [
+              -75.19486606121063,
+              39.93887780234021
+            ],
+            [
+              -75.19488349556923,
+              39.938797083514686
+            ],
+            [
+              -75.19343510270117,
+              39.93858526041154
+            ],
+            [
+              -75.19341699779034,
+              39.93867214909382
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#e89f21",
+        "fill-opacity": 0.5,
+        "label": "Small Retail",
+        "section":[
+          "SmallRetail",
+          "GreenSpace",
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/SmallRetail.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19480839371681,
+              39.93897600154731
+            ],
+            [
+              -75.19482985138893,
+              39.93888448606033
+            ],
+            [
+              -75.19439801573752,
+              39.93881970536074
+            ],
+            [
+              -75.19436314702034,
+              39.93897702981051
+            ],
+            [
+              -75.19480839371681,
+              39.93897600154731
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#d968c1",
+        "fill-opacity": 0.5,
+        "label": "Affordable Housing (16)",
+        "section":[
+          "AffordableHousing",
+          "CommunityCenter",
+          "SmallRetail",
+          "GreenSpace",
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/AffordableHousing.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19429743289946,
+              39.938696827516
+            ],
+            [
+              -75.1943403482437,
+              39.938519451158605
+            ],
+            [
+              -75.19353300333022,
+              39.93840634135727
+            ],
+            [
+              -75.193492770195,
+              39.93857909079676
+            ],
+            [
+              -75.19429743289946,
+              39.938696827516
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#757af5",
+        "fill-opacity": 0.5,
+        "label": "Community Center",
+        "section":[
+          "CommunityCenter",
+          "SmallRetail",
+          "GreenSpace",
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/CommunityCenter.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19485265016556,
+              39.93877240512864
+            ],
+            [
+              -75.19492506980895,
+              39.93842279370363
+            ],
+            [
+              -75.19450128078459,
+              39.93836315392925
+            ],
+            [
+              -75.19441813230515,
+              39.93871276565898
+            ],
+            [
+              -75.19485265016556,
+              39.93877240512864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#d968c1",
+        "fill-opacity": 0.5,
+        "label": "Affordable Housing (24)",
+        "section": [
+          "AffordableHousing",
+          "CommunityCenter",
+          "SmallRetail",
+          "GreenSpace",
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/AffordableHousing.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19494116306305,
+              39.93828294863349
+            ],
+            [
+              -75.19498407840729,
+              39.93811431155119
+            ],
+            [
+              -75.19364297389984,
+              39.937943617495904
+            ],
+            [
+              -75.19360274076462,
+              39.938112254998856
+            ],
+            [
+              -75.19494116306305,
+              39.93828294863349
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#ffffff",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.9,
+        "label": "Parking (bottom)",
+        "section": [
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/ParkingCenterBottom.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.194933116436,
+              39.93833436229544
+            ],
+            [
+              -75.19485265016556,
+              39.938276778991465
+            ],
+            [
+              -75.19360207021236,
+              39.93811636810347
+            ],
+            [
+              -75.19365102052689,
+              39.93817086671657
+            ],
+            [
+              -75.194933116436,
+              39.93833436229544
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#ffffff",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.9,
+        "label": "Parking (top)",
+        "section": [
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/ParkingTop.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.1942303776741,
+              39.93898114286316
+            ],
+            [
+              -75.19425585865974,
+              39.93887420341371
+            ],
+            [
+              -75.19342303276062,
+              39.93887728820784
+            ],
+            [
+              -75.1934042572975,
+              39.93898422765249
+            ],
+            [
+              -75.1942303776741,
+              39.93898114286316
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#35de41",
+        "fill-opacity": 0.5,
+        "label": "Green Space (buffer)",
+        "section": [
+          "GreenSpace",
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img" : "data/GreenSpaceBuffer.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.194256529212,
+              39.93887060448701
+            ],
+            [
+              -75.1942739635706,
+              39.938801196578154
+            ],
+            [
+              -75.19346259534359,
+              39.93869014377758
+            ],
+            [
+              -75.19342303276062,
+              39.938871632751784
+            ],
+            [
+              -75.194256529212,
+              39.93887060448701
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#ffffff",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.9,
+        "label": "Parking (center)",
+        "section": [
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/ParkingCenterBottom.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19428670406342,
+              39.938463924552224
+            ],
+            [
+              -75.19354373216629,
+              39.93836006911194
+            ],
+            [
+              -75.1936000585556,
+              39.9384083979008
+            ],
+            [
+              -75.19434303045273,
+              39.9385132815379
+            ],
+            [
+              -75.19428670406342,
+              39.938463924552224
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 4,
+        "stroke-opacity": 1,
+        "fill": "#35de41",
+        "fill-opacity": 0.5,
+        "label": "Green Space (Garden)",
+        "section": [
+          "GreenSpace",
+          "Parking",
+          "ProjectOverview"
+        ],
+        "img": "data/GreenSpaceGarden.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.19435912370682,
+              39.93841765234582
+            ],
+            [
+              -75.19438058137892,
+              39.93831996647401
+            ],
+            [
+              -75.19364565610886,
+              39.938221252188185
+            ],
+            [
+              -75.19362553954124,
+              39.93831585338159
+            ],
+            [
+              -75.19435912370682,
+              39.93841765234582
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
