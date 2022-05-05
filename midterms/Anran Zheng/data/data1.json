@@ -1,0 +1,320 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Beijing, China",
+        "era": "Beijing",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.378173828125,
+          39.91394967016644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Pyeongchang, South Korea",
+        "era": "Pyeongchang",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.389984,
+          37.370476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Sochi, Russia",
+        "era": "Sochi",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.72793579101562,
+          43.58536476400974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Vancouver, Canada",
+        "era": "Vancouver",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.12034606933594,
+          49.264668080750134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Turino, Italy",
+        "era": "Turino",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.687683105468749,
+          45.07739974122637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Salt Lake City, United States",
+        "era": "Salt Lake City",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.88957214355469,
+          40.769101775774935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Nagano, Japan",
+        "era": "Nagano",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.15032958984375,
+          36.23762751669998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Lillehammer, Norway",
+        "era": "Lillehammer",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.460357666015625,
+          61.11604957696039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Alberville, France",
+        "era": "Alberville",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           6.392726,
+          45.675535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Calgary, Canada",
+        "era": "Calgary",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06280517578125,
+          51.054344119247425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Sarajevo, Yugoslavia",
+        "era": "Sarajevo",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.38733673095703,
+          43.85186000694389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Lake Placid, USA",
+        "era": "Lake Placid",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97781372070312,
+         44.28257044667387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Innsbruck, Austria",
+        "era": "Innsbruck",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.400032043457031,
+           47.26664987622105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Sapporo, Japan",
+        "era": "Sapporo",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.35765075683594,
+          43.05935630381922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Grenoble, France",
+        "era": "Grenoble",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.728168487548828,
+          45.182036837015886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Squaw Valley, USA",
+        "era": "Squaw Valley",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.24697875976562,
+          36.74080999982695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Corina d'Ampezzo, Italy",
+        "era": "Cortina dAmpezzo",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.13714599609375,
+          46.54091587805394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Oslo, Norway",
+        "era": "Oslo",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.738792419433594,
+          59.913385607357235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "St Moritz, Switzerland",
+        "era": "St Moritz",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.836711883544922,
+         46.495674340742674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Garmisch-Partenkirchen, Germany",
+        "era": "Garmisch-Partenkirchen",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.105117797851562,
+          47.4921528170241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Chamonix, France",
+        "era": "Chamonix",
+        "type": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.092135906219482,
+          47.4946755406268
+        ]
+      }
+    }
+  ]
+}
