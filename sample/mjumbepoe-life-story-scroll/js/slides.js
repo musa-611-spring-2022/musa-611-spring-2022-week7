@@ -1,124 +1,59 @@
 const slides = [
   {
-    title: "Mjumbe's Personal Journey",
+    title: "Hearing Change in Old San Juan’s Plazas",
     content: `
-      Here we present a snapshot of Mjumbe Poe's life told geospatially.
+      Here we present a geospatial array of the sounds, stories, and sense of places in 4 public spaces in Puerto Rico's historic city- Old San Juan
     `,
-    era: null,
+    Plaza: null,
     bounds: [[-75, -180], [75, 180]],
   },
 
   {
-    title: 'Early Days',
+    title: 'Plaza de Armas',
     content: `
-      Mjumbe was born in San Jose, California. He lived with his family first in
-      **San Jose**, then **Santa Cruz**, briefly in **Oceanside**, and finally
-      in **Riverside**.
+    -A myriad of activities: city hall, shops, tourism office, restaurants, and market
+    -Two cafe kiosks create more programmed space
+    -Increase programming, infrastructure for local activities (e.g. more tables for dominos)
+
     `,
-    era: 'early life',
+    Plaza: 'Plaza de Armas',
     showpopups: true,
   },
 
   {
-    title: 'Move to Philadelphia',
+    title: 'Plaza de Colon',
     content: `
-      When Mjumbe was 11, his family moved across the country to Philadelphia.
-      They lived in what would later be knows as the **Cedar Park**
-      neighborhood, and Mjumbe attended **J.R. Masterman** for middle and high
-      school.
+    - Located at the eastern entrance to Old San Juan
+    - Used for artisans’ market from morning to afternoon
+    - Tour buses drop off visitors along eastern perimeter
+    - Two food kiosks, tourist oriented
+    - “Puerto Rico’s Rum Route” signage
     `,
-    era: 'formative',
+    Plaza: 'Plaza de Colon',
     showpopups: true,
   },
 
   {
-    title: 'College',
+    title: 'Plaza de San Jose',
     content: `
-      Mjumbe went back to California for college. He graduated with a computer
-      science degree from **Harvey Mudd College** in **Claremont, California**.
-      After college, Mjumbe moved back to the Cedar Park neighborhood and worked
-      for a few years at the University of Pennsylvania, making tools for
-      modeling and simulation in the social sciences.
+    - Benches along the perimeter, shaded by trees
+    - Tables set up for the nearby restaurant
+    - Along Calle de San Sebastian (main bar scene in OSJ) and Ostracosa (outdoor restaurant)
+    - Increase historical wayfinding and interpretation at the space
     `,
-    era: 'college',
+    Plaza: 'Plaza de San Jose',
     showpopups: true,
   },
 
   {
-    title: 'Code for America',
+    title: 'Calle de Recinto Sur',
     content: `
-      Mjumbe was a Code for America fellow in 2011, living and working primarily
-      from **Oakland, CA**. He worked on projects with the cities of Philadelphia
-      and Seattle.
+    - “Paletas Bar,” popular ice cream shop across the street
+    - Major entryway for tourists coming from cruise ships into the city
+    - Prime view of the bay and cruise ships
+    - Little shade in middle of the day, almost no people stopping
     `,
-    era: 'cfa',
+    Plaza: 'Calle de Recinto Sur',
     showpopups: true,
-  },
-
-  {
-    title: 'OpenPlans',
-    content: `
-      After Code for America, Mjumbe went to work for OpenPlans, a NYC-based
-      non-profit making tools to help citizens get involved in the urban
-      planning process. He would usually work remotely from **Independents Hall**,
-      making occasional trips to the NYC office from his home in **Yorktown** via
-      the **Temple University train station**.
-    `,
-    era: 'openplans',
-    showpopups: true,
-  },
-
-  {
-    title: 'City of Philadelphia',
-    content: `
-      Mjumbe then went to work for the **City of Philadelphia** in the Office of
-      Open Data and Digital Transformation. During this period he lived near
-      Temple University in the **Hartranft** neighborhood.
-    `,
-    era: 'city of phila',
-    showpopups: true,
-  },
-
-  {
-    title: 'Stepwise',
-    content: `
-      Mjumbe left the city of Philadelphia to work on a startup called Stepwise
-      with a former coworker and friend. They made tools to help investors get
-      a fuller picture of potential investment properties. They would often work
-      out of the **First Round Capital** offices. For a time Mjumbe lived in the
-      **Woodland Terrace** neighborhood, and later in an apartment overlooking
-      **Malcolm X Park**.
-    `,
-    era: 'stepwise',
-    showpopups: true,
-  },
-
-  {
-    title: 'International Conference on Appropriate Technology',
-    content: `
-      Mjumbe has been involved with the planning of the International Conference
-      on Appropriate Technology since 2012. This conference has taken him to
-      locations around Africa.
-    `,
-    era: 'inat',
-    showpopups: true,
-  },
-
-  {
-    title: 'Travels',
-    content: `
-      Additionally, Mjumbe has been lucky to spend time in several places around
-      the world.
-    `,
-    era: 'travels',
-    showpopups: true,
-  },
-
-  {
-    title: 'Present Day',
-    content: `
-      Mjumbe currently lives in **East Passyunk**. Thanks for taking this journey!
-    `,
-    era: 'present day',
   },
 ];

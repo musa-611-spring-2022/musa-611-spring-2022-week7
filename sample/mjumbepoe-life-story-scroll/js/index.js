@@ -1,10 +1,10 @@
 /* globals showdown */
 
-let map = L.map('map').setView([0, 0], 0);
+let map = L.map('map').setView([500, 500], 0);
 let layerGroup = L.layerGroup().addTo(map);
 let lifeCollection = { features: [] };
 
-L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg', {
+L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.jpg', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
 }).addTo(map);
 
@@ -15,27 +15,27 @@ const slidesDiv = document.querySelector('.slides');
 function updateMap(collection) {
   layerGroup.clearLayers();
   const geoJsonLayer = L.geoJSON(collection, { pointToLayer: (p, latlng) => L.marker(latlng) })
-    .bindTooltip(l => l.feature.properties.label)
+    .bindTooltip(l => l.feature.properties.Plaza)
     .addTo(layerGroup);
 
   return geoJsonLayer;
 }
 
-function makeEraCollection(era) {
+function makePlazaCollection(Plaza) {
   return {
     type: 'FeatureCollection',
-    features: lifeCollection.features.filter(f => f.properties.era === era),
+    features: lifeCollection.features.filter(f => f.properties.Plaza === Plaza),
   };
 }
 
 function syncMapToSlide(slide) {
-  const collection = slide.era ? makeEraCollection(slide.era) : lifeCollection;
+  const collection = slide.Plaza ? makeEraCollection(slide.Plaza) : lifeCollection;
   const layer = updateMap(collection);
 
   function handleFlyEnd() {
     if (slide.showpopups) {
       layer.eachLayer(l => {
-        l.bindTooltip(l.feature.properties.label, { permanent: true });
+        l.bindTooltip(l.feature.properties.Plaza, { permanent: true });
         l.openTooltip();
       });
     }

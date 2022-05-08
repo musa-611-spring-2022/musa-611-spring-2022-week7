@@ -2,87 +2,31 @@
 
 ## Mid-term Exercise
 
-Create a story map using some GeoJSON data. It can be a personal story, or the
-story of a place, a project, a process, a people, whatever you want, as long as
-you ground that story in location.
+This exercise is the same/ in conjunction with my final assignment, as it builds off of my original midterm project idea for a story map of Viejo San Juan. The main project folder with project content can be found under "sample/ Viejo San Juan Memories".
 
-Some examples from last year (which you can download and run locally):
-- https://github.com/gxzhao1/SF-Business-Trend
-- https://github.com/Haoheng-Tang/Haoheng-MUSA611-Midterm
-- https://github.com/hkbonestroo/Bonestroo_CPLN-692_Midterm
-- https://github.com/hqiao97/OSGIS-PhillyFoodAccess
+# LA HISTORIA EN EL VIEJO SAN JUAN
 
-### Preparation
+In collaboration with Puerto Rican native, Nick Quijano, and the vision of tenured Puerto Rican residents in Old San Juan, this project is seeking to develop an interactive map for residents to add memories. The goal is for the local Puerto Ricans to reclaim their heritages within their spaces. The project was developed from a fieldwork trip in Spring 2022 from a Historic Preservation Studio "Urban Regeneration in the Americas" at the University of Pennsylvania. The data depicted in the maps in the tabs to the left depict the conflicting uses of historic public spaces by the residents as a result of the increasing population of tourists and expats. The Home Value tab displays the current Zillow home sale prices nearest to the plaza, as a way for residents to stay up to date of new developments and potential threats of touristification. In addition, the Sounds tab captures our meetings with architects, planners, artists, and anthropologists and most importantly the conflicting sounds from the past and the present.
 
-#### Step 1: Prepare Geographic Data
 
-Think about what data you want to tell a story about. You can choose a dataset from any of the following sources:
+# THE PURPOSE:
 
-* Use data you've been working with for another class
-* Find data from an open data repository (see [sample open data sources](sample-open-data-sources.md))
-* Create your own dataset (check out [geojson.io](https://geojson.io))
+The people of Viejo San Juan believe in maintaining their historic culture, however the historic conservation process needs a better system to protect Puerto Rican heritage. This app- "Amplificar el Patrimonio" is a tool that democratizes the conservation process, and allows the local residents to collectively advocate with local architects, city planners, and conservationists to save their historic places.
 
-**Data Requirements**
-* At least five data points
-* At least one property that can be used to filter the data and color the data
-* Points, lines, and polygons are all fine
-* Data should be real stuff (don't create a dataset with fictional locations)
-* Whatever data you use, **be sure to include citations somewhere in your app interface**
+# THE USER:
 
-#### Step 2: Think About Slide Content
+The primary user in this case are the local residents themselves, specifically elderly residents who value the historic squares the most. The residents will be able to keep track of home values as a way to advocate for more policies against touristification causing increases in housing costs and thus displacement. In the Amplificar el Patrimonio 2.0, residents will be able to add their own memories as a tool for protecting public collective memories, as well as improving digital literacy amongst older populations in Viejo San Juan.
 
-Your story will have multiple slides, each with a title, some additional text, maybe images, and geographic data. It might also need to contain information about how you will filter or style the data for that particular slide. This kind of structure is another type of data.
+The secondary users will be the architects, city planners, and conservationists to keep track of which specific historic spaces to prioritize based on public input and proximate home sale prices. Further, with intense development and renovations in Viejo San Juan, conservationists can use this tool as a platform to advocate for stricter design guidelines to protect the historic identity and heritage of the city.
 
-How will you represent this data that is about the slides? In slides.js, write a brief example that shows what the data for one slide might look like. Think about how it will be stored and read in Javascript (arrays, objects, etc.).
+# FEATURES:
 
-#### Step 3: App Behavior
+-   Updated real estate properties in closest proximity to historic plazas with subsequent home sale prices and square footage
 
-What do you want the map or the data on the map to do when you go to a different
-slide?
-- Should it pan and zoom to specific features?
-- Should it highlight or show a popup on any features?
-- Should the features shown be filtered?
+-   Eventually, the site/app can be updated weekly with new home sale prices
 
-Think about what you want/need your application to do. It's often helpful to
-frame these app behaviors in a "When... then..." format. For example:
-- When I click the "⧏" button, then the app should show the slide before the
-  current one.
-- When I click the "⧐" button, then the app should show the slide after the
-  current one.
-- When the page loads, then the app should show the first slide.
-
-These behavior descriptions can help you determine what functions you need to
-write. For example, the behaviors above imply that you should have functions to
-handle the next/previous button clicks, and a function to show a given slide.
-
-#### Step 3: Function Signatures
-
-It can be helpful to step back and think about the project before starting to write any code.
-
-In your index.js file, write short descriptions of the functions that will make up your application. You don't need to write any of the code inside the functions (yet) — just think about what the functions will do, what parameters you will pass to them, and what they will return. Write comments inside of the functions detailing the steps that you want to happen when the function runs.
-
-For example:
-
-```js
-function showSlide(...) {
-  /*
-    This function should:
-    1: accept some slide data as the input
-    2: show the content of the slide data
-    3: filter the map for according the slide filters
-    4: ...
-  */
-}
-```
-
-#### Step 4: Start writing!
-
-## Submitting you assignment
-
-**This exercise will be due on March 28.** We will have a few students present their story maps during the class period.
-
-This exercise will not have automated tests in the same way as previous exercises, _however_ you code should still conform to the AirBnB JavaScript style guide. To ensure that it does, run:
-
+-   Collective updates of new public memories including pictures, stories, sounds, and written memories. The "Sounds" tab can eventually be used as a public kiosk for residents to share their public memories and vouch to protect their heritage of place
+-   Data scraped from Zillow home sale prices.
 ```
 npx eslint exercise
 ```
