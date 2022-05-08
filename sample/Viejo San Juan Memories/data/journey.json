@@ -1,0 +1,70 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Plaza": "Plaza de Armas",
+        "Sound Level": "~ 99 decibels",
+        "Dominant Sounds": "traffic",
+        "Secondary Sounds": "fountain, tourists, locals, bar/restaurant music"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.11621086355096,
+          18.465465340277166
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "Plaza": "Calle del Recinto Sur",
+        "Sound Level": "~ 84 decibels",
+        "Dominant Sounds": "tourists",
+        "Secondary Sounds": "pianist, traffic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.11622036430845,
+          18.464144108563485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plaza": "Plaza de San Jose",
+        "Sound Level": "~ 93 decibels",
+        "Dominant Sounds": "bar/restaurant music",
+        "Secondary Sounds": "tourists, traffic, tour guides"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.11765115218515,
+          18.467493287990596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plaza": "Plaza de Colon",
+        "Sound Level": "~ 94 decibels",
+        "Dominant Sounds": "traffic",
+        "Secondary Sounds": "tour guides, tourists, market, fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1117582672459,
+          18.466342156352567
+        ]
+      }
+    }
+  ]
+}
