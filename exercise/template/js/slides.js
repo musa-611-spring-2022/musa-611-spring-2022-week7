@@ -16,11 +16,17 @@ const slides = [
     title: "Top Fifteen Most Important Battles of The U.S. Revolutionary War",
     content: `
       Here we present a snapshot of the 15 most important battles of the U.S.
-      Revolutionary War told geospatially. All coordinate data and battle summary
-      information derived from https://latitude.to/.
+      Revolutionary War told geospatially. The size of the markers for each battle
+      location was designated by the total death toll, and the color was designated
+      by which side one - with blue markers symbolizing "Patriot" victories and red
+      markers symbolizing "Redcoat" victories. All coordinate data and battle summary
+      information derived from https://latitude.to/ and https://allthingsliberty.com
+      <img
+        src="img/revolutionarywar.jpg"
+        alt="The US Revolutionary War">
     `,
     name: null,
-    bounds: [[-75, -180], [75, 180]],
+    bounds: [[13.923403897723347, -128.671875], [53.12040528310657, -49.92187499999999]],
   },
 
   {
@@ -32,6 +38,9 @@ const slides = [
       within the towns of Lexington, Concord, Lincoln, Menotomy
       (present-day Arlington), and Cambridge, near Boston. The result was an
       American victory.
+      <img
+        src="img/lexingtonconcord.jpg"
+        alt="The Battles of Lexington and Concord">
     `,
     name: 'First',
     showpopups: true
@@ -44,6 +53,9 @@ const slides = [
       Boston in the early stages of the American Revolutionary War. Even though
       they won the battle and were able to push the Patriots away from the crucial
       Charleston peninsula, the British experienced far more casualties.
+      <img
+        src="img/bunkerhill.jpg"
+        alt="The Battle of Bunker Hill">
     `,
     name: 'Second',
     showpopups: true
@@ -59,6 +71,9 @@ const slides = [
       came with heavy losses. General Richard Montgomery was killed, Benedict
       Arnold was wounded, and Daniel Morgan and more than 400 men were taken
       prisoner.
+      <img
+        src="img/quebec.jpg"
+        alt="The Battle of Quebec">
     `,
     name: 'Third',
     showpopups: true
@@ -77,6 +92,9 @@ const slides = [
       and the Continental Army seized Dorchester Heights, just outside of
       Boston, and pointed their cannons at the British ships anchored in the
       harbor, leading to a British retreat.
+      <img
+        src="img/siegeofboston.jpg"
+        alt="The Siege of Boston">
     `,
     name: 'Fourth',
     showpopups: true
@@ -90,6 +108,9 @@ const slides = [
       expand the war southwards. Just near Charleston, Fort Sullivan provided a
       major seaport. When the British failed to capture it, it forced the war's
       focus on the north for the next couple of years.
+      <img
+        src="img/fortsullivan.jpg"
+        alt="The Battle of Fort Sullivan">
     `,
     name: 'Fifth',
     showpopups: true
@@ -105,6 +126,9 @@ const slides = [
       the Continental Army under General George Washington and the beginning of
       a successful campaign that gave the British control of the strategically
       important city of New York.
+      <img
+        src="img/longisland.jpg"
+        alt="The Battle of Long Island">
     `,
     name: 'Sixth',
     showpopups: true
@@ -119,6 +143,9 @@ const slides = [
       the remnent of the garrison of Fort Washington near the north end of
       Manhattan Island. Perhaps the worst Patriot defeat during the war, this
       battle led to the British capture of over 3000 colonists in Manhattan.
+      <img
+        src="img/fortwashington.jpg"
+        alt="The Battle of Fort Washington">
     `,
     name: 'Seventh',
     showpopups: true
@@ -134,6 +161,9 @@ const slides = [
       main body of the Continental Army against Hessian soldiers garrisoned at
       Trenton. After a brief battle, nearly the entire Hessian force was
       captured, with negligible losses to the Americans.
+      <img
+        src="img/trenton.jpg"
+        alt="The Battle of Trenton">
     `,
     name: 'Eighth',
     showpopups: true
@@ -151,13 +181,16 @@ const slides = [
       Although the result was a tactical British victory, as they held the field of
       battle at the end of the day, it set the British up for failure in the
       second battle.
+      <img
+        src="img/freemanfarm.jpg"
+        alt="The Battle of Freeman Farm">
     `,
     name: 'Nineth',
     showpopups: true
   },
 
   {
-    title: 'Battles of Bemis Heights',
+    title: 'Battle of Bemis Heights',
     content: `
       The Battle of Bemis Heights (October 7, 1777), otherwise known as the
       Second Battle of Saratoga, marked the climax of the Saratoga campaign
@@ -166,20 +199,26 @@ const slides = [
       and on the same stretch of land, the battle resulted in the surrender of
       over 6000 British troops, shocking the world and ultimately inducing France
       to partake in the war.
+      <img
+        src="img/bemisheights.jpg"
+        alt="The Battle of Bemis Heights">
     `,
     name: 'Tenth',
     showpopups: true
   },
 
   {
-    title: 'Battle of Newport',
+    title: 'Battle of Rhode ISland',
     content: `
-      The Battle of Newport (August 29, 1778), or The Battle of Rhode Island,
+      The Battle of Rhode Island (August 29, 1778), or The Battle of Rhode Island,
       was a failed American campaign, often overlooked as insignificant, that
       not only stopped American military momentum gained from Saratoga and the
       recovery of Philadelphia, but showed that the alliance with France would
       not bring a speedy end to the war. The northern theater remained in a
       stalemate for the rest of the war.
+      <img
+        src="img/newport.jpg"
+        alt="The Battle of Rhode Island">
     `,
     name: 'Eleventh',
     showpopups: true
@@ -196,6 +235,9 @@ const slides = [
       Benjamin Lincoln who surrendered his forces to the British after the six
       week siege. This is largely considered as one of the greatest American
       defeats in the war.
+      <img
+        src="img/charleston.jpg"
+        alt="The Siege of Charleston">
     `,
     name: 'Twelfth',
     showpopups: true
@@ -209,6 +251,9 @@ const slides = [
       Southern campaign of the American Revolutionary War. This led to the
       British having to rethink their strategy in the South and demonstrated
       that their subsidiary forces could easily be defeated.
+      <img
+        src="img/kingsmountain.jpg"
+        alt="The Battle of Kings Mountain">
     `,
     name: 'Thirteenth',
     showpopups: true
@@ -224,6 +269,9 @@ const slides = [
       of South Carolina from the British, as it renewed the spirits of the
       American troops and put to a hault to British offensive momentum in the
       South.
+      <img
+        src="img/cowpens.jpg"
+        alt="The Battle of Cowpens">
     `,
     name: 'Fourteenth',
     showpopups: true
@@ -242,6 +290,9 @@ const slides = [
       Revolutionary War in the North American theater, as the surrender by
       Cornwallis, and the capture of both him and his army, prompted the British
       government to negotiate an end to the conflict.
+      <img
+        src="img/yorktown.jpg"
+        alt="The Siege of Yorktown">
     `,
     name: 'Fifteenth',
     showpopups: true

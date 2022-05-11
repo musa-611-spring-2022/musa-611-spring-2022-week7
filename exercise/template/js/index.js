@@ -1,13 +1,17 @@
 /* globals showdown */
 
-let map = L.map('map').setView([0,0], 3);
+let map = L.map('map').setView([37.43997405227057, -93.515625], 4);
 let layerGroup = L.layerGroup().addTo(map);
 let warCollection = { features: [] };
 
-L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-}).addTo(map);
 
+//L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg', {
+//  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+//}).addTo(map);
+L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
+	maxZoom: 8.5,
+	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+}).addTo(map);
 
 let currentSlideIndex = 0;
 
@@ -17,14 +21,33 @@ const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 const slideJumpSelect = document.querySelector('#jump-to-slide');
 
+
 function updateMap(collection) {
   layerGroup.clearLayers();
-  const geoJsonLayer = L.geoJSON(collection, { pointToLayer: (p, latlng) => L.marker(latlng) })
-    .bindTooltip(l => l.feature.properties.label)
+  const geoJsonLayer = L.geoJSON(collection, {
+    pointToLayer: function(feature, latlng) {
+      if (feature.properties.victor === "Blue") {
+        return L.circleMarker(latlng, {
+          radius: feature.properties.deaths/12,
+          fillColor: "blue",
+          fillOpacity: 0.8,
+          color: "black"
+        });
+      } else if (feature.properties.victor === "Red") {
+        return L.circleMarker(latlng, {
+          radius: feature.properties.deaths/12,
+          fillColor: "red",
+          fillOpacity: 0.8,
+          color: "black"
+        });
+      }
+    }
+  }).bindTooltip(l => l.feature.properties.label)
     .addTo(layerGroup);
-
-  return geoJsonLayer;
+    return geoJsonLayer;
 }
+
+
 
 function makeNameCollection(name) {
   return {
