@@ -1,0 +1,260 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battles of Lexington and Concord: 122 Deaths",
+        "name": "First",
+        "date": "4-19-1775",
+        "victor": "Blue",
+        "deaths": 122
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.225165766,
+          42.4431148942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Bunker Hill: 411 Deaths",
+        "name": "Second",
+        "date": "6-17-1775",
+        "victor": "Red",
+        "deaths": 411
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0564664408,
+          42.3724818434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Quebec: 103 Deaths",
+        "name": "Third",
+        "date": "12-31-1775",
+        "victor": "Red",
+        "deaths": 103
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2013825278,
+          46.8090567638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Siege of Boston: 79 Deaths",
+        "name": "Fourth",
+        "date": "3-17-1776",
+        "victor": "Blue",
+        "deaths": 79
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0547114478,
+          42.3579402349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Fort Sullivan: 105 Deaths",
+        "name": "Fifth",
+        "date": "6-28-1776",
+        "victor": "Blue",
+        "deaths": 105
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.6221391781,
+          34.738502046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Long Island: 200 Deaths",
+        "name": "Sixth",
+        "date": "9-27-1776",
+        "victor": "Red",
+        "deaths": 200
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981,
+          40.665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Fort Washington: 157 Deaths",
+        "name": "Seventh",
+        "date": "11-16-1776",
+        "victor": "Red",
+        "deaths": 157
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.938,
+          40.853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Trenton: 12 Deaths",
+        "name": "Eighth",
+        "date": "12-26-1776",
+        "victor": "Blue",
+        "deaths": 12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.755,
+          40.218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Freeman Farm: 280 Deaths",
+        "name": "Nineth",
+        "date": "9-19-1777",
+        "victor": "Red",
+        "deaths": 280
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.64722,
+          43.00593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Bemis Heights: 130 Deaths",
+        "name": "Tenth",
+        "date": "10-7-1777",
+        "victor": "Blue",
+        "deaths": 130
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.63345,
+          42.97119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Rhode Island: 167 Deaths",
+        "name": "Eleventh",
+        "date": "8-29-1778",
+        "victor": "Red",
+        "deaths": 167
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.263,
+          41.596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Siege of Charleston: 227 Deaths",
+        "name": "Twelfth",
+        "date": "5-12-1780",
+        "victor": "Red",
+        "deaths": 227
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.9385395792,
+          32.7898501739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Kings Mountain: 90 Deaths",
+        "name": "Thirteenth",
+        "date": "10-7-1780",
+        "victor": "Blue",
+        "deaths": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.39359,
+          35.11935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Battle of Cowpens: 72 Deaths",
+        "name": "Fourteenth",
+        "date": "1-17-1781",
+        "victor": "Blue",
+        "deaths": 72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.8095967616,
+          35.1354327916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Siege of Yorktown: 90 Deaths",
+        "name": "Fifteenth",
+        "date": "10-19-1781",
+        "victor": "Blue",
+        "deaths": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.510692,
+          37.239301
+        ]
+      }
+    }
+  ]
+}
