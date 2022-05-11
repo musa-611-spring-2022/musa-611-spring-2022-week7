@@ -1,0 +1,29 @@
+---
+title: "HudsonRivSchoolArt_DataCollection"
+author: "Johnathan Clementi"
+date: "3/14/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(rvest)
+```
+```{r}
+# The url to pull data from:
+url = "https://en.wikipedia.org/wiki/List_of_Hudson_River_School_artists"
+```
+
+```{r}
+HRSA_html = read_html(url)
+
+df = HRSA_html %>% 
+  html_nodes(css = "table") %>%
+  nth(1) %>%
+  html_table(fill = TRUE)
+```
+

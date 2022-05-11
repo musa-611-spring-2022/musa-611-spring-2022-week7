@@ -1,0 +1,345 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Albany From the East side of the Hudson River",
+        "siteID": "Albany",
+        "region": "north",
+        "painters": "Thomas Cole",
+        "paintings": "viewOfAlbany_Cole.jpg,viewOfAlbany_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.749496,
+          42.63459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Catskill Creek",
+        "siteID": "Catskill_Creek",
+        "region": "north",
+        "painters": "Thomas Cole, Frederic Edwin Church",
+        "paintings": "viewOnTheCatskill_Cole.jpg,sceneOnTheCatskillCreek_Church.jpg,catskillCreek_Cole.jpg,onCatskillCreekAtSunset_Cole.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.887604,
+          42.223621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Catskill Mountain House",
+        "siteID": "Catskill_Mountain_House",
+        "region": "north",
+        "painters": "Thomas Cole, Frederic Edwin Church, Sarah Cole, Jasper Francis Cropsey",
+        "paintings": "catskillMtnHouse1_Church.jpg,catskillMtnHouse2_Church.jpg,catskillMtnHouse3_Church.jpg,theHandsOfGlaciers_Cole.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.034744,
+          42.194729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eagle Cliff near Artist's Rock",
+        "siteID": "Eagle_Cliff",
+        "region": "mid",
+        "painters": "Thomas Worthington Whittredge, Sanford Robinson Gifford",
+        "paintings": "eaglesCliff_Whittredge.jpg,eaglesCliff_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.15532,
+          41.76814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hudson River from Croton Point Park",
+        "siteID": "Hudson_River_from_Croton",
+        "region": "south",
+        "painters": "Sanford Robinson Gifford",
+        "paintings": "crotonPointPark1_Gifford.jpg,crotonPointPark2_Gifford.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.893356,
+          41.181519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hudson River From Hasbrouk Park in Kingston",
+        "siteID": "Hudson_River_From_Hasbrouk",
+        "region": "mid",
+        "painters": "Joseph Tubby",
+        "paintings": "hasbroukPark_Tubby.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980442,
+          41.922038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hudson River from Vanderbilt Mansion",
+        "siteID": "Hudson_River_from_Vanderbilt",
+        "region": "mid",
+        "painters": "Johann Hermann Carmiencke",
+        "paintings": "vanderbilt_Carmiencke.jpg,vanderbilt_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.943329,
+          41.795673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hudson River Skywalk",
+        "siteID": "Hudson_River_Skywalk",
+        "region": "north",
+        "painters": "Thomas Cole, Frederic Edwin Church",
+        "paintings": "hudsonRiverSkywalk1.jpg,cloudsFromOlana_Church.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.854861,
+          42.224528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jasper Cropsey Home and Studio",
+        "siteID": "Jasper_Cropsey",
+        "region": "south",
+        "painters": "Jasper Francis Cropsey",
+        "paintings": "hudsonFromCropseyHome_Cropsey.jpg,hudsonFromCropseyHome2_Cropsey.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.881813,
+          40.992691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaaterskill Clove",
+        "siteID": "Kaaterskill_Clove",
+        "region": "north",
+        "painters": "Thomas Cole, Asher B. Durand, Harriet Cany Peale",
+        "paintings": "topOfKaaterskill_Cole.png,topOfKaaterskill2_Cole.jpg,topOfKaaterskill_Durand.jpg,Asher_Durand_Kindred_Spirits.jpg,Kaaterskill_Clove_by_Harriet_Cany_Peale_1858.jpg,kaaterskillClove_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.074028,
+          42.184711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaaterskill Falls",
+        "siteID": "Kaaterskill_Falls",
+        "region": "north",
+        "painters": "Thomas Cole, Frederic Edwin Church, Sanford Robinson Gifford",
+        "paintings": "kaaterskillFalls_Cole.jpg,kaaterskill-falls-1826_Cole.jpg,kaaterskill-falls3.jpg,kaaterskill-falls4.jpg,kaaterskill-falls_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.063,
+          42.19584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mohonk Lake",
+        "siteID": "Mohonk_Lake",
+        "region": "mid",
+        "painters": "Thomas Cole",
+        "paintings": "THOMAS-COLE-LAKE-MOHONK.jpg,lakeMohonk_Cole.jpg,lakeMohonk_irl.jpg,lakeMohonk2_Cole.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.15532,
+          41.76814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Merino and the Catskills",
+        "siteID": "Mount_Merino_and_the_Catskills",
+        "region": "north",
+        "painters": "Sanford Robinson Gifford",
+        "paintings": "south_bay_hudson_Gifford.jpg,south_bay_hudson_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.797097,
+          42.256215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North-South Lake",
+        "siteID": "North_South_Lake",
+        "region": "north",
+        "painters": "Thomas Cole, Jasper Francis Cropsey",
+        "paintings": "lake-with-dead-trees-catskill-1825_Cole.jpg,north_south_lake.jpg,north_south_lake_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.041588,
+          42.200039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Olana State Historic Site",
+        "siteID": "Olana_State_Historic_Site",
+        "region": "north",
+        "painters": "Frederic Edwin Church",
+        "paintings": "Catskill-Mountains_FromOlana1_Church.jpg,olana_pano.jpg,olana_sketch_Church.jpg,olana_mansion.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.827202,
+          42.217251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Platte Clove",
+        "siteID": "Platte_Clove",
+        "region": "north",
+        "painters": "Asher B. Durand, Thomas Cole",
+        "paintings": "platte_clove.jpg,a-sycamore-tree-plaaterkill-cove-asher-brown-durand.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.085437,
+          42.133094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shawangunk Mountains from Sky Top",
+        "siteID": "Shawangunk_Mountains",
+        "region": "mid",
+        "painters": "Thomas Worthington Whittredge, Sanford Robinson Gifford",
+        "paintings": "shawangunks_Gifford.jpg,gunks_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.15637,
+          41.76419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Storm King from Long Dock Park",
+        "siteID": "Storm_King",
+        "region": "south",
+        "painters": "Thomas Cole",
+        "paintings": "cole_storm_king.jpg,cole_storm_king2.jpg,storm_king_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98594,
+          41.50475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sunset Rock",
+        "siteID": "Sunset_Rock",
+        "region": "north",
+        "painters": "Thomas Cole, Jasper Francis Cropsey",
+        "paintings": "sunsetRock_Cole.jpg,sunsetRock2.jpg,sunsetRock_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.030685,
+          42.205063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Thomas Cole National Historic Site",
+        "siteID": "Thomas_Cole_National_Historic_Site",
+        "region": "north",
+        "painters": "Thomas Cole, Frederic Edwin Church, Charles Herbert Moore",
+        "paintings": "cole_mainHouse.jpg,cole_mainHouse_irl.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.861145,
+          42.22559
+        ]
+      }
+    }
+  ]
+}
