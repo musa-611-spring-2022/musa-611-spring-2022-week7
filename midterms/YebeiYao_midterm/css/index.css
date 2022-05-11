@@ -1,0 +1,71 @@
+body {
+  display: flex;
+
+  margin: 0;
+  border-width: 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(to right top, #bc0a59, #8a2260, #582956,#19191c);
+}
+
+
+.map {
+  width: 60%;
+}
+
+.slide-section {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -0.5rem -1rem 1rem #4f5b66;
+  padding: 1rem;
+  width: 25rem;
+
+}
+
+.slide-controls{
+  margin: 0 auto;
+}
+
+.Brief-Summary {
+  flex-grow: 1;
+}
+
+.slide-Country {
+  padding: 0.5rem;
+
+}
+
+.slide-nav-button {
+  transition: all 0.1s;
+  padding: 2;
+  margin: 1rem;
+  width: 6rem;
+  height: 3rem;
+  border: 1px solid #4d004b;
+  border-radius: 0.25rem;
+  background-color: #fff7ec;
+  font-size: 1.2em;
+}
+
+.slide-nav-button:hover {
+  background-color: #cbc9e2;
+  color: #4d004b;
+}
+
+.slide-nav-select {
+  min-width: 0;
+}
+
+.slide-img {
+  height: 300px;
+ width: 400px;
+ overflow: hidden;
+}
+
+.slide-img img {
+  height: auto;
+ width: 400px;
+}

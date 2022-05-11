@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Incidents Details</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>  <div class="map" id="map"></div>
+
+  <div class="slide-section">
+
+    <div class="slide-controls">
+      <label for="jump-to-slide" style="color: #fef0d9;font-size:25px;"><strong>Jump&nbsp;To:</strong></label>
+      <select class="slide-nav-select" id="jump-to-slide"></select>
+    </div>
+
+    <div class="slide-Country">
+      <div class="slide-title" style="color: #fdcc8a"><b>Country:</b></div>
+      <div class="slide-Country-json" style="color: #feedde"></div>
+    </div>
+
+    <div class="slide-Fromto">
+      <div class="slide-title" style="color: #fdcc8a"><b>From:</b></div>
+      <div class="slide-from" style="color: #feedde"></div>
+      <div class="slide-title" style="color: #fdcc8a"><b>To:</b></div>
+      <div class="slide-to" style="color: #feedde"></div>
+    </div>
+
+    <div class="slide-Flight">
+      <div class="slide-flght" style="color: #fdcc8a"><b>Flight:</b></div>
+      <div class="slide-flght-json" style="color: #feedde"></div>
+    </div>
+
+    <div class="slide-Time">
+      <div class="slide-time" style="color: #fdcc8a"><b>Time:</b></div>
+      <div class="slide-time-json" style="color: #feedde"></div>
+    </div>
+
+    <div class="slide-Casualty">
+      <div class="slide-casualty" style="color: #fdcc8a"><b>Casualty:</b></div>
+      <div class="slide-casualty-json" style="color: #feedde"></div>
+    </div>
+
+    <div class="slide-PlaneType">
+      <div class="slide-planetype" style="color: #fdcc8a"><b>Plane Type:</b></div>
+      <div class="slide-planetype-json" style="color: #feedde"></div>
+    </div>
+
+    <div class="slide-img"></div>
+
+    <div class="Brief-Summary">
+
+      <div class="slide-summary-title" style="color: #fdcc8a"><b>Brief Summary:</b></div>
+      <div class="slide-summary"></div>
+    </div>
+
+
+
+    <div class="slide-controls">
+      <button class="slide-nav-button" id="prev-slide" type="button">Previous</button>
+      <button class="slide-nav-button" id="next-slide" type="button">Next</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="https://unpkg.com/showdown@1.9.0/dist/showdown.min.js"></script>
+  <script src="js/incidents.js"></script>
+  <script src="js/slides.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

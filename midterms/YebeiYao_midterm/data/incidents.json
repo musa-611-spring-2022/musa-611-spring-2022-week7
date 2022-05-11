@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "FatalSurvival": "fatal",
+      "properties": {
+        "Country": "China",
+        "From": "Kunming",
+        "To": "Guangzhou",
+        "Flight": "MU5735 by China Eastern Airlines",
+        "Time": "March 21 2022",
+        "Casualty": "123 passengers and 9 crew members,132 people in total.",
+        "Plane type": "Boeing 737-800 plane"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.22802734375,
+            24.766784522874453
+          ],
+          [
+            113.4228515625,
+            23.443088931121785
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "FatalSurvival": "fatal",
+      "properties": {
+        "Country": "Indonesia",
+        "From": "Jakarta",
+        "To": "City of Pontianak on Borneo island",
+        "Flight": "SJ182 by Sriwijaya Air",
+        "Time": "January 9 2022",
+        "Casualty": "50 passengers and 12 crew members on board,62 people in total.",
+        "Plane type": "Boeing 737"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            106.84478759765624,
+            -6.1978989780452
+          ],
+          [
+            109.3414306640625,
+            -0.03295898255728466
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "FatalSurvival": "fatal",
+      "properties": {
+        "Country": " Pakistan",
+        "From": "Lahore",
+        "To": "Karachi",
+        "Flight": "PK8303 by Pakistan International Airlines",
+        "Time": "May 22 2020",
+        "Casualty": "91 passengers and 8 crew members on board,1 in later succumbed injuries,98 people in total",
+        "Plane type": "Airbus A320-214"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            74.32525634765625,
+            31.555133721172034
+          ],
+          [
+            67.03582763671875,
+            24.86151853356795
+          ]
+        ]
+      }
+    }
+  ]
+}
